@@ -140,6 +140,10 @@ hr{
 .splash button.portfolio{
     background-color: rgba(184, 22, 22, 0.6);
 }
+
+.splash button.science{
+    background-color: rgba(122, 184, 22, 0.6);
+}
 .splash button:hover{
     background:rgba(255,255,255,0.4);
     box-shadow: 0 12px 16px 0 rgba(0,0,0,0.24), 0 17px 50px 0 rgba(0,0,0,0.19);
@@ -207,6 +211,20 @@ hr{
         margin:0
     }
     
+    .row{
+        display: table-row-group;
+    }
+
+    .splash .content{
+        text-align: -webkit-center;
+    }
+    .left{
+        float: left;
+    }
+
+    .right{
+        float: right;
+    }
 
     .splash .title h1{
         max-inline-size: min-content;
@@ -257,6 +275,7 @@ hr{
     .splash .button{
         margin-top: 0;
         display: block;
+        font-size: 70%;
     }
 
     .splash .title h1{
@@ -264,7 +283,6 @@ hr{
     }
 
     .splash .title{
-        padding-bottom: 1rem;
         text-align: -webkit-center;
     }
 }
