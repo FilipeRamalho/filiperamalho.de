@@ -125,6 +125,21 @@ hr{
     transition: 0.3s;
 }
 
+.splash button.twitter{
+    background-color: rgba(29, 160, 242, 0.6);
+}
+
+.splash button.github{
+    background-color: rgba(0, 0, 0, 0.6);
+}
+
+.splash button.blog{
+    background-color: rgba(255, 166, 0, 0.6);
+}
+
+.splash button.portfolio{
+    background-color: rgba(184, 22, 22, 0.6);
+}
 .splash button:hover{
     background:rgba(255,255,255,0.4);
     box-shadow: 0 12px 16px 0 rgba(0,0,0,0.24), 0 17px 50px 0 rgba(0,0,0,0.19);
