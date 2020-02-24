@@ -1,0 +1,118 @@
+@import url('utils.css');
+html,body,.main,.navigation{
+    background-color: #1c1c1c;
+    color: white;
+}
+.rhein{
+    background: #151515 url("../img/rhein4.webp") no-repeat center center;
+}
+
+.image{
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    background-size: cover;
+    width: 100%;
+    height: 200vh;
+    position: relative;
+    text-align: center;
+    color: #fff;
+    display: table;
+}
+
+.title h1,.title h2{
+    padding-top: 1rem;
+}
+
+nav {
+    background-color: #0B6552;
+    text-align: center;
+}
+
+nav .social{
+    display: inline-flex;
+    margin: 1rem;
+}
+
+nav button{
+    background-color: #1c1c1c;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    padding-left: 2ch;
+    padding-right: 2ch;
+    vertical-align: middle;
+    border: none;
+    font-size: initial;
+    border-radius: 3px;
+    display: inline-block;
+    width: 110px;
+}
+
+nav .social button {
+    background-color: white;
+    border: #1c1c1c 1px solid;
+}
+
+.twitter{
+    color: #1DA1F2;
+}
+
+#content{
+    width: 100%;
+    padding: 0%;
+    display: inline-block;
+    vertical-align: top;
+    white-space: normal;
+}
+
+.small-display{
+    display: none;
+}    
+
+.middle-display{
+    display: none;
+}
+
+@media only screen and (max-width:500px){
+    
+    .big-display{
+        display: none;
+    }
+
+    .middle-display{
+        display: none;
+    }
+
+    .small-display{
+        display: inherit;
+    }
+}
+
+@media only screen and (max-width:620px) and (min-width:500px){
+
+    .big-display{
+        display: none;
+    }
+
+    .middle-display{
+        display: inherit;
+    }
+
+    .small-display{
+        display: none;
+    }
+
+}
+
+@media only screen and (max-width:620px){
+    .big-display{
+        display: none;
+    }
+
+    .middle-display{
+        display: none;
+    }
+
+    .small-display{
+        display: inherit;
+    }
+}

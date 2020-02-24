@@ -1,0 +1,74 @@
+.card{
+    margin-top: 1em;
+    border-radius: 3px;
+    width: 320px;
+    display: inline-block;
+    margin-right: 1em;
+    margin-left: 1em;
+    text-align: center;
+    white-space: nowrap;
+    position: relative;
+    min-height: 300px;
+}
+
+.card img{
+    border-radius: 3px;
+    width: 75px;
+    height: 118px;
+    object-fit: cover;
+    display: inline-block;
+    position: absolute;
+    top: 0px;
+    left: 0px;
+}
+
+.card-text{
+    background-color: white;
+    border-radius: 3px;
+    display: inline-block;
+    width: 240px;
+    padding: 10px;
+    margin-top: 5px;
+    white-space: normal;
+    text-align: left;
+    position: absolute;
+    top: 100px;
+    left: 60px;
+}
+
+.card-title{
+    font-size: 220%;
+    width: 230px;
+    text-align: left;
+    position: absolute;
+    top: 0px;
+    left: 85px;
+    white-space: normal;
+}
+
+.switch-icon{
+    width: 100%;
+    margin-top: 1em;
+    text-align: center;
+    background-color: rgb(230,0,18);   
+}
+
+.fab .fa-nintendo-switch{
+    font-size: 150%;
+    padding: 5px;
+}
+
+.switch-img{
+    height: 150px;
+}
+
+body{
+    min-width: 360px;
+}
+
+@media only screen and (min-width:1024px){
+    .card{
+        margin-right: 2em;
+        margin-left: 2em;
+    }
+}

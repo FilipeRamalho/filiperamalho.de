@@ -1,0 +1,195 @@
+@import url('https://fonts.googleapis.com/css?family=Roboto+Condensed:700&display=swap');
+@import url('https://rsms.me/inter/inter.css');
+
+html{
+    font-family: Inter, sans-serif!important;
+    text-rendering: optimizeLegibility!important;
+    color: rgb(60, 60, 60);
+    background-color: rgb(250,250,250);
+    height: 101%;
+}
+
+body{
+    margin:0;
+    padding:0;    
+}
+
+
+a:link,a:visited,a:hover,a:active{
+    text-decoration: none;
+}
+
+/*
+* Color
+*/
+
+.grey{
+    color: rgb(60,60,60)
+}
+
+.grey a,
+.grey a:link,
+.grey a:hover{
+    color: rgb(60, 60, 60);
+}
+
+.gold{
+    color: #86711d;
+}
+
+.green{
+    color: #0B6552;
+}
+
+.yellowgreen{
+    color: yellowgreen;
+}
+
+.white{
+    color: white
+}
+
+.blue{
+    color: royalblue;
+}
+
+.black{
+    color: black!important;
+}
+
+/*
+* Background colors
+*/
+
+.blue-back{
+    background-color: royalblue;
+}
+
+.yellowgreen-back{
+    background-color: yellowgreen;
+}
+
+.gold-back{
+    background-color: #86711d;
+}
+
+/*
+* Fonts
+*/
+
+.roboto-font{
+    font-family: 'Roboto Condensed',sans-serif;
+}
+.fs400{
+    font-size: 400%;
+}
+
+.fs300{
+    font-size: 300%;
+}
+
+.fs200{
+    font-size: 200%;
+}
+
+.fs150{
+    font-size: 150%;
+}
+
+.fs90{
+    font-size: 90%;
+}
+
+.fs80{
+    font-size: 80%;
+}
+
+.fs70{
+    font-size: 70%;
+}
+
+.fs25{
+    font-size: 25%;
+}
+
+.bold{
+    font-weight: bold;
+}
+
+.italic{
+    font-style: italic;
+}
+
+.text-center{
+    text-align: center;
+}
+
+.text-right{
+    text-align: right;
+}
+
+.text-justify{
+    text-align: justify;
+}
+
+.uppercase{
+    text-transform: uppercase;
+}
+
+/*
+* Div utils
+*/
+
+.no-margin{
+    margin: 0!important;
+}
+
+.inline-block{
+    display: inline-block;
+}
+
+.w10{
+    width: 10%;
+}
+
+.w33{
+    width: 33%;
+}
+
+.w49{
+    width: 49.5%;
+}
+
+.w50{
+    width: 50%;
+}
+
+.w80{
+    width: 80%;
+}
+
+.top{
+    vertical-align: top;
+}
+
+.bottom{
+    vertical-align: bottom;
+}
+
+/*
+* Ribbon
+*/
+
+.ribbon{
+    background-color: #0B6552;
+    height: 10px;
+    margin-bottom: 1rem;
+}
+
+/*
+* Main divs
+*/
+
+.main{    
+    white-space: nowrap;
+}
