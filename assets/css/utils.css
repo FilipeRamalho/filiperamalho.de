@@ -41,6 +41,10 @@ a:link,a:visited,a:hover,a:active{
     color: #0B6552;
 }
 
+.lime{
+    color: #74b816;
+}
+
 .yellowgreen{
     color: yellowgreen;
 }
@@ -51,6 +55,10 @@ a:link,a:visited,a:hover,a:active{
 
 .blue{
     color: royalblue;
+}
+
+.twitterblue{
+    color: #1DA1F2;
 }
 
 .black{
