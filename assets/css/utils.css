@@ -37,6 +37,13 @@ a:link,a:visited,a:hover,a:active{
     color: #86711d;
 }
 
+.red{
+    color: #b81616;
+}
+
+.orange{
+    color: orange;
+}
 .green{
     color: #0B6552;
 }
