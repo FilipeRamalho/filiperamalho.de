@@ -26,11 +26,7 @@ html{
     background-size: cover;
 }
 
-<<<<<<< HEAD
-.no-webp .strassburg {
-=======
 .no-webp .strassburg{
->>>>>>> 15517c1776685292faf4584e6324c160934db686
     background: #151515 url("../img/strassburg.jpg") no-repeat center center;
     -webkit-background-size: cover;
     -moz-background-size: cover;
@@ -63,6 +59,20 @@ hr{
     text-align: center;
     color: #fff;
     display: table;
+}
+
+.image-location{
+    text-align: right;
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    border: 0;
+    background: rgba(128, 128, 128, 0.6);
+    padding: 2px;
+    font-size: 80%;
+
+
+
 }
 
 .title{
@@ -119,6 +129,7 @@ hr{
 
 .splash button .name{
     display: inline;
+    padding: 0.5em;
 }
 
 @media only screen and (min-width:768px){
