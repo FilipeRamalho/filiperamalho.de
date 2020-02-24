@@ -7,6 +7,12 @@ html,body,.main,.navigation{
     background: #151515 url("../img/rhein4.webp") no-repeat center center;
 }
 
+
+.strassburg{
+    background: #151515 url("../img/strassburg4.webp") no-repeat center center;
+}
+
+
 .image{
     -webkit-background-size: cover;
     -moz-background-size: cover;
