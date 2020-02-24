@@ -88,6 +88,23 @@ a:link,a:visited,a:hover,a:active{
 .roboto-font{
     font-family: 'Roboto Condensed',sans-serif;
 }
+
+.fs800{
+    font-size: 800%;
+}
+
+.fs700{
+    font-size: 700%;
+}
+
+.fs600{
+    font-size: 600%;
+}
+
+.fs500{
+    font-size: 500%;
+}
+
 .fs400{
     font-size: 400%;
 }

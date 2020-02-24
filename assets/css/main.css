@@ -1,10 +1,12 @@
 @import url('utils.css');
-html,body,.main,.navigation{
-    background-color: #1c1c1c;
+html{
     color: white;
+    background-color: #0B6552;
 }
+
 .rhein{
     background: #151515 url("../img/rhein4.webp") no-repeat center center;
+    height: 70vh;
 }
 
 
@@ -12,34 +14,56 @@ html,body,.main,.navigation{
     background: #151515 url("../img/strassburg4.webp") no-repeat center center;
 }
 
+.splash .overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: #111111;
+    opacity: .7;
+}
+
+hr{
+    border:none;
+}
+
+.splash .content{
+    position: sticky;
+    vertical-align: middle;
+    display: table-cell;
+}
 
 .image{
     -webkit-background-size: cover;
     -moz-background-size: cover;
     background-size: cover;
     width: 100%;
-    height: 200vh;
     position: relative;
     text-align: center;
     color: #fff;
     display: table;
 }
-
+.title{
+    padding-bottom: 2rem;
+}
 .title h1,.title h2{
-    padding-top: 1rem;
+    padding-top: 4rem;
 }
 
-nav {
+.splash {
     background-color: #0B6552;
     text-align: center;
+    height: 100vh;
+    display: table;
 }
 
-nav .button{
+.splash .button{
     display: inline-flex;
     margin: 1rem;
 }
 
-nav button{
+.splash button{
     background:rgba(255,255,255,0.3);
     border: none;
     font-size: initial;
@@ -51,19 +75,19 @@ nav button{
     transition: 0.3s;
 }
 
-nav button:hover{
+.splash button:hover{
     background:rgba(255,255,255,0.4);
     box-shadow: 0 12px 16px 0 rgba(0,0,0,0.24), 0 17px 50px 0 rgba(0,0,0,0.19);
 }
 
-nav button .fa-blog+.name{
+.splash button .fa-blog+.name{
     margin-left: 7px;
 }
 
-nav button:focus{
+.splash button:focus{
     outline: none;
 }
-nav button .icon{
+.splash button .icon{
     padding-bottom: 10px;
     padding-top: 10px;
     padding-left: 0.5ch;
@@ -74,34 +98,29 @@ nav button .icon{
     opacity: initial;
 }
 
-nav button .name{
+.splash button .name{
     display: inline;
 }
 
-.small-display{
-    display: none;
-}    
-
-.middle-display{
-    display: none;
-}
-
-@media only screen and (max-width:500px){
-    
-    .big-display{
+@media only screen and (min-width:768px){
+    .small-display{
         display: none;
-    }
+    }    
 
     .middle-display{
         display: none;
     }
 
-    .small-display{
+    .big-display{
         display: inherit;
+    }
+
+    h1{
+        font-size: 600%;
     }
 }
 
-@media only screen and (max-width:620px) and (min-width:500px){
+@media only screen and (max-width:768px) and (min-width:425px){
 
     .big-display{
         display: none;
@@ -115,9 +134,13 @@ nav button .name{
         display: none;
     }
 
+    h1{
+        font-size: 500%;
+    }
+
 }
 
-@media only screen and (max-width:620px){
+@media only screen and (max-width:425px){
     .big-display{
         display: none;
     }
@@ -128,5 +151,10 @@ nav button .name{
 
     .small-display{
         display: inherit;
+    }
+
+
+    h1{
+        font-size: 400%;
     }
 }
