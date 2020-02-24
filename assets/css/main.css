@@ -6,12 +6,35 @@ html{
 
 .rhein{
     background: #151515 url("../img/rhein4.webp") no-repeat center center;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    background-size: cover;
     height: 70vh;
 }
 
+.no-webp .rhein{
+    background: #151515 url("../img/rhein.jpg") no-repeat center center;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    background-size: cover;
+}
 
 .strassburg{
     background: #151515 url("../img/strassburg4.webp") no-repeat center center;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    background-size: cover;
+}
+
+<<<<<<< HEAD
+.no-webp .strassburg {
+=======
+.no-webp .strassburg{
+>>>>>>> 15517c1776685292faf4584e6324c160934db686
+    background: #151515 url("../img/strassburg.jpg") no-repeat center center;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    background-size: cover;
 }
 
 .splash .overlay {
@@ -35,9 +58,6 @@ hr{
 }
 
 .image{
-    -webkit-background-size: cover;
-    -moz-background-size: cover;
-    background-size: cover;
     width: 100%;
     position: relative;
     text-align: center;
@@ -50,7 +70,7 @@ hr{
 }
 
 .title h1,.title h2{
-    padding-top: 4rem;
+    padding-top: 1rem;
 }
 
 .splash {
