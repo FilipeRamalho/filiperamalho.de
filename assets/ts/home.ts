@@ -54,7 +54,7 @@ var page = {
                             )
                         ),
                         div('.button .right',
-                            a({href:"https://jolantru.de",target:"_blank",rel:"noopener noreferrer"},
+                            a({href:"#!/blog"},
                                 button('.white .blog',{'aria-disabled':"true",disabled:"true"},
                                     i('.icon .fas .orange .fa-blog'),
                                     div('.name',"Blog")

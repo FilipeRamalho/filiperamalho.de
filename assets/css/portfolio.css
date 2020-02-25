@@ -3,6 +3,7 @@
 .portfolio .bar{
     padding: 1ch;
     background-color: black;
+    height: 4vh;
     font-size: 200%;
     font-weight: bold;
     font-family: 'Roboto Condensed',sans-serif;

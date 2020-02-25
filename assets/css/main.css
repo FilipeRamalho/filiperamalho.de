@@ -130,6 +130,12 @@ button{
     transition: 0.3s;
 }
 
+iframe{
+    height: 92.4vh;
+    display: flex;
+    width: 100%;
+}
+
 button.home{
     background-color: #0B6552;
 }

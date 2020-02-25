@@ -5,6 +5,8 @@ import HomeView from './home.ts'
 import PortfolioView from './portfolio.ts'
 //@ts-ignore 
 import ScienceView from './science.ts'
+//@ts-ignore 
+import BlogView from './blog.ts'
 
 import '../../index.html'
 import '../../favicon.ico'
@@ -20,4 +22,5 @@ m.route(el, "/home", {
     "/home": HomeView,
     "/portfolio": PortfolioView,
     "/science": ScienceView,
+    "/blog": BlogView,
 })
