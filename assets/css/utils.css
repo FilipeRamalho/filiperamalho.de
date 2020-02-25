@@ -1,12 +1,30 @@
-@import url('https://fonts.googleapis.com/css?family=Roboto+Condensed:700&display=swap');
-@import url('https://rsms.me/inter/inter.css');
+@font-face {
+    font-family: "Inter";
+    font-style:  normal;
+    font-weight: 700;
+    font-display: swap;
+    src:url(../webfonts/Inter-Bold.woff2);
+}
+
+@font-face {
+    font-family: "Inter";
+    font-style:  normal;
+    font-weight: 400;
+    font-display: swap;
+    src: url(../webfonts/Inter-Regular.woff2);
+}
+
+@font-face {
+    font-family: 'Roboto Condensed';
+    font-style: normal;
+    font-weight: 700;
+    font-display: swap;
+    src: url(../webfonts/Roboto.woff2);
+}
 
 html{
-    font-family: Inter, sans-serif!important;
+    font-family: "Inter";
     text-rendering: optimizeLegibility!important;
-    color: rgb(60, 60, 60);
-    background-color: rgb(250,250,250);
-    height: 101%;
 }
 
 body{
@@ -97,7 +115,7 @@ a:link,a:visited,a:hover,a:active{
 */
 
 .roboto-font{
-    font-family: 'Roboto Condensed',sans-serif;
+    font-family: "Roboto Condensed",sans-serif;
 }
 
 .fs800{

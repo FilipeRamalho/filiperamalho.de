@@ -1,19 +1,17 @@
-@import url('utils.css');
-
 html{
     color: white;
     background-color: #0B6552;
 }
 
 .rhein{
-    background: #151515 url("../img/rhein4.webp") no-repeat center center;
+    background: #151515 url("../img/rhein.webp") no-repeat center center;
     -webkit-background-size: cover;
     -moz-background-size: cover;
     background-size: cover;
     height: 70vh;
 }
 
-.no-webp .rhein{
+.no-webp.rhein{
     background: #151515 url("../img/rhein.jpg") no-repeat center center;
     -webkit-background-size: cover;
     -moz-background-size: cover;
@@ -21,13 +19,13 @@ html{
 }
 
 .strassburg{
-    background: #151515 url("../img/strassburg4.webp") no-repeat center center;
+    background: #151515 url("../img/strassburg.webp") no-repeat center center;
     -webkit-background-size: cover;
     -moz-background-size: cover;
     background-size: cover;
 }
 
-.no-webp .strassburg{
+.no-webp.strassburg{
     background: #151515 url("../img/strassburg.jpg") no-repeat center center;
     -webkit-background-size: cover;
     -moz-background-size: cover;
