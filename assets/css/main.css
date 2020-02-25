@@ -1,4 +1,5 @@
 @import url('utils.css');
+
 html{
     color: white;
     background-color: #0B6552;
@@ -168,7 +169,7 @@ hr{
     padding: 0.5em;
 }
 
-@media only screen and (min-width:768px){
+@media only screen and (min-width:769px){
     .small-display{
         display: none;
     }    
@@ -186,7 +187,7 @@ hr{
     }
 }
 
-@media only screen and (max-width:768px) and (min-width:425px){
+@media only screen and (max-width:768px) and (min-width:426px){
 
     .big-display{
         display: none;
@@ -227,8 +228,10 @@ hr{
     }
 
     .splash .title h1{
-        max-inline-size: min-content;
+        padding-left: 0.5em;
+        padding-right: 0.5em;
     }
+
     .splash .title{
         padding-bottom: 1rem;
         text-align: -webkit-center;

@@ -1,0 +1,19 @@
+{
+  "dependencies": {
+    "@types/mithril": "^2.0.2",
+    "@types/node": "^13.1.2",
+    "hyperscript-helpers": "^3.0.3",
+    "mithril": "^2.0.4",
+    "typescript": "^3.7.4",
+    "webpack": "^4.41.5",
+    "webpack-cli": "^3.3.10"
+  },
+  "scripts": {
+    "start": "webpack assets/ts/main.ts --output bin/app.js -d --watch"
+  },
+  "name": "landing_page",
+  "main": "main.ts",
+  "repository": "https://github.com/FilipeRamalho/filiperamalho.de.git",
+  "author": "Filipe Ramalho <privat@filiperamalho.de>",
+  "license": "MIT"
+}
