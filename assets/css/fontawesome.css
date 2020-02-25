@@ -28,3 +28,7 @@
 .fa-blog:before {
 content: "\f781"; }
 
+.fa-home:before{
+  content: "\f015"
+}
+

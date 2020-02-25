@@ -13,7 +13,6 @@ module.exports = {
       {
         test: /\.(jpe?g|png|gif|svg|webp|woff2|ico|html)$/i,
         loader: 'file-loader',
-        exclude: /node_modules/,
         options: {
           name: '[path][name].[ext]'
         },
