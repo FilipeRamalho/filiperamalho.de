@@ -1,6 +1,8 @@
 import m from 'mithril'
 //@ts-ignore
 import { canUseWebP } from './utils.ts';
+//@ts-ignore 
+import Button from './button.ts'
 
 const { div,p,a,i,button,picture,source,img,h1,h2,br,hr} =
 require('hyperscript-helpers')(m);
@@ -27,49 +29,55 @@ var page = {
                         h2('.no-margin .roboto-font .fs100 .uppercase .small-display',"Entwickler", br(), "Schüler",br(), "Physik Enthusiast"),
                     ]),
                     div('.row',[
-                        div('.button .left',
-                            a({href:"https://twitter.com/filipe_mdsr",target:"_blank",rel:"noopener noreferrer"},
-                                button('.white .twitter',{'aria-disabled':"true",disabled:"true"},
-                                    i('.icon .fab .twitterblue .fa-twitter'),
-                                    div('.name',"Twitter")
-                                )
-                            )
+                        div('.button',
+                            m(Button,{
+                                newtab: true,
+                                href:"https://twitter.com/filipe_mdsr",
+                                color:".twitter",
+                                icon:".fab .twitterblue .fa-twitter",
+                                name:"Twitter"
+                            })
                         ),
-                        div('.button .right',
-                            a({href:"https://github.com/FilipeRamalho",target:"_blank",rel:"noopener noreferrer"},
-                                button('.white .github',{'aria-disabled':"true",disabled:"true"},
-                                    i('.icon .fab .black .fa-github'),
-                                    div('.name',"Github")
-                                )
-                            )
+                        div('.button',
+                            m(Button,{
+                                newtab: true,
+                                href:"https://github.com/FilipeRamalho",
+                                color:".github",
+                                icon:".fab .black .fa-github",
+                                name:"Github"
+                            })
                         )
                     ]),
                     div('.row',[
-                        div('.button .left',
-                            a({href:"#!/portfolio"},
-                                button('.white .portfolio',{'aria-disabled':"true",disabled:"true"},
-                                    i('.icon .fas .red .fa-briefcase'),
-                                    div('.name',"Portfolio")
-                                )
-                            )
+                        
+                        div('.button',
+                            m(Button,{
+                                newtab: false,
+                                href:"#!/portfolio",
+                                color:".portfolio",
+                                icon:".fas .red .fa-briefcase",
+                                name:"Portfolio"
+                            })
                         ),
-                        div('.button .right',
-                            a({href:"https://jolantru.de",target:"_blank",rel:"noopener noreferrer"},
-                                button('.white .blog',{'aria-disabled':"true",disabled:"true"},
-                                    i('.icon .fas .orange .fa-blog'),
-                                    div('.name',"Blog")
-                                )
-                            )
+                        div('.button',
+                            m(Button,{
+                                newtab: true,
+                                href:"https://jolantru.de",
+                                color:".blog",
+                                icon:".fas .orange .fa-blog",
+                                name:"Blog"
+                            })
                         )
                     ]),
                     div('.row',[
-                        div('.button .left',
-                            a({href:"#!/science"},
-                                button('.white .science',{'aria-disabled':"true",disabled:"true"},
-                                    i('.icon .fas .science-green .fa-microscope'),
-                                    div('.name',"Wissenschaftliche Arbeiten")
-                                )
-                            )
+                        div('.button',
+                            m(Button,{
+                                newtab: false,
+                                href:"#!/science",
+                                color:".scince",
+                                icon:".fas .science-green .fa-microscope",
+                                name:"Wissenschaftliche Arbeiten"
+                            })
                         )
                     ])
                 ]) 

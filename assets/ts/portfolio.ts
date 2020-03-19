@@ -1,6 +1,8 @@
 import m from 'mithril'
 //@ts-ignore
 import { canUseWebP } from './utils.ts';
+//@ts-ignore 
+import Card from './card.ts'
 import '../css/portfolio.css'
 
 const { div,p,a,i,button,picture,source,img,h1,h2,br,hr} =
@@ -24,16 +26,12 @@ var page = {
                     ])
                 )
             ]),
-            div('.text-center',[
-                div('.card',[
-                    img({src:"assets/img/website4.webp"}),
-                    div('.card-title',
-                        p('.no-margin .bold .card-title-text',"Develop experiences")
-                    ),
-                    div('.card-text',
-                        p('.no-margin .black',"Test")
-                    )
-                ])
+            div('.text-center',[                
+                m(Card,{
+                    src:"assets/img/website4.webp",
+                    title:"Develop experiences",
+                    text:"Test"
+                })
             ])
         ])
     }

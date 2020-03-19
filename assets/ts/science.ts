@@ -1,6 +1,8 @@
 import m from 'mithril'
 //@ts-ignore
 import { canUseWebP } from './utils.ts';
+//@ts-ignore
+import Card from './card.ts'
 import '../css/portfolio.css'
 
 const { div,p,a,i,button,picture,source,img,h1,h2,br,hr} =
@@ -25,15 +27,11 @@ var page = {
                 )
             ]),
             div('.text-center',[
-                div('.card',[
-                    img({src:"assets/img/bll.png"}),
-                    div('.card-title',
-                        p('.no-margin .bold .card-title-text',"Neutrino- forschung am IceCube-Projekt")
-                    ),
-                    div('.card-text',
-                        p('.no-margin .black',"Das IceCube ermöglicht es Supernovae schneller zu finden, wodurch man mehr Daten über die Supernovae sammeln kann. Das IceCube-Projekt ist besonders durch seine Kollaboration erfolgreich, welche so groß geworden ist. In der Neutrinophysik stehen noch viele offene Fragen, es könnte das interessanteste Fachbereich der Physik sein in den nächsten Jahren.")
-                    )
-                ])
+                m(Card,{
+                    src:"assets/img/bll.png",
+                    title:"Neutrino- forschung am IceCube-Projekt",
+                    text:"Das IceCube ermöglicht es Supernovae schneller zu finden, wodurch man mehr Daten über die Supernovae sammeln kann. Das IceCube-Projekt ist besonders durch seine Kollaboration erfolgreich, welche so groß geworden ist. In der Neutrinophysik stehen noch viele offene Fragen, es könnte das interessanteste Fachbereich der Physik sein in den nächsten Jahren."
+                })
             ])
         ])
     }
