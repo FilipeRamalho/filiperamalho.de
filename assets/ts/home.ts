@@ -49,16 +49,6 @@ var page = {
                         )
                     ]),
                     div('.row',[
-                        
-                        div('.button',
-                            m(Button,{
-                                newtab: false,
-                                href:"#!/portfolio",
-                                color:".portfolio",
-                                icon:".fas .red .fa-briefcase",
-                                name:"Portfolio"
-                            })
-                        ),
                         div('.button',
                             m(Button,{
                                 newtab: true,
@@ -66,17 +56,6 @@ var page = {
                                 color:".blog",
                                 icon:".fas .orange .fa-blog",
                                 name:"Blog"
-                            })
-                        )
-                    ]),
-                    div('.row',[
-                        div('.button',
-                            m(Button,{
-                                newtab: false,
-                                href:"#!/science",
-                                color:".scince",
-                                icon:".fas .science-green .fa-microscope",
-                                name:"Wissenschaftliche Arbeiten"
                             })
                         )
                     ])
