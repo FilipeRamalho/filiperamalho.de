@@ -29,10 +29,10 @@ var page = {
                 div('.content',[
                     div('.title white .verdana-font text-center',[
                         h1('.no-margin',span('.rainbow',"Filipe Ramalho")),
-                        h2('.no-margin .fs200 .uppercase .big-display',"Student • Programierer • Radfahrer"),
-                        h2('.no-margin .fs100 .uppercase .middle-display',"Student • Programierer • Radfahrer"),
-                        h2('.no-margin .fs100 .uppercase .small-display',"Student", br(), "Programierer",br(), "Radfahrer"),
-                        h2('.no-margin .fs100 .uppercase .mini-display',"Student", br(), "Programierer",br(), "Radfahrer"),
+                        h2('.no-margin .fs200 .uppercase .big-display',"Student • Programmierer • Radfahrer"),
+                        h2('.no-margin .fs100 .uppercase .middle-display',"Student • Programmierer • Radfahrer"),
+                        h2('.no-margin .fs100 .uppercase .small-display',"Student", br(), "Programmierer",br(), "Radfahrer"),
+                        h2('.no-margin .fs100 .uppercase .mini-display',"Student", br(), "Programmierer",br(), "Radfahrer"),
                     ]),
                     div('.row',[
                         div('.button',

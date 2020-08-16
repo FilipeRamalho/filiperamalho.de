@@ -98,6 +98,7 @@ a:link,a:visited,a:hover,a:active{
     background-clip: text;
     transition: color 1s
 }
+
 .rainbow:hover{
     color: transparent
 }
