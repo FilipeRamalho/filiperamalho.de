@@ -1,7 +1,7 @@
 import m from 'mithril'
 //@ts-ignore
 import { canUseWebP } from './utils.ts';
-//@ts-ignore 
+//@ts-ignore
 import Button from './button.ts'
 
 const { div,p,a,i,button,picture,source,img,h1,h2,br,hr} =
@@ -22,11 +22,12 @@ var page = {
                     p('.no-margin',"Place de la Cathédrale, Straßbug")
                 ),
                 div('.content',[
-                    div('.title white text-center',[
-                        h1('.no-margin .roboto-font',"Filipe Ramalho"),
-                        h2('.no-margin .roboto-font .fs200 .uppercase .big-display',"Entwickler • Schüler • Physik Enthusiast"),
-                        h2('.no-margin .roboto-font .fs200 .uppercase .middle-display',"Entwickler • Schüler",br(), "Physik Enthusiast"),
-                        h2('.no-margin .roboto-font .fs100 .uppercase .small-display',"Entwickler", br(), "Schüler",br(), "Physik Enthusiast"),
+                    div('.title white .verdana-font text-center',[
+                        h1('.no-margin',"Filipe Ramalho"),
+                        h2('.no-margin .fs200 .uppercase .big-display',"Entwickler • Schüler • Physik Enthusiast"),
+                        h2('.no-margin .fs100 .uppercase .middle-display',"Entwickler • Schüler • Physik Enthusiast"),
+                        h2('.no-margin .fs100 .uppercase .small-display',"Entwickler", br(), "Schüler",br(), "Physik Enthusiast"),
+                        h2('.no-margin .fs100 .uppercase .mini-display',"Entwickler", br(), "Schüler",br(), "Physik Enthusiast"),
                     ]),
                     div('.row',[
                         div('.button',
@@ -59,7 +60,7 @@ var page = {
                             })
                         )
                     ])
-                ]) 
+                ])
             ]),
             div('.rhein .image ' + webp,
                 div('.image-location',

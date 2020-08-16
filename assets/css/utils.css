@@ -1,35 +1,11 @@
-@font-face {
-    font-family: "Inter";
-    font-style:  normal;
-    font-weight: 700;
-    font-display: swap;
-    src:url(../webfonts/Inter-Bold.woff2);
-}
-
-@font-face {
-    font-family: "Inter";
-    font-style:  normal;
-    font-weight: 400;
-    font-display: swap;
-    src: url(../webfonts/Inter-Regular.woff2);
-}
-
-@font-face {
-    font-family: 'Roboto Condensed';
-    font-style: normal;
-    font-weight: 700;
-    font-display: swap;
-    src: url(../webfonts/Roboto.woff2);
-}
-
 html{
-    font-family: "Inter";
+    font-family: "Trebuchet MS";
     text-rendering: optimizeLegibility!important;
 }
 
 body{
     margin:0;
-    padding:0;    
+    padding:0;
 }
 
 
@@ -114,8 +90,8 @@ a:link,a:visited,a:hover,a:active{
 * Fonts
 */
 
-.roboto-font{
-    font-family: "Roboto Condensed",sans-serif;
+.verdana-font{
+    font-family: "Verdana",sans-serif;
 }
 
 .fs800{
@@ -256,6 +232,6 @@ a:link,a:visited,a:hover,a:active{
 * Main divs
 */
 
-.main{    
+.main{
     white-space: nowrap;
 }

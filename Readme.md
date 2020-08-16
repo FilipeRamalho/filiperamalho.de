@@ -10,11 +10,10 @@ Enter development mode with:
 
 - yarn start
 
-The build is under /bin. Copy that folder to deploy.
+The build is under /bin. Copy the contents of the folder to deploy.
 (NOTE: The server should support brotli for optimal network compression)
 
 
-# Files that has to be updated manually
+# Notes
 
-- Fontawesome
-- Inter font
+The Fontawesome css is a reduced set of the original css files
