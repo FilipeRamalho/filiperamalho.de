@@ -192,7 +192,7 @@ button .name{
     }
 
     h1{
-        font-size: 600%;
+        font-size: 700%;
     }
 }
 
@@ -226,12 +226,12 @@ button .name{
     }
 
     h1{
-        font-size: 500%;
+        font-size: 600%;
     }
 
 }
 
-@media only screen and (max-width:764px) and (min-width:350px){
+@media only screen and (max-width:764px) and (min-width:555px){
     .big-display{
         display: none;
     }
@@ -259,21 +259,11 @@ button .name{
     }
 
     h1{
-        font-size: 400%;
-    }
-
-    .row{
-        display: block;
-    }
-
-    .splash .button{
-        margin-top: 0;
-        margin-bottom: 40px;
-        display: block;
+        font-size: 500%;
     }
 }
 
-@media only screen and (max-width:350px){
+@media only screen and (max-width:555px){
     .big-display{
         display: none;
     }

@@ -90,6 +90,28 @@ a:link,a:visited,a:hover,a:active{
 * Fonts
 */
 
+.rainbow{
+    background-image: -webkit-gradient( linear, left top, right top, color-stop(0, red), color-stop(0.2, orange), color-stop(0.4, yellow), color-stop(0.6, green), color-stop(0.8, blue), color-stop(1, purple) );
+    background-image: gradient( linear, left top, right top, color-stop(0, red), color-stop(0.2, orange), color-stop(0.4, yellow), color-stop(0.6, green), color-stop(0.8, blue), color-stop(1, purple) );
+    color:transparent;
+    -webkit-background-clip: text;
+    background-clip: text;
+    animation: rainbow both;
+}
+
+@keyframes rainbow{
+    0%{
+        color: transparent;
+    }
+    100% {
+        color: white;
+    }
+}
+
+.rainbow:hover{
+    animation: rainbow;
+}
+
 .verdana-font{
     font-family: "Verdana",sans-serif;
 }

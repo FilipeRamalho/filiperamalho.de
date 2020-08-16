@@ -4,7 +4,7 @@ import { canUseWebP } from './utils.ts';
 //@ts-ignore
 import Button from './button.ts'
 
-const { div,p,a,i,button,picture,source,img,h1,h2,br,hr} =
+const { div,p,a,i,button,picture,source,img,h1,h2,br,hr,span} =
 require('hyperscript-helpers')(m);
 
 var webp = "no-webp";
@@ -23,11 +23,11 @@ var page = {
                 ),
                 div('.content',[
                     div('.title white .verdana-font text-center',[
-                        h1('.no-margin',"Filipe Ramalho"),
-                        h2('.no-margin .fs200 .uppercase .big-display',"Entwickler • Schüler • Physik Enthusiast"),
-                        h2('.no-margin .fs100 .uppercase .middle-display',"Entwickler • Schüler • Physik Enthusiast"),
-                        h2('.no-margin .fs100 .uppercase .small-display',"Entwickler", br(), "Schüler",br(), "Physik Enthusiast"),
-                        h2('.no-margin .fs100 .uppercase .mini-display',"Entwickler", br(), "Schüler",br(), "Physik Enthusiast"),
+                        h1('.no-margin',span('.rainbow',"Filipe Ramalho")),
+                        h2('.no-margin .fs200 .uppercase .big-display',"Student • Programierer • Radfahrer"),
+                        h2('.no-margin .fs100 .uppercase .middle-display',"Student • Programierer • Radfahrer"),
+                        h2('.no-margin .fs100 .uppercase .small-display',"Student", br(), "Programierer",br(), "Radfahrer"),
+                        h2('.no-margin .fs100 .uppercase .mini-display',"Student", br(), "Programierer",br(), "Radfahrer"),
                     ]),
                     div('.row',[
                         div('.button',
