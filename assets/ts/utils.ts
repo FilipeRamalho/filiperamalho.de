@@ -9,3 +9,11 @@ export function canUseWebP() {
     // very old browser like IE 8, canvas not supported
     return false;
 }
+
+export function isMobile(){
+    if (/Mobi|Android/i.test(navigator.userAgent)) {
+        return true
+    }
+
+    return false
+}

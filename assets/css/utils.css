@@ -93,23 +93,22 @@ a:link,a:visited,a:hover,a:active{
 .rainbow{
     background-image: -webkit-gradient( linear, left top, right top, color-stop(0, red), color-stop(0.2, orange), color-stop(0.4, yellow), color-stop(0.6, green), color-stop(0.8, blue), color-stop(1, purple) );
     background-image: gradient( linear, left top, right top, color-stop(0, red), color-stop(0.2, orange), color-stop(0.4, yellow), color-stop(0.6, green), color-stop(0.8, blue), color-stop(1, purple) );
-    color:transparent;
     -webkit-background-clip: text;
     background-clip: text;
-    animation: rainbow both;
 }
 
 @keyframes rainbow{
-    0%{
-        color: transparent;
-    }
-    100% {
+    from{
         color: white;
+    }
+    to{
+        color: transparent;
     }
 }
 
 .rainbow:hover{
-    animation: rainbow;
+    animation: rainbow 3s;
+    animation-fill-mode: forwards;
 }
 
 .verdana-font{

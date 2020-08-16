@@ -1,22 +1,27 @@
 import m from 'mithril'
 //@ts-ignore
-import { canUseWebP } from './utils.ts';
+import { canUseWebP, isMobile } from './utils.ts';
 //@ts-ignore
 import Button from './button.ts'
 
 const { div,p,a,i,button,picture,source,img,h1,h2,br,hr,span} =
 require('hyperscript-helpers')(m);
 
-var webp = "no-webp";
+var webp = " no-webp ";
+var mobile = " no-mobile "
 
 if(canUseWebP()){
-    webp = "webp";
+    webp = " webp ";
+}
+
+if(isMobile()){
+    mobile = " mobile ";
 }
 
 var page = {
     view: function() {
         return div('.fancy',[
-            div('.splash .white .strassburg .image ' + webp,[
+            div('.splash .white .strassburg .image ' + webp + mobile,[
                 div('.overlay'),
                 div('.image-location',
                     p('.no-margin',"Place de la Cathédrale, Straßbug")

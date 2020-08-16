@@ -3,11 +3,6 @@ html{
     background-color: #0B6552;
 }
 
-.fancy {animation:fade-in 0.5s;}
-@keyframes fade-in {
-    from {opacity:0;}
-    to {opacity:1;}
-}
 
 .rhein{
     background: #151515 url("../img/rhein.webp") no-repeat center center;
@@ -101,10 +96,19 @@ hr{
     padding-top: 1rem;
 }
 
+.splash.mobile{
+    padding-top: 5em;
+    padding-bottom: 5em;
+    height: fit-content;
+}
+
+.splash.no-mobile{
+    height: 100vh;
+}
+
 .splash {
     background-color: #0B6552;
     text-align: center;
-    height: 100vh;
     display: table;
 }
 
