@@ -1,7 +1,6 @@
 import m from 'mithril'
 //@ts-ignore
 import { canUseWebP } from './utils.ts';
-import '../css/portfolio.css'
 
 const { div,p,a,i,button,picture,source,img,h1,h2,br,hr} =
 require('hyperscript-helpers')(m);

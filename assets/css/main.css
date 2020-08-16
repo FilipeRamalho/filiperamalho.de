@@ -118,15 +118,11 @@ hr{
 }
 
 button{
-    background:#809d3196;
     border: none;
     font-size: initial;
     padding: 0;
-    padding-right: 7px;
     border-radius: 3px;
-    text-align: left;
-    min-width: 90px;
-    font-size: 140%;
+    font-size: 130%;
     transition: 0.3s;
 }
 
@@ -175,13 +171,13 @@ button .icon{
 
 button .name{
     display: inline;
-    padding: 0.5em;
+    padding: 1em;
 }
 
-@media only screen and (min-width:769px){
+@media only screen and (min-width:1064px){
     .small-display{
         display: none;
-    }    
+    }
 
     .middle-display{
         display: none;
@@ -189,6 +185,10 @@ button .name{
 
     .big-display{
         display: inherit;
+    }
+
+    .mini-display{
+        display: none;
     }
 
     h1{
@@ -196,7 +196,7 @@ button .name{
     }
 }
 
-@media only screen and (max-width:768px) and (min-width:426px){
+@media only screen and (max-width:1064px) and (min-width:764px){
 
     .big-display{
         display: none;
@@ -207,6 +207,10 @@ button .name{
     }
 
     .small-display{
+        display: none;
+    }
+
+    .mini-display{
         display: none;
     }
 
@@ -215,35 +219,10 @@ button .name{
         margin-top: 5em;
         margin-bottom: 5em;
         display: inherit;
-    } 
+    }
 
     .quote .text{
         margin:0
-    }
-    
-    .row{
-        display: table-row-group;
-    }
-
-    .splash .content{
-        text-align: -webkit-center;
-    }
-    .left{
-        float: left;
-    }
-
-    .right{
-        float: right;
-    }
-
-    .splash .title h1{
-        padding-left: 0.5em;
-        padding-right: 0.5em;
-    }
-
-    .splash .title{
-        padding-bottom: 1rem;
-        text-align: -webkit-center;
     }
 
     h1{
@@ -252,7 +231,7 @@ button .name{
 
 }
 
-@media only screen and (max-width:425px){
+@media only screen and (max-width:764px) and (min-width:350px){
     .big-display{
         display: none;
     }
@@ -265,6 +244,9 @@ button .name{
         display: inherit;
     }
 
+    .mini-display{
+        display: none;
+    }
     .quote{
         margin: 0;
         margin-top: 5em;
@@ -286,15 +268,49 @@ button .name{
 
     .splash .button{
         margin-top: 0;
+        margin-bottom: 40px;
         display: block;
-        font-size: 70%;
+    }
+}
+
+@media only screen and (max-width:350px){
+    .big-display{
+        display: none;
     }
 
-    .splash .title h1{
-        max-inline-size: min-content;
+    .middle-display{
+        display: none;
     }
 
-    .splash .title{
-        text-align: -webkit-center;
+    .small-display{
+        display: none;
+    }
+
+    .mini-display{
+        display: inherit;
+    }
+    .quote{
+        margin: 0;
+        margin-top: 5em;
+        margin-bottom: 5em;
+        display: inherit;
+    }
+
+    .quote .text{
+        margin:0
+    }
+
+    h1{
+        font-size: 300%;
+    }
+
+    .row{
+        display: block;
+    }
+
+    .splash .button{
+        margin-top: 0;
+        margin-bottom: 40px;
+        display: block;
     }
 }
