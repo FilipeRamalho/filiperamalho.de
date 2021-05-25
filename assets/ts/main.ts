@@ -1,6 +1,8 @@
 import m from 'mithril'
 //@ts-ignore
 import HomeView from './home.ts'
+//@ts-ignore
+import FCView from './fc.ts'
 
 import '../../index.html'
 import '../../favicon.ico'
@@ -13,5 +15,6 @@ const stylesheets = importAll(require.context('../css/', false, /\.(css)$/));
 
 const el = document.getElementById('content')
 m.route(el, "/home", {
-    "/home": HomeView
+    "/home": HomeView,
+    "/switch": FCView
 })

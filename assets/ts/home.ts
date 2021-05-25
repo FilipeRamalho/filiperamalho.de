@@ -57,11 +57,11 @@ var page = {
                     div('.row',[
                         div('.button',
                             m(Button,{
-                                newtab: true,
-                                href:"https://jolantru.de",
-                                color:".blog",
-                                icon:".fas .orange .fa-blog",
-                                name:"Blog"
+                                newtab: false,
+                                href:"#!/switch",
+                                color:".switch",
+                                icon:".fas .red .fa-gamepad",
+                                name:"Friend Code"
                             })
                         )
                     ])

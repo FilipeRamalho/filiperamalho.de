@@ -150,6 +150,10 @@ button.portfolio{
     background-color: rgba(184, 22, 22, 0.6);
 }
 
+button.switch{
+    background-color:  #e4000f;
+}
+
 button.science{
     background-color: rgba(122, 184, 22, 0.6);
 }
