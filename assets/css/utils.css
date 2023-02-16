@@ -35,6 +35,14 @@ a:link,a:visited,a:hover,a:active{
     color: #e4000f;
 }
 
+.JGUred {
+    color: #c1002a;
+}
+
+.mastodonpurple {
+    color: rgba(93, 80, 231, 0.6);
+}
+
 .orange{
     color: orange;
 }

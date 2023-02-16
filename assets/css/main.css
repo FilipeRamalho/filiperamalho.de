@@ -154,6 +154,14 @@ button.switch{
     background-color:  #e4000f;
 }
 
+button.mastodon {
+    background-color: rgba(93, 80, 231, 0.6);
+}
+
+button.FSR {
+    background-color: #c1002a;
+}
+
 button.science{
     background-color: rgba(122, 184, 22, 0.6);
 }

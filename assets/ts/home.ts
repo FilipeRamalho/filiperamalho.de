@@ -21,6 +21,7 @@ if(isMobile()){
 var page = {
     view: function() {
         return div('.fancy',[
+            a({rel:'me',href:'https://tech.lgbt/@filipe_mdsr', style:'display:none'},'Mastodon'),
             div('.splash .white .strassburg .image ' + webp + mobile,[
                 div('.overlay'),
                 div('.image-location',
@@ -29,19 +30,19 @@ var page = {
                 div('.content',[
                     div('.title white .verdana-font text-center',[
                         h1('.no-margin',span('.rainbow',"Filipe Ramalho")),
-                        h2('.no-margin .fs200 .uppercase .big-display',"Student • Programmierer • Radfahrer"),
-                        h2('.no-margin .fs100 .uppercase .middle-display',"Student • Programmierer • Radfahrer"),
-                        h2('.no-margin .fs100 .uppercase .small-display',"Student", br(), "Programmierer",br(), "Radfahrer"),
-                        h2('.no-margin .fs100 .uppercase .mini-display',"Student", br(), "Programmierer",br(), "Radfahrer"),
+                        h2('.no-margin .fs200 .uppercase .big-display',"Student • Hiwi • Radfahrer"),
+                        h2('.no-margin .fs100 .uppercase .middle-display',"Student • Hiwi • Radfahrer"),
+                        h2('.no-margin .fs100 .uppercase .small-display',"Student", br(), "Hiwi",br(), "Radfahrer"),
+                        h2('.no-margin .fs100 .uppercase .mini-display',"Student", br(), "Hiwi",br(), "Radfahrer"),
                     ]),
                     div('.row',[
                         div('.button',
                             m(Button,{
                                 newtab: true,
-                                href:"https://twitter.com/filipe_mdsr",
-                                color:".twitter",
-                                icon:".fab .twitterblue .fa-twitter",
-                                name:"Twitter"
+                                href:"https://tech.lgbt/@filipe_mdsr",
+                                color:".mastodon",
+                                icon:".fab .mastodonpurple .fa-mastodon",
+                                name:"Mastodon"
                             })
                         ),
                         div('.button',
@@ -58,10 +59,10 @@ var page = {
                         div('.button',
                             m(Button,{
                                 newtab: false,
-                                href:"#!/switch",
-                                color:".switch",
-                                icon:".fas .red .fa-gamepad",
-                                name:"Friend Code"
+                                href:"https://fachschaft.physik.uni-mainz.de/fachschaftsrat/mitglieder/",
+                                color:".FSR",
+                                icon:".fas .JGUred .fa-uni",
+                                name:"FSR"
                             })
                         )
                     ])
