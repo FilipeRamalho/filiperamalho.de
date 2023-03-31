@@ -48,6 +48,15 @@ var page = {
                         div('.button',
                             m(Button,{
                                 newtab: true,
+                                href:"https://twitter.com/filipe_mdsr",
+                                color:".twitter",
+                                icon:".fab .twitterblue .fa-twitter",
+                                name:"Twitter"
+                            })
+                        ),
+                        div('.button',
+                            m(Button,{
+                                newtab: true,
                                 href:"https://github.com/FilipeRamalho",
                                 color:".github",
                                 icon:".fab .black .fa-github",

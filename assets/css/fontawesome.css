@@ -37,7 +37,7 @@
   line-height: 1; }
 
 .fa-mastodon:before {
-    content: "\f4f6"; }
+  content: "\f4f6"; }
 
 .fa-briefcase:before {
   content: "\f0b1"; }
@@ -55,10 +55,11 @@
   content: "\f781"; }
 
 .fa-home:before{
-  content: "\f015"
-}
+  content: "\f015"; }
+
+.fa-twitter:before {
+  content: "\f099"; }
 
 .fa-uni:before{
-  content: "\f19c"
-}
+  content: "\f19c"; }
 
