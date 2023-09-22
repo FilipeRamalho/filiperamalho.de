@@ -3,6 +3,7 @@ import m from 'mithril'
 import { canUseWebP, isMobile } from './utils.ts';
 //@ts-ignore
 import Button from './button.ts'
+import StarFleetImage from '../img/starfleet.png'
 
 const { div,p,a,i,button,picture,source,img,h1,h2,br,hr,span} =
 require('hyperscript-helpers')(m);
@@ -83,7 +84,7 @@ var page = {
                 )
             ),
             div('.quote',[
-                img('.inline-block',{src:"assets/img/starfleet.png",alt:"Starfleet icon"}),
+                img('.inline-block',{src:StarFleetImage,alt:"Starfleet icon"}),
                 div('.text',[
                     h1("It's possible to commit no mistakes and still lose. That's not a weakness, that is life."),
                     h2("-Jean-Luc Picard")

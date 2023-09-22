@@ -1,8 +1,6 @@
 import m from 'mithril'
-//@ts-ignore
-import HomeView from './home.ts'
-//@ts-ignore
-import FCView from './fc.ts'
+import HomeView from './home'
+import FCView from './fc'
 
 import '../../index.html'
 import '../../favicon.ico'
@@ -10,7 +8,7 @@ import '../../favicon.ico'
 function importAll(r) {
     return r.keys().map(r);
 }
-const images = importAll(require.context('../img/', false, /\.(png|jpe?g|svg|webp)$/));
+const images = importAll(require.context('../img/', false, /\.(png|jpe?g|webp)$/));
 const stylesheets = importAll(require.context('../css/', false, /\.(css)$/));
 
 const el = document.getElementById('content')

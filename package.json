@@ -1,22 +1,23 @@
 {
   "dependencies": {
     "@types/mithril": "^2.0.2",
-    "@types/node": "^13.1.2",
+    "@types/node": "^20.6.3",
     "@types/webpack-env": "^1.15.2",
-    "compression-webpack-plugin": "^3.1.0",
-    "css-loader": "^3.4.2",
-    "file-loader": "^5.1.0",
+    "compression-webpack-plugin": "^10.0.0",
+    "css-loader": "^6.8.1",
+    "file-loader": "^6.2.0",
     "hyperscript-helpers": "^3.0.3",
-    "image-webpack-loader": "^6.0.0",
+    "image-webpack-loader": "^8.1.0",
     "mithril": "^2.0.4",
-    "style-loader": "^1.1.3",
-    "typescript": "^3.7.4",
-    "webpack": "^4.41.5",
-    "webpack-cli": "^3.3.10"
+    "style-loader": "^3.3.3",
+    "typescript": "^5.2.2",
+    "webpack": "^5.88.2",
+    "webpack-cli": "^5.1.4",
+    "yarn-audit-fix": "^10.0.1"
   },
   "scripts": {
-    "start": "webpack assets/ts/main.ts --output bin/app.js -d --watch",
-    "build": "webpack assets/ts/main.ts --output bin/app.js -p"
+    "start": "webpack --config webpack.config.js --watch",
+    "build": "webpack --config webpack.config.js"
   },
   "name": "filiperamalho.de",
   "main": "main.ts",

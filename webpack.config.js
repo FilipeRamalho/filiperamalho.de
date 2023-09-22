@@ -1,6 +1,22 @@
 const CompressionPlugin = require('compression-webpack-plugin');
+const path = require('path');
+
 
 module.exports = {
+  entry: './assets/ts/main.ts',
+  output: {
+    path: path.resolve(__dirname, 'bin'),
+    filename: 'app.js',
+    publicPath: '/',
+  },
+  resolve: {
+    extensions: ['.tsx', '.ts', '.js', '.json'],
+  },
+  devServer: {
+    contentBase: path.resolve(__dirname, ''),
+    port: 3000,
+    watchFiles: ['assets/**/*'],
+  },
   module: {
     rules: [
       {
@@ -8,20 +24,19 @@ module.exports = {
         use: [
           'style-loader',
           'css-loader',
-        ],
+        ]
       },
       {
-        test: /\.(jpe?g|png|gif|svg|webp|woff2|ico|html)$/i,
-        loader: 'file-loader',
-        options: {
-          name: '[path][name].[ext]'
-        },
+        test: /\.(jpe?g|png|gif|woff2|svg|webp|ico|html)$/i,
+        type: 'asset/resource',
+        generator: {
+          filename: '[name][ext]'
+        }
       }
     ]
   },
   plugins: [
     new CompressionPlugin({
-      filename: '[path].br[query]',
       algorithm: 'brotliCompress',
       compressionOptions: { level: 11 },
       threshold: 10240,
@@ -29,4 +44,5 @@ module.exports = {
       deleteOriginalAssets: false,
     })
   ],
+  mode: 'production'
 };

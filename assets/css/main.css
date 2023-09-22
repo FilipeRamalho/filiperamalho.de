@@ -13,21 +13,21 @@ html{
 }
 
 .no-webp.rhein{
-    background: #151515 url("../img/rhein.jpg") no-repeat center center;
+    background: #151515 url("/assets/img/rhein.jpg") no-repeat center center;
     -webkit-background-size: cover;
     -moz-background-size: cover;
     background-size: cover;
 }
 
 .strassburg{
-    background: #151515 url("../img/strassburg.webp") no-repeat center center;
+    background: #151515 url("/assets/img/strassburg.webp") no-repeat center center;
     -webkit-background-size: cover;
     -moz-background-size: cover;
     background-size: cover;
 }
 
 .no-webp.strassburg{
-    background: #151515 url("../img/strassburg.jpg") no-repeat center center;
+    background: #151515 url("/assets/img/strassburg.jpg") no-repeat center center;
     -webkit-background-size: cover;
     -moz-background-size: cover;
     background-size: cover;
