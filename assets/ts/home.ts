@@ -39,7 +39,7 @@ var page = {
                         div('.button',
                             m(Button,{
                                 newtab: true,
-                                href:"https://threads.net/@filipe_mdsr",
+                                href:"https://threads.net/@filipe.mdsr",
                                 color:".threads",
                                 icon:".fab .black .fa-threads",
                                 name:"Threads"
