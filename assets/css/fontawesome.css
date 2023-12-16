@@ -60,6 +60,9 @@
 .fa-twitter:before {
   content: "\f099"; }
 
+.fa-threads:before{
+  content: "\e618"
+}
 .fa-uni:before{
   content: "\f19c"; }
 

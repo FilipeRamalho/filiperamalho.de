@@ -22,7 +22,6 @@ if(isMobile()){
 var page = {
     view: function() {
         return div('.fancy',[
-            a({rel:'me',href:'https://tech.lgbt/@filipe_mdsr', style:'display:none'},'Mastodon'),
             div('.splash .white .strassburg .image ' + webp + mobile,[
                 div('.overlay'),
                 div('.image-location',
@@ -40,19 +39,10 @@ var page = {
                         div('.button',
                             m(Button,{
                                 newtab: true,
-                                href:"https://tech.lgbt/@filipe_mdsr",
-                                color:".mastodon",
-                                icon:".fab .mastodonpurple .fa-mastodon",
-                                name:"Mastodon"
-                            })
-                        ),
-                        div('.button',
-                            m(Button,{
-                                newtab: true,
-                                href:"https://twitter.com/filipe_mdsr",
-                                color:".twitter",
-                                icon:".fab .twitterblue .fa-twitter",
-                                name:"Twitter"
+                                href:"https://threads.net/@filipe_mdsr",
+                                color:".threads",
+                                icon:".fab .black .fa-threads",
+                                name:"Threads"
                             })
                         ),
                         div('.button',
@@ -64,7 +54,7 @@ var page = {
                                 name:"Github"
                             })
                         )
-                    ]),
+                    ]),/**
                     div('.row',[
                         div('.button',
                             m(Button,{
@@ -75,7 +65,7 @@ var page = {
                                 name:"FSR"
                             })
                         )
-                    ])
+                    ])*/
                 ])
             ]),
             div('.rhein .image ' + webp,

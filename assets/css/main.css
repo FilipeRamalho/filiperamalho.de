@@ -134,8 +134,14 @@ button.home{
     background-color: #0B6552;
 }
 
-button.twitter{
-    background-color: rgba(29, 160, 242, 0.6);
+button.threads{
+    background: #d6249f;
+    background: radial-gradient(circle at 30% 107%, #fdf49781 0%, #fdf49781 5%, #fd584981 45%,#d6249f81 60%,#285AEB81 90%);
+    text-shadow: 0 0 20px #000;
+}
+
+button.threads i{
+    text-shadow: none;
 }
 
 button.github{
