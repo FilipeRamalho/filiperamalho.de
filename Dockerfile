@@ -1,5 +1,5 @@
 # Use an official Node.js runtime as the base image
-FROM node:20 as build
+FROM node:20-alpine as build
 LABEL org.opencontainers.image.source="https://github.com/Capy-IT/WebTemplate"
 
 # Set the working directory in the container
