@@ -1,6 +1,7 @@
-.vscode
-node_modules
-yarn.lock
-bin
-.DS_Store
+.parcel-cache
 .idea
+.DS_Store
+*.iml
+dist
+node_modules
+*~lock~

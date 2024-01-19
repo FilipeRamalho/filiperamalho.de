@@ -1,0 +1,22 @@
+.page{
+
+}
+
+.view {
+    padding: 20px;
+    background-color: #fff;
+    border-radius: 5px;
+    box-shadow: 0 0 5px rgba(0, 0, 0, .1);
+    font-size: 4em;
+    margin: 1em 1em 20px;
+}
+
+.view:active {
+    box-shadow: 0 0 20px rgba(255, 255, 255, 0.3);
+}
+
+.views {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+}
