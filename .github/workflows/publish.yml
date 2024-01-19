@@ -1,6 +1,8 @@
 name: Release Image
 on:
   push:
+    branches:
+      - 'master'
     tags:
       - 'v*'
   workflow_dispatch:
@@ -31,6 +33,7 @@ jobs:
           tags: |
             type=semver,pattern={{version}}
             type=semver,pattern=v{{major}}
+            type=ref,event=branch
       - name: 'Build and push Docker image'
         uses: docker/build-push-action@v5
         with:
