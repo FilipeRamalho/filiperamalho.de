@@ -1,5 +1,5 @@
 # Use an official Node.js runtime as the base image
-FROM --platform=$TARGETPLATFORM node:20-alpine as build
+FROM --platform=$BUILDPLATFORM node:20-alpine as build
 LABEL org.opencontainers.image.source="https://github.com/Capy-IT/WebTemplate"
 
 # Set the working directory in the container
@@ -19,7 +19,7 @@ COPY src/ ./src
 RUN yarn build
 
 
-FROM --platform=$TARGETPLATFORM alpine as run
+FROM --platform=$BUILDPLATFORM alpine as run
 
 RUN apk update \
     && apk add lighttpd \
