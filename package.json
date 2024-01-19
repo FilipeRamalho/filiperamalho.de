@@ -1,0 +1,27 @@
+{
+  "name": "webtemplate",
+  "version": "0.0.1",
+  "license": "",
+  "dependencies": {
+    "@types/mithril": "^2.0.2",
+    "@types/node": "^20.4.8",
+    "brotli": "^1.3.3",
+    "hyperscript-helpers": "^3.0.3",
+    "mithril": "^2.2.2",
+    "normalize.css": "~8.0.1",
+    "typescript": "~5.3.3"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "parcel src/index.html --lazy",
+    "build": "parcel build src/index.html"
+  },
+  "browser": {
+    "fs": false
+  },
+  "devDependencies": {
+    "parcel": "^2.11.0",
+    "prettier": "^3.2.4",
+    "typescript-plugin-css-modules": "^5.0.2"
+  }
+}

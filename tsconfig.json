@@ -1,0 +1,15 @@
+{
+  "include": ["src/**/*"],
+  "compilerOptions": {
+    "module": "es2022",
+    "moduleResolution": "Node",
+    "plugins": [
+      {
+        "name": "typescript-plugin-css-modules",
+        "options": {
+          "customMatcher": "\\.(c|le|sa|sc)ss$"
+        }
+      }
+    ]
+  }
+}

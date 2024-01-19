@@ -1,0 +1,7 @@
+.parcel-cache
+.idea
+.DS_Store
+*.iml
+dist
+node_modules
+*~lock~

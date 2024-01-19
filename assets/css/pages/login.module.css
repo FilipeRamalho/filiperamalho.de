@@ -1,0 +1,14 @@
+.loginForm {
+    display: flex;
+    flex-direction: column;
+    align-content: center;
+    align-items: center;
+    color: white;
+}
+
+.page{
+}
+
+.loginForm form{
+    display: contents;
+}
