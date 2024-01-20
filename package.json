@@ -1,6 +1,6 @@
 {
   "name": "filiperamalho.de",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "license": "",
   "dependencies": {
     "@types/mithril": "^2.0.2",

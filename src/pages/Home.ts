@@ -5,7 +5,7 @@ import {canUseWebP, isMobile} from "../utils";
 import locationTag from "../components/LocationTag";
 import quote from "../components/Quote";
 
-const {div, p, h1, h2, span, br, img} = require("hyperscript-helpers")(m);
+const {div, h1, h2, span, br} = require("hyperscript-helpers")(m);
 
 const webp = canUseWebP() ? '.'+style.webp : '.'+style.noWebp;
 const mobile = isMobile() ? '.'+style.mobile : '.'+style.noMobile;
@@ -19,8 +19,8 @@ const page: m.Component = {
                 div('.'+style.content, [
                     div('.'+style.title, [
                         h1(span('.'+style.rainbow, "Filipe Ramalho")),
-                        h2( '.'+style.bigDisplay,"Student • Hiwi • Radfahrer"),
-                        h2('.'+style.smallDisplay, "Student", br(), "Hiwi", br(), "Radfahrer"),
+                        h2( '.'+style.bigDisplay,"Student • Werkstudent • Radfahrer"),
+                        h2('.'+style.smallDisplay, "Student", br(), "Werkstudent", br(), "Radfahrer"),
                     ]),
                     div('.'+style.row, [
                             m(Button, {
