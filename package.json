@@ -1,6 +1,6 @@
 {
-  "name": "webtemplate",
-  "version": "0.0.1",
+  "name": "filiperamalho.de",
+  "version": "1.0.0",
   "license": "",
   "dependencies": {
     "@types/mithril": "^2.0.2",
@@ -21,6 +21,8 @@
   },
   "devDependencies": {
     "parcel": "^2.11.0",
+    "postcss": "^8.0.0",
+    "postcss-modules": "^4.3.0",
     "prettier": "^3.2.4",
     "typescript-plugin-css-modules": "^5.0.2"
   }

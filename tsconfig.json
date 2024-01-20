@@ -1,5 +1,5 @@
 {
-  "include": ["src/**/*"],
+  "include": ["src/**/*","assets/**/*"],
   "compilerOptions": {
     "module": "es2022",
     "moduleResolution": "Node",

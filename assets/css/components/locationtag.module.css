@@ -1,0 +1,14 @@
+.locationTag{
+    text-align: right;
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    border: 0;
+    background: rgba(128, 128, 128, 0.6);
+    padding: 2px;
+    font-size: 80%;
+}
+
+.location{
+    margin: 0
+}

@@ -4,29 +4,29 @@
  */
 
 @font-face {
-  font-family:"Font Awesome 5 Brands";
-  font-display: swap;
+  font-family:"FA 5 Brands";
   font-style:normal;
   font-weight:400;
   font-display:auto;
-  src:url(../webfonts/fa-brands-400.woff2)
+  src:url(../fonts/fa-brands-400.woff2)
 }
+
 .fab{
-  font-family:"Font Awesome 5 Brands";font-weight:400
+  font-family: "FA 5 Brands", serif;font-weight:400
 }
 
 @font-face{
-  font-family:"Font Awesome 5 Free";
+  font-family:"FA 5";
   font-style:normal;
   font-weight:900;
   font-display:auto;
-  src:url(../webfonts/fa-solid-900.woff2);
+  src:url(../fonts/fa-solid-900.woff2);
 }
 
-.fa,.fas{font-family:"Font Awesome 5 Free";font-weight:900}
+.fa{
+  font-family: "FA 5", serif;font-weight:900}
 
 .fa,
-.fas,
 .fab {
   -moz-osx-font-smoothing: grayscale;
   -webkit-font-smoothing: antialiased;
@@ -36,33 +36,33 @@
   text-rendering: auto;
   line-height: 1; }
 
-.fa-mastodon:before {
+.mastodon:before {
   content: "\f4f6"; }
 
-.fa-briefcase:before {
+.briefcase:before {
   content: "\f0b1"; }
 
-.fa-microscope:before {
+.microscope:before {
   content: "\f610"; }
 
-.fa-github:before {
+.github:before {
   content: "\f09b"; }
 
-.fa-gamepad:before {
+.gamepad:before {
   content: "\f11b"; }
 
-.fa-blog:before {
+.blog:before {
   content: "\f781"; }
 
-.fa-home:before{
+.home:before{
   content: "\f015"; }
 
-.fa-twitter:before {
+.twitter:before {
   content: "\f099"; }
 
-.fa-threads:before{
+.threads:before{
   content: "\e618"
 }
-.fa-uni:before{
+.uni:before{
   content: "\f19c"; }
 
