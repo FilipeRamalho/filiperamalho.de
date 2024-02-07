@@ -4,18 +4,34 @@
 
 This is the repo of [filiperamalho.de](https://filiperamalho.de).
 
+Created with [WebTemplate - CapyIT](https://github.com/capyit/WebTemplate)
+
+**Development mode**
+
+If you want to build the project or develop on it, then run
+
+`yarn install`
+
+to install dependencies.
+
+**Build natively**
+
 Build a prod-build with:
 
-- yarn build
+`yarn build`
 
 Enter development mode with:
 
-- yarn start
+`yarn start`
 
-The build is under /bin. Copy the contents of the folder to deploy.
-(NOTE: The server should support brotli for optimal network compression)
+The build is under /dist. Copy the contents of the folder to deploy.
 
+**Docker**
 
-# Notes
+There is an accompanying Dockerfile, with which you can build a docker image to run the webpage.
+
+This repo includes a GitHub workflow, which automatically creates a Docker image on each release.
+
+## Notes
 
 The Fontawesome css is a reduced set of the original css files
