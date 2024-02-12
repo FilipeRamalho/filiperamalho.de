@@ -22,6 +22,6 @@
   "devDependencies": {
     "parcel": "^2.11.0",
     "prettier": "^3.2.4",
-    "typescript-plugin-css-modules": "^5.0.2"
+    "typescript-plugin-css-modules": "^5.1.0"
   }
 }
