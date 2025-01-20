@@ -121,7 +121,7 @@
     }
 
     .img{
-        height: 80vh;
+        height: 30vh;
     }
 
     .img img{
@@ -129,7 +129,11 @@
     }
 
     .img img{
-        object-position: 60% 80%;
+        object-position: 60% 60%;
+    }
+
+    .blocks > img:nth-child(2){
+        display: none;
     }
 
     .aboutme .buttons{
