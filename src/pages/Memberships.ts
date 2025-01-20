@@ -18,7 +18,7 @@ const HomePage: Base = new Base(
                     div({class: style.splashblock},[
                         h1("Mitgliedschaften"),
                         a({href:"https://adfc.de", target: "_blank", rel:" noopener noreferrer",},img({src: require("/assets/img/logos/ADFC.png"),alt: "Allgemeiner Deutscher Fahrrad-Club"})),
-                        a({href:"https://dpg-physik.de", target: "_blank", rel:" noopener noreferrer",},img({src: require("/assets/img/logos/DFP.png"),alt: "Deutsche Physikalische Gesellschaft"})),
+                        a({href:"https://dpg-physik.de", target: "_blank", rel:" noopener noreferrer",},img({src: require("/assets/img/logos/DPG.png"),alt: "Deutsche Physikalische Gesellschaft"})),
                         a({href:"https://fachschaft.physik.uni-mainz.de", target: "_blank", rel:" noopener noreferrer",},img({src: require("/assets/img/logos/FS.jpg"),alt: "Fachschaft Physik Mainz"})),
                         a({href:"https://fdp.de", target: "_blank", rel:" noopener noreferrer",},img({src: require("/assets/img/logos/FDP.png"),alt: "Freie Demokratische Partei"})),
                         a({href:"https://julis.de", target: "_blank", rel:" noopener noreferrer",},img({src: require("/assets/img/logos/JuLis.png"),alt: "Junge Liberale"})),
