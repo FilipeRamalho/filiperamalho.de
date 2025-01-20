@@ -17,10 +17,10 @@ jobs:
     strategy:
       matrix:
         include:
-          - runner: ubuntu-latest        # amd64 runner
+          - runner: ubuntu-24.04   # amd64 runner
             platform: linux/amd64
             archSuffix: amd64
-          - runner: ubuntu-latest-arm64  # arm64 runner
+          - runner: ubuntu-24.04-arm  # arm64 runner
             platform: linux/arm64
             archSuffix: arm64
     runs-on: ${{ matrix.runner }}
