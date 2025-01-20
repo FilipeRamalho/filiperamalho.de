@@ -1,6 +1,5 @@
 # Use an official Node.js runtime as the base image
 FROM --platform=$BUILDPLATFORM node:20-alpine as build
-LABEL org.opencontainers.image.source="https://github.com/FilipeRamalho/filiperamalho.de"
 
 # Set the working directory in the container
 WORKDIR /usr/src/app
@@ -26,5 +25,6 @@ RUN apk update \
     && rm -rf /var/cache/apk/*
 
 COPY --from=build /usr/src/app/dist /var/www/localhost/htdocs
+COPY lighttpd.conf /temp/
 
-CMD ["lighttpd","-D","-f","/etc/lighttpd/lighttpd.conf"]
+CMD ["lighttpd","-D","-f","/temp/lighttpd.conf"]

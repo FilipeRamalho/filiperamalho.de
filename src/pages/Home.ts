@@ -1,53 +1,108 @@
 import * as m from "mithril";
+import BaseTemplate, {Base} from "../components/Base";
 import style from "/assets/css/pages/home.module.css";
-import {Button, DefaultIcons} from "../components/Button";
-import {canUseWebP, isMobile} from "../utils";
-import locationTag from "../components/LocationTag";
-import quote from "../components/Quote";
+import {Button} from "../components/Button";
 
-const {div, h1, h2, span, br} = require("hyperscript-helpers")(m);
+const {div,h1,h2,br,img} = require("hyperscript-helpers")(m);
 
-const webp = canUseWebP() ? '.'+style.webp : '.'+style.noWebp;
-const mobile = isMobile() ? '.'+style.mobile : '.'+style.noMobile;
 
-const page: m.Component = {
-    view() {
-        return div('.' + style.page, [
-            div('.'+style.splash+'.'+style.strassburg+'.'+style.image + webp + mobile, [
-                div('.'+style.overlay),
-                m(locationTag, {location: "Place de la Cathédrale, Straßburg"}),
-                div('.'+style.content, [
-                    div('.'+style.title, [
-                        h1(span('.'+style.rainbow, "Filipe Ramalho")),
-                        h2( '.'+style.bigDisplay,"Student • Werkstudent • Radfahrer"),
-                        h2('.'+style.smallDisplay, "Student", br(), "Werkstudent", br(), "Radfahrer"),
+const HomePage: Base = new Base(
+    {
+        name: "Home",
+        id: "home",
+        route: "/",
+    },{
+        view() {
+            return m(BaseTemplate, HomePage.attrs, [
+                div({class: style.blocks}, [
+                    div({class: style.splashblock},[
+                        div({class: style.intro},[
+                            h1("Filipe",br(), "Ramalho"),
+                            "Physiker. ITler. Liberal. YIMBY.",
+                            div({class: style.buttons},[
+                                m(Button, {
+                                    newTab: true,
+                                    href: "https://threads.net/@filipe.mdsr",
+                                    color: "black",
+                                    textColor: "white",
+                                    name: "Threads"
+                                }),
+                                m(Button, {
+                                    newTab: true,
+                                    href: "https://github.com/FilipeRamalho",
+                                    color: "black",
+                                    textColor: "white",
+                                    name: "Github"
+                                }),
+                                m(Button, {
+                                    newTab: true,
+                                    href: "https://www.linkedin.com/in/fmdsr/",
+                                    color: "black",
+                                    textColor: "white",
+                                    name: "LinkedIn"
+                                }),
+                                m(Button, {
+                                    newTab: true,
+                                    href: "https://www.instagram.com/filipe.mdsr/",
+                                    color: "black",
+                                    textColor: "white",
+                                    name: "Instagram"
+                                })
+                            ])
+                        ]),
+                        div({class: style.img},[img({src: require("/assets/img/profilepicture.jpeg")})])
                     ]),
-                    div('.'+style.row, [
+                    /*div({class: style.block, style: "background-color: #A81900; color: white;"},[
+                        h1("Meine Beiträge")
+                    ]),*/
+                    img({src: require("/assets/img/strassburg.webp")}),
+                    div({class: style.block+" "+style.aboutme, style: "background-color: #5B9400; color: white;"},[
+                        h1("Über Mich"),
+                        br(),
+                        "Olá! Mein Name ist Filipe und ich studiere Physik. Nebenbei arbeite ich als Werkstudent im IT-Monitoring bei der Berufsgenossenschaft Holz und Metall.",
+                        " Geboren bin ich in Coimbra. Während der Wirtschaftskrise 2009 ist meine Familie nach Rheinhessen gezogen. So hatte ich eine rhoihessisch-portugiesische Kindheit. Dementsprechend trinke ich gerne Wein aus den zwei besten Weinanbaugebieten der Welt.", br(),
+                        "Ich fahre leidenschaftlich gerne Fahrrad, sowohl sportlich als auch im Alltag. Außerdem bin ich ein großer Fan von lebendigen, grünen, dichten und modernen Städten.",
+                        " Nach einem langen Tag entspanne ich am liebsten mit einer Folge Star Trek oder Doctor Who. Diese Serien sind mehr als nur Unterhaltung für mich - sie zeigen eine Zukunft, wie ich sie mir wünsche: Eine Welt mit mehr Freiheit und Demokratie für alle Menschen.",
+                        div({class: style.buttons},[
+                            /*m(Button, {
+                                newTab: false,
+                                href: "/lebenslauf",
+                                color: "black",
+                                textColor: "white",
+                                name: "Lebenslauf"
+                            }),*/
                             m(Button, {
-                                newTab: true,
-                                href: "https://threads.net/@filipe.mdsr",
-                                icon: DefaultIcons.Threads,
-                                name: "Threads"
+                                newTab: false,
+                                href: "/mitgliedschaften",
+                                color: "black",
+                                textColor: "white",
+                                name: "Mitgliedschaften"
                             }),
-                            m(Button, {
-                                newTab: true,
-                                href: "https://github.com/FilipeRamalho",
-                                icon: DefaultIcons.Github,
-                                name: "Github"
-                            })
+                            /*m(Button, {
+                                newTab: false,
+                                href: "/galerie",
+                                color: "black",
+                                textColor: "white",
+                                name: "Bildergalerie"
+                            }),*/
+                        ])
                     ]),
-                ])
-            ]),
-            div('..'+style.rhein+'.'+style.image + webp,
-                m(locationTag, {location: "Rhein, Bonn-Gronau"})
-            ),
-            m(quote, {
-                quote: "It's possible to commit no mistakes and still lose. That's not a weakness, that is life.",
-                author: "Jean-Luc Picard",
-                img: require("/assets/img/starfleet.png"),
-                alt: "Starfleet icon"
-            })
-        ]);
+                    /*img({src: require("/assets/img/oszi.jpeg")}),
+                    div({class: style.block, style: "background-color: #4B009B; color: white;"},[
+                        h1("Meine Projekte")
+                    ]),*/
+                    img({src: require("/assets/img/schillerplatz.jpeg")}),
+                    div({class: style.block+" "+style.quotebox, style: "background-color: #0D6552; color: white;"},[
+                        img({src: require("/assets/img/starfleet.png")}),
+                        div({class: style.quote},[
+                            h1("It’s possible to commit no mistakes and still lose. That’s not a weakness, that is life."),
+                            h2("-Jean-Luc Picard")
+                        ])
+                    ]),
+                ]),
+            ]);
+        }
     }
-};
-export default page;
+)
+
+export default HomePage;

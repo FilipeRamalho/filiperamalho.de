@@ -1,7 +1,6 @@
 html{
-    color: white;
-    background-color: #0B6552;
-    font-family: "Verdana",sans-serif;
+    background-color: grey;
+    font-family: "Urbanist",sans-serif;
     text-rendering: optimizeLegibility!important;
 }
 
@@ -9,120 +8,39 @@ a:link,a:visited,a:hover,a:active{
     text-decoration: none;
 }
 
+::-webkit-scrollbar {
+    display: none;
+}
+
+@font-face {
+    font-family: 'Urbanist';
+    src: url(../fonts/Urbanist.ttf);
+}
+
 :root {
     --github: rgb(0,0,0);
-    --githuba: rgba(0,0,0,0.6);
+    --githubA: rgba(0,0,0,0.6);
     --blog: rgba(255, 166, 0);
-    --bloga: rgba(255, 166, 0, 0.6);
+    --blogA: rgba(255, 166, 0, 0.6);
     --switch: rgba(228,0,15);
-    --switcha: rgba(228,0,15, 0.6);
+    --switchA: rgba(228,0,15, 0.6);
     --mastodonPurple: rgba(93, 80, 231);
-    --mastodonPurplea: rgba(93, 80, 231, 0.6);
+    --mastodonPurpleA: rgba(93, 80, 231, 0.6);
     --JGURed: rgba(193,0,42);
-    --JGUReda: rgba(193,0,42,0.6);
+    --JGURedA: rgba(193,0,42,0.6);
     --scienceGreen: rgba(122, 184, 22);
-    --scienceGreena: rgba(122, 184, 22, 0.6);
-    --default: #0B6552
+    --scienceGreenA: rgba(122, 184, 22, 0.6);
 }
 
-
-
-@media only screen and (min-width:1064px){
-    .small-display{
-        display: none;
-    }
-
-    .middle-display{
-        display: none;
-    }
-
-    .big-display{
-        display: inherit;
-    }
-
-    .mini-display{
-        display: none;
-    }
-
-    h1{
-        font-size: 700%;
-    }
+.rainbow{
+    background-image: -webkit-gradient( linear, left top, right top, color-stop(0, red), color-stop(0.2, orange), color-stop(0.4, yellow), color-stop(0.6, green), color-stop(0.8, blue), color-stop(1, purple) );
+    background-image: gradient( linear, left top, right top, color-stop(0, red), color-stop(0.2, orange), color-stop(0.4, yellow), color-stop(0.6, green), color-stop(0.8, blue), color-stop(1, purple) );
+    -webkit-background-clip: text;
+    color: white;
+    background-clip: text;
+    transition: color 1s
 }
 
-@media only screen and (max-width:1064px) and (min-width:764px){
-
-    .big-display{
-        display: none;
-    }
-
-    .middle-display{
-        display: inherit;
-    }
-
-    .small-display{
-        display: none;
-    }
-
-    .mini-display{
-        display: none;
-    }
-
-    h1{
-        font-size: 600%;
-    }
-
-}
-
-@media only screen and (max-width:764px) and (min-width:555px){
-    .big-display{
-        display: none;
-    }
-
-    .middle-display{
-        display: none;
-    }
-
-    .small-display{
-        display: inherit;
-    }
-
-    .mini-display{
-        display: none;
-    }
-
-    h1{
-        font-size: 500%;
-    }
-}
-
-@media only screen and (max-width:555px){
-    .big-display{
-        display: none;
-    }
-
-    .middle-display{
-        display: none;
-    }
-
-    .small-display{
-        display: none;
-    }
-
-    .mini-display{
-        display: inherit;
-    }
-
-    h1{
-        font-size: 300%;
-    }
-
-    .row{
-        display: block;
-    }
-
-    .splash .button{
-        margin-top: 0;
-        margin-bottom: 40px;
-        display: block;
-    }
+.rainbow:hover{
+    color: transparent
 }

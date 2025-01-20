@@ -10,7 +10,7 @@ Created with [WebTemplate - CapyIT](https://github.com/capyit/WebTemplate)
 
 If you want to build the project or develop on it, then run
 
-`yarn install`
+`yarn`
 
 to install dependencies.
 
@@ -31,7 +31,3 @@ The build is under /dist. Copy the contents of the folder to deploy.
 There is an accompanying Dockerfile, with which you can build a docker image to run the webpage.
 
 This repo includes a GitHub workflow, which automatically creates a Docker image on each release.
-
-## Notes
-
-The Fontawesome css is a reduced set of the original css files
