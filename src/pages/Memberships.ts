@@ -16,6 +16,13 @@ const HomePage: Base = new Base(
             return m(BaseTemplate, HomePage.attrs, [
                 div({class: style.blocks}, [
                     div({class: style.splashblock},[
+                        m(Button, {
+                        newTab: false,
+                        href: "/",
+                        color: "black",
+                        textColor: "white",
+                        name: "Startseite"
+                    }),
                         h1("Mitgliedschaften"),
                         a({href:"https://adfc.de", target: "_blank", rel:" noopener noreferrer",},img({src: require("/assets/img/logos/ADFC.png"),alt: "Allgemeiner Deutscher Fahrrad-Club"})),
                         a({href:"https://dpg-physik.de", target: "_blank", rel:" noopener noreferrer",},img({src: require("/assets/img/logos/DPG.png"),alt: "Deutsche Physikalische Gesellschaft"})),
@@ -24,13 +31,6 @@ const HomePage: Base = new Base(
                         a({href:"https://julis.de", target: "_blank", rel:" noopener noreferrer",},img({src: require("/assets/img/logos/JuLis.png"),alt: "Junge Liberale"})),
                         a({href:"https://lisl-deutschland.de", target: "_blank", rel:" noopener noreferrer",},img({src: require("/assets/img/logos/LiSl.png"),alt: "Liberale Schwule, Lesben, Bi, Trans und Queer"})),
                         a({href:"https://yimby.jetzt", target: "_blank", rel:" noopener noreferrer",},img({src: require("/assets/img/logos/YIMBY.svg"),alt: "YIMBY Deutschland"})),
-                        m(Button, {
-                            newTab: false,
-                            href: "/",
-                            color: "black",
-                            textColor: "white",
-                            name: "Startseite"
-                        }),
                     ]),
                 ]),
             ]);
