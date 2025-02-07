@@ -47,6 +47,13 @@ const HomePage: Base = new Base(
                                     color: "black",
                                     textColor: "white",
                                     name: "Instagram"
+                                }),
+                                m(Button, {
+                                    newTab: true,
+                                    href: "https://yimby.jetzt/author/filipe/",
+                                    color: "black",
+                                    textColor: "white",
+                                    name: "YIMBY DE"
                                 })
                             ])
                         ]),
