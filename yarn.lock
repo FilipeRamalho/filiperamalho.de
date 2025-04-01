@@ -1712,10 +1712,10 @@ minimist@^1.2.6:
   resolved "https://registry.yarnpkg.com/minimist/-/minimist-1.2.8.tgz#c1a464e7693302e082a075cee0c057741ac4772c"
   integrity sha512-2yyAR8qBkN3YuheJanUpWC5U3bb5osDywNB8RzDVlDwDHbocAJveqqj1u8+SVD7jkWT4yvsHCpWqqWqAxb0zCA==
 
-mithril@^2.2.12:
-  version "2.2.12"
-  resolved "https://registry.yarnpkg.com/mithril/-/mithril-2.2.12.tgz#b09a8be68e4a51b618405e353ee523daf6460cf4"
-  integrity sha512-EpHb0DkcfwB+83NYvU8WMGBib+/TBtFLzdvYYXijqcW0o1i6cpVPklrCglJi2COXT2MG0Kih81CNPCoZkj0vag==
+mithril@^2.2.15:
+  version "2.2.15"
+  resolved "https://registry.yarnpkg.com/mithril/-/mithril-2.2.15.tgz#bcdcb69619ea997cedaf3b558abee2bddc7a46ae"
+  integrity sha512-jM4bWhyg8FdiSgT+zea9CjDajRnkRK4MggOKTAIEBrYrqRvbnYM0c4hIqn3giomTKSSijt9XadLF/Uz81Sctiw==
 
 ms@2.1.2:
   version "2.1.2"
