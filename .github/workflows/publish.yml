@@ -43,7 +43,7 @@ jobs:
         id: meta
         uses: docker/metadata-action@v5
         with:
-          images: ${{ env.REGISTRY }}/${{ github.repository_owner }}/${{ github.event.repository.name | lower }}
+          images: ${{ env.REGISTRY }}/${{ env.IMAGE_NAME }}
           tags: |
             # Create multiple tags based on semver and branch
             type=semver,pattern={{version}}
@@ -82,7 +82,7 @@ jobs:
         id: meta
         uses: docker/metadata-action@v5
         with:
-          images: ${{ env.REGISTRY }}/${{ github.repository_owner }}/${{ github.event.repository.name | lower }}
+          images: ${{ env.REGISTRY }}/${{ env.IMAGE_NAME }}
           tags: |
             # Repeat the same strategy so we get identical tags
             type=semver,pattern={{version}}
@@ -96,7 +96,7 @@ jobs:
             TRIMMED_TAG=$(echo "$TAG" | xargs)
             echo "Merging multi-arch for tag: $TRIMMED_TAG"
             docker buildx imagetools create \
-              --tag "${{ env.REGISTRY }}/${{ github.repository_owner }}/${{ github.event.repository.name | lower }}:$TRIMMED_TAG" \
-              "${{ env.REGISTRY }}/${{ github.repository_owner }}/${{ github.event.repository.name | lower }}:$TRIMMED_TAG-amd64" \
-              "${{ env.REGISTRY }}/${{ github.repository_owner }}/${{ github.event.repository.name | lower }}:$TRIMMED_TAG-arm64"
+              --tag "${{ env.REGISTRY }}/${{ env.IMAGE_NAME }}:$TRIMMED_TAG" \
+              "${{ env.REGISTRY }}/${{ env.IMAGE_NAME }}:$TRIMMED_TAG-amd64" \
+              "${{ env.REGISTRY }}/${{ env.IMAGE_NAME }}:$TRIMMED_TAG-arm64"
           done
