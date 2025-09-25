@@ -9,7 +9,7 @@ on:
 
 env:
   REGISTRY: ghcr.io
-  IMAGE_NAME: ${{ github.repository }}
+  IMAGE_NAME: ${{ github.repository_owner }}/${{ github.event.repository.name }}
 
 jobs:
   # 1) Build each architecture on its native runner
@@ -43,7 +43,7 @@ jobs:
         id: meta
         uses: docker/metadata-action@v5
         with:
-          images: ${{ env.REGISTRY }}/${{ env.IMAGE_NAME }}
+          images: ${{ env.REGISTRY }}/${{ github.repository_owner }}/${{ github.event.repository.name | lower }}
           tags: |
             # Create multiple tags based on semver and branch
             type=semver,pattern={{version}}
@@ -82,7 +82,7 @@ jobs:
         id: meta
         uses: docker/metadata-action@v5
         with:
-          images: ${{ env.REGISTRY }}/${{ env.IMAGE_NAME }}
+          images: ${{ env.REGISTRY }}/${{ github.repository_owner }}/${{ github.event.repository.name | lower }}
           tags: |
             # Repeat the same strategy so we get identical tags
             type=semver,pattern={{version}}
@@ -91,13 +91,12 @@ jobs:
 
       - name: Merge both architectures into multi-arch tags
         run: |
-          # Split comma-separated tags into an array
           IFS=',' read -ra ALL_TAGS <<< "${{ steps.meta.outputs.tags }}"
           for TAG in "${ALL_TAGS[@]}"; do
             TRIMMED_TAG=$(echo "$TAG" | xargs)
             echo "Merging multi-arch for tag: $TRIMMED_TAG"
             docker buildx imagetools create \
-              --tag "${{ env.REGISTRY }}/${{ env.IMAGE_NAME }}:$TRIMMED_TAG" \
-              "${{ env.REGISTRY }}/${{ env.IMAGE_NAME }}:$TRIMMED_TAG-amd64" \
-              "${{ env.REGISTRY }}/${{ env.IMAGE_NAME }}:$TRIMMED_TAG-arm64"
+              --tag "${{ env.REGISTRY }}/${{ github.repository_owner }}/${{ github.event.repository.name | lower }}:$TRIMMED_TAG" \
+              "${{ env.REGISTRY }}/${{ github.repository_owner }}/${{ github.event.repository.name | lower }}:$TRIMMED_TAG-amd64" \
+              "${{ env.REGISTRY }}/${{ github.repository_owner }}/${{ github.event.repository.name | lower }}:$TRIMMED_TAG-arm64"
           done
