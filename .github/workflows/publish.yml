@@ -58,7 +58,11 @@ jobs:
           push: true
 
           # Append "-amd64" or "-arm64" to each tag so we can merge them later
-          tags: ${{ steps.meta.outputs.tags }}-${{ matrix.archSuffix }}
+          tags: |
+            ${{ steps.meta.outputs.tags }}-${{ matrix.archSuffix }}
+            # Also push the raw tags (e.g., v3, latest) for the current arch.
+            # This is redundant but ensures compatibility.
+            ${{ steps.meta.outputs.tags }}
           labels: ${{ steps.meta.outputs.labels }}
 
   # 2) Merge the two arch-specific images into a single multi-arch manifest
@@ -87,19 +91,13 @@ jobs:
 
       - name: Merge both architectures into multi-arch tags
         run: |
-          # Because docker/metadata-action can generate multiple comma-separated tags,
-          # split them into an array first.
+          # Split comma-separated tags into an array
           IFS=',' read -ra ALL_TAGS <<< "${{ steps.meta.outputs.tags }}"
-
-          # For each resulting tag, combine its "-amd64" and "-arm64" variants
           for TAG in "${ALL_TAGS[@]}"; do
-            # Trim whitespace in case of newlines
             TRIMMED_TAG=$(echo "$TAG" | xargs)
-
             echo "Merging multi-arch for tag: $TRIMMED_TAG"
-
             docker buildx imagetools create \
-              --tag "$TRIMMED_TAG" \
-              "$TRIMMED_TAG-amd64" \
-              "$TRIMMED_TAG-arm64"
+              --tag "${{ env.REGISTRY }}/${{ env.IMAGE_NAME }}:$TRIMMED_TAG" \
+              "${{ env.REGISTRY }}/${{ env.IMAGE_NAME }}:$TRIMMED_TAG-amd64" \
+              "${{ env.REGISTRY }}/${{ env.IMAGE_NAME }}:$TRIMMED_TAG-arm64"
           done
