@@ -91,12 +91,24 @@ jobs:
 
       - name: Merge both architectures into multi-arch tags
         run: |
+          # Split tags and process each one
           IFS=',' read -ra ALL_TAGS <<< "${{ steps.meta.outputs.tags }}"
           for TAG in "${ALL_TAGS[@]}"; do
             TRIMMED_TAG=$(echo "$TAG" | xargs)
             echo "Merging multi-arch for tag: $TRIMMED_TAG"
+
+            # Construct the full image references
+            FULL_TAG="${{ env.REGISTRY }}/${{ env.IMAGE_NAME }}:$TRIMMED_TAG"
+            FULL_TAG_AMD64="${{ env.REGISTRY }}/${{ env.IMAGE_NAME }}:$TRIMMED_TAG-amd64"
+            FULL_TAG_ARM64="${{ env.REGISTRY }}/${{ env.IMAGE_NAME }}:$TRIMMED_TAG-arm64"
+
+            echo "Creating manifest for: $FULL_TAG"
+            echo "  - AMD64 source: $FULL_TAG_AMD64"
+            echo "  - ARM64 source: $FULL_TAG_ARM64"
+
+            # Create the multi-arch manifest
             docker buildx imagetools create \
-              --tag "${{ env.REGISTRY }}/${{ env.IMAGE_NAME }}:$TRIMMED_TAG" \
-              "${{ env.REGISTRY }}/${{ env.IMAGE_NAME }}:$TRIMMED_TAG-amd64" \
-              "${{ env.REGISTRY }}/${{ env.IMAGE_NAME }}:$TRIMMED_TAG-arm64"
+              --tag "$FULL_TAG" \
+              "$FULL_TAG_AMD64" \
+              "$FULL_TAG_ARM64"
           done
