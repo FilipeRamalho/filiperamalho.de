@@ -98,9 +98,9 @@ jobs:
             echo "Merging multi-arch for tag: $TRIMMED_TAG"
 
             # Construct the full image references
-            FULL_TAG="${{ env.REGISTRY }}/${{ env.IMAGE_NAME }}:$TRIMMED_TAG"
-            FULL_TAG_AMD64="${{ env.REGISTRY }}/${{ env.IMAGE_NAME }}:$TRIMMED_TAG-amd64"
-            FULL_TAG_ARM64="${{ env.REGISTRY }}/${{ env.IMAGE_NAME }}:$TRIMMED_TAG-arm64"
+            FULL_TAG="$TRIMMED_TAG"
+            FULL_TAG_AMD64="$TRIMMED_TAG-amd64"
+            FULL_TAG_ARM64="$TRIMMED_TAG-arm64"
 
             echo "Creating manifest for: $FULL_TAG"
             echo "  - AMD64 source: $FULL_TAG_AMD64"
