@@ -1,0 +1,51 @@
+@import "tailwindcss";
+
+/* Chrome, Safari and Opera */
+html::-webkit-scrollbar {
+    display: none;
+}
+
+html {
+    -ms-overflow-style: none; /* IE and Edge */
+    scrollbar-width: none; /* Firefox */
+}
+
+@theme {
+    /* https://fabricweb.z5.web.core.windows.net/pr-deploy-site/refs/heads/master/theming-designer/ */
+    --color-primary: #ffdd00;
+    --color-text: #ffffff;
+    --color-background: #002c45;
+
+    --color-primary-dark: #e6c700;
+    --color-default: #8a8886;
+    --color-foreground: #f8f8f8;
+}
+
+/**
+const myTheme = createTheme({
+  palette: {
+    themePrimary: '#ffdd00',
+    themeLighterAlt: '#fffef5',
+    themeLighter: '#fffad6',
+    themeLight: '#fff5b3',
+    themeTertiary: '#ffeb66',
+    themeSecondary: '#ffe11f',
+    themeDarkAlt: '#e6c700',
+    themeDark: '#c2a800',
+    themeDarker: '#8f7c00',
+    neutralLighterAlt: '#002a43',
+    neutralLighter: '#002a42',
+    neutralLight: '#00283f',
+    neutralQuaternaryAlt: '#00253b',
+    neutralQuaternary: '#002438',
+    neutralTertiaryAlt: '#002236',
+    neutralTertiary: '#c8c8c8',
+    neutralSecondary: '#d0d0d0',
+    neutralSecondaryAlt: '#8a8886',
+    neutralPrimaryAlt: '#dadada',
+    neutralPrimary: '#ffffff',
+    neutralDark: '#f4f4f4',
+    black: '#f8f8f8',
+    white: '#002c45',
+  }});
+ */

@@ -1,0 +1,21 @@
+---
+interface Props {
+    primary?: boolean;
+    link?: string;
+}
+
+const {primary, link} = Astro.props
+---
+
+{
+    primary ?
+    <a class="font-bold text-background bg-primary hover:bg-primary-dark select-none cursor-pointer py-2 px-3 rounded"
+       href={link}>
+        <slot/>
+    </a>
+        :
+    <a class="font-bold text-white bg-transparent outline-1 outline-default hover:bg-background select-none cursor-pointer py-2 px-3 rounded"
+       href={link}>
+        <slot/>
+    </a>
+    }

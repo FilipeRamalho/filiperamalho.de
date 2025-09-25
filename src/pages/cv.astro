@@ -1,0 +1,164 @@
+---
+import { NodeCompiler } from "@myriaddreamin/typst-ts-node-compiler";
+
+import Main from "../layouts/Main.astro";
+import Navbar from "../components/Navbar.astro";
+import type {TypstDocInput} from "astro-typst/dist/lib/prelude";
+import {load} from "cheerio";
+
+const code1 = `
+#import "@preview/cv-soft-and-hard:0.1.0": styling, section, entry, subsection, rust, cpp, python, typst-logo, java, typescript
+#show: styling
+#set page(fill: white, margin:1cm`
+
+const code2 = `)
+ #align(center)[
+  = Filipe Ramalho - Curriculum Vitae\\
+  Berlinerstr. 29, 55131 Mainz\\
+  #link("https://filiperamalho.de", "filiperamalho.de") |
+  #link("https://www.github.com/FilipeRamalho", "github.com/FilipeRamalho") |
+  #link("mailto:privat@filiperamalho.de", "privat@filiperamalho.de") |
+  #link("tel:+4917622095047", "+49 176 22095047")
+]
+
+#section("Profil")
+Physiker mit Fokus auf Maschinelles Lernen. \\
+Ich finde gerne Lösungen durch datenbasierte Arbeit und die Entwicklung von selbst geschriebener Software. 
+Dabei vertiefe ich mich in die aktuelle Forschung, um stets mit den neuesten und schnellsten Tools und Methoden zu arbeiten. 
+Ich arbeite gerne in Teams, in denen direkt und klar miteinander geredet wird.
+
+//Experience
+#section("Erfahrung")
+#entry(
+  [
+    *Werkstudent* (_Berufsgenossenschaft Holz und Metall_)
+    - Migration von MS SCOM zu PRTG
+    - Betrieb der Überwachung von Server-Hardware und Applikationen
+    - Entwicklung von selbstgeschriebenen Sensoren für PRTG mit PowerShell
+    - Betreuung von Auszubildenden
+    - Fehlerdiagnose und -behebung mittels WMI
+  ],
+  [_seit 11/2023_]
+)
+
+#entry(
+  [
+    *Hilfswissenschaftler* (_ZDV Mainz_)
+    - Alltägliche Hardwarewartungsarbeiten. 
+    - Webseiten auf moderne Javascript Frameworks portiert 
+    - Python-Skripte für den HPC-Betrieb entwickelt. 
+    - Entwicklung und Koordination eines Asset Management Systems. 
+  ],
+  [_09/2021 - 10/2023_]
+)
+
+#entry(
+  [
+    *Praktikum* (_Institut für Kernphysik Mainz_)
+    - Durfte zum ersten Mal Löten und Schaltungen entwickeln. 
+    - Interesse an Elektronik geweckt
+  ],
+  [_06/2018_],
+)
+
+#block(breakable: false)[
+#section("Bildung")
+#entry(
+  [
+    *Johannes-Gutenberg-Universität Mainz*\\
+    Bsc. Physics\\
+    #text([Nebenfach: Informatik], size: 9pt) \\
+    #text([Thesis: "_Neural network implementation of a variational method to determine solutions of the Schrödinger equation_" (Univ.-Prof. Dr. Marc Vanderhaeghen)], size: 9pt)
+  ],
+  [\\
+    _04/2020-04/2026_
+  ],
+)
+#entry(
+  [*IGS Gerhard Ertl, Sprendlingen*],
+  [_09/2011-03/2020_]
+)
+]
+#block(breakable: false)[
+#section("Skills", note: "In absteigender Reihenfolge nach Kenntnisstand")
+#table(
+  align: left,
+  columns: (auto, 1fr),
+  stroke: none,
+  row-gutter: 0pt,
+  column-gutter: 5pt,
+  inset: (left: 0pt, top: 2pt),
+  text("Programming Languages", weight: 600),
+  [Kotlin, PowerShell, Typescript, Python, Mathematica, SQL],
+  text("Development Tools", weight: 600),
+  [Docker, Linux, GitHub Actions],
+  text("Documentation & Publishing", weight: 600),
+  [Typst, LaTeX, HTML, CSS],
+  text("Machine Learning", weight: 600),
+  [PyTorch, Torchquad],
+  text("Others", weight: 600),
+  [Computer Hardware & Support, Löten, Elektronik, CI/CD],
+)
+]
+
+#box(place(hide[
+#block(breakable: false)[
+#section("Selected Projects", note: "In descending order of project size")
+#entry(
+  [
+    *#link("https://beispiel.com", \`beispiel_projekt\`)* -
+    _Beispielprojekt_ #java #python #typescript\\
+    - Punkt 1
+    - Punkt 2
+  ],
+  [_08/2022_]
+)
+]
+
+#block(breakable: false)[
+#section("Further Commitment")
+#entry(
+  [
+    *Fachschaft Physik/Meteorologie*\\
+    - Vertretung der Studierenden in verschiedenen Gremien und Ausschüssen auf allen Ebenen, vom Fachbereich bis zur Bundesfachschaftstagung.
+    - Organisation von Fachschaftsveranstaltungen mitgewirkt, wie das Mario-Kart-Turniers mit über 100 Teilnehmern
+    - Pflege der Homepage 
+    - Server und ein Wiki für die Fachschaft eingerichtet. 
+    - Entwicklung einer Anwendung zur digitalen Verwaltung von Turnieren.
+  ],
+  [_2021/2025_],
+)]]))`
+
+function getTypstSVG(code: string) {
+    let input: TypstDocInput =
+        { mainFileContent: code }
+
+    const $typst = NodeCompiler.create()
+    const docRes = $typst.compile(input);
+    if (!docRes.result) {
+        docRes.printDiagnostics();
+        return "";
+    }
+    const doc = docRes.result;
+    const svg = $typst.svg(doc)
+    let $ = load(svg, {
+        xml: true,
+    });
+    $("svg").attr("width", "100%");
+    $("svg").attr("height", "auto");
+    return $.html();
+
+}
+---
+<Main>
+    <Navbar></Navbar>
+    <div class="absolute left-0 w-screen m-auto md:hidden">
+        <div class="w-full h-full" set:html={getTypstSVG(code1 + ",width: 10cm" + code2)} />
+    </div>
+    <div class="w-full hidden hidden md:inline lg:hidden">
+        <div set:html={getTypstSVG(code1 + ",width: 15cm" + code2)} />
+    </div>
+    <div class="w-full hidden lg:inline">
+        <div class="w-full h-full" set:html={getTypstSVG(code1 + code2)} />
+    </div>
+</Main>

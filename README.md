@@ -4,13 +4,11 @@
 
 This is the repo of [filiperamalho.de](https://filiperamalho.de).
 
-Created with [WebTemplate - CapyIT](https://github.com/capyit/WebTemplate)
-
 **Development mode**
 
 If you want to build the project or develop on it, then run
 
-`yarn`
+`corepack yarn`
 
 to install dependencies.
 
@@ -18,16 +16,14 @@ to install dependencies.
 
 Build a prod-build with:
 
-`yarn build`
+`corepack yarn build`
 
 Enter development mode with:
 
-`yarn start`
-
-The build is under /dist. Copy the contents of the folder to deploy.
+`corepack yarn dev`
 
 **Docker**
 
-There is an accompanying Dockerfile, with which you can build a docker image to run the webpage.
+An accompanying Dockerfile is provided, which you can use to build a Docker image to run the webpage.
 
-This repo includes a GitHub workflow, which automatically creates a Docker image on each release.
+This repository includes a GitHub workflow that automatically creates a Docker image with each release.

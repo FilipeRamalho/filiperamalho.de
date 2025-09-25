@@ -1,0 +1,17 @@
+---
+import Error from "../layouts/Error.astro";
+
+interface Props {
+    error: unknown
+}
+
+const {error} = Astro.props
+---
+<Error>
+    <header>
+        <h2 class="text-xl m-1">A wild 500 appeared. </h2>
+        <p class="text-xl">There seems to be an error server-side?</p>
+        <p class="text-xl">{(error instanceof Error) ? error.message : 'Unknown Error'}</p>
+    </header>
+
+</Error>

@@ -1,0 +1,24 @@
+---
+import '../styles/global.css'
+import DoorOpen from "@lucide/astro/icons/door-open";
+---
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg"/>
+    <meta name="generator" content={Astro.generator}/>
+    <title>Filipe Ramalho</title>
+</head>
+<body class="bg-[#002c45] h-svh flex content-center">
+<div class='text-white m-auto text-center'>
+    <slot/>
+    <section>
+        <a href="/">
+            <DoorOpen class="m-auto text-[#ffdd00]" size={64}/>
+        </a>
+    </section>
+</div>
+</body>
+</html>
