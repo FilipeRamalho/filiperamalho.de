@@ -58,10 +58,10 @@ jobs:
           push: true
 
           # Append "-amd64" or "-arm64" to each tag so we can merge them later
-          tags: |
-            ${{ steps.meta.outputs.tags }}-${{ matrix.archSuffix }}
           # Also push the raw tags (e.g., v3, latest) for the current arch.
           # This is redundant but ensures compatibility.
+          tags: |
+            ${{ steps.meta.outputs.tags }}-${{ matrix.archSuffix }}
             ${{ steps.meta.outputs.tags }}
           labels: ${{ steps.meta.outputs.labels }}
 
