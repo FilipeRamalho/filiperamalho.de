@@ -7,7 +7,7 @@ import tailwindcss from '@tailwindcss/vite';
 export default defineConfig({
     output: "server",
     adapter: node({
-      mode: 'standalone'
+        mode: 'standalone'
     }),
     vite: {
         ssr: {

@@ -1,9 +1,8 @@
 ---
-import { NodeCompiler } from "@myriaddreamin/typst-ts-node-compiler";
+import {type CompileDocArgs, NodeCompiler} from "@myriaddreamin/typst-ts-node-compiler";
 
 import Main from "../layouts/Main.astro";
 import Navbar from "../components/Navbar.astro";
-import type {TypstDocInput} from "astro-typst/dist/lib/prelude";
 import {load} from "cheerio";
 
 const code1 = `
@@ -130,8 +129,8 @@ Ich arbeite gerne in Teams, in denen direkt und klar miteinander geredet wird.
 )]]))`
 
 function getTypstSVG(code: string) {
-    let input: TypstDocInput =
-        { mainFileContent: code }
+    let input: CompileDocArgs =
+        {mainFileContent: code}
 
     const $typst = NodeCompiler.create()
     const docRes = $typst.compile(input);
@@ -141,24 +140,24 @@ function getTypstSVG(code: string) {
     }
     const doc = docRes.result;
     const svg = $typst.svg(doc)
-    let $ = load(svg, {
+    let loaded_svg = load(svg, {
         xml: true,
     });
-    $("svg").attr("width", "100%");
-    $("svg").attr("height", "auto");
-    return $.html();
+    loaded_svg("svg").attr("width", "100%");
+    loaded_svg("svg").attr("height", "auto");
+    return loaded_svg.html();
 
 }
 ---
 <Main>
     <Navbar></Navbar>
     <div class="absolute left-0 w-screen m-auto md:hidden">
-        <div class="w-full h-full" set:html={getTypstSVG(code1 + ",width: 10cm" + code2)} />
+        <div class="w-full h-full" set:html={getTypstSVG(code1 + ",width: 10cm" + code2)}/>
     </div>
-    <div class="w-full hidden hidden md:inline lg:hidden">
-        <div set:html={getTypstSVG(code1 + ",width: 15cm" + code2)} />
+    <div class="w-full hidden md:inline lg:hidden">
+        <div set:html={getTypstSVG(code1 + ",width: 15cm" + code2)}/>
     </div>
     <div class="w-full hidden lg:inline">
-        <div class="w-full h-full" set:html={getTypstSVG(code1 + code2)} />
+        <div class="w-full h-full" set:html={getTypstSVG(code1 + code2)}/>
     </div>
 </Main>
