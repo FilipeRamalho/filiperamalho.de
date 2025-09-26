@@ -134,7 +134,7 @@ let input: CompileDocArgs =
 const $typst = NodeCompiler.create()
 const pdfData = $typst.pdf(input)
 const base64Data = btoa(String.fromCharCode(...new Uint8Array(pdfData)));
-const dataUrl = `data:application/pdf;base64,${base64Data}`;
+const dataUrl = `data:application/octet-stream;base64,${base64Data}`;
 
 
 function getTypstSVG(code: string) {
@@ -155,7 +155,7 @@ function getTypstSVG(code: string) {
 ---
 <Main>
     <Navbar>
-        <Button link={dataUrl} download="CV-FilipeRamalho.pdf" target="_blank">
+        <Button link={dataUrl} download="CV-FilipeRamalho.pdf" target="_blank" rel="noopener noreferrer">
             Download
         </Button>
     </Navbar>

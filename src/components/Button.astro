@@ -4,20 +4,21 @@ interface Props {
     link?: string;
     download?: string;
     target?: string;
+    rel?: string;
 }
 
-const {primary, link,download,target} = Astro.props
+const {primary, link,download,target,rel} = Astro.props
 ---
 
 {
     primary ?
-    <a class="font-bold text-background bg-primary hover:bg-primary-dark select-none cursor-pointer py-2 px-3 rounded"
-       href={link} download={download} target={target}>
+    <a class="button font-bold text-background bg-primary hover:bg-primary-dark select-none cursor-pointer py-2 px-3 rounded"
+       href={link} download={download} target={target} rel={rel}>
         <slot/>
     </a>
         :
-    <a class="font-bold text-white bg-transparent outline-1 outline-default hover:bg-background select-none cursor-pointer py-2 px-3 rounded"
-       href={link} download={download} target={target}>
+    <a class="button font-bold text-white bg-transparent outline-1 outline-default hover:bg-background select-none cursor-pointer py-2 px-3 rounded"
+       href={link} download={download} target={target} rel={rel}>
         <slot/>
     </a>
     }
