@@ -7,7 +7,7 @@ interface Props {
 
 const {sm_margin = 10, margin = 10} = Astro.props
 ---
-<div id="navbar" class=`flex flex-row justify-between w-min my-${margin} sm:my-${sm_margin} gap-7`>
+<div id="navbar" class=`flex flex-wrap my-${margin} sm:my-${sm_margin} gap-7`>
     <Button primary link="/">
         Home
     </Button>
@@ -17,4 +17,5 @@ const {sm_margin = 10, margin = 10} = Astro.props
     <Button primary link="/contact">
         Kontakt
     </Button>
+    <slot />
 </div>

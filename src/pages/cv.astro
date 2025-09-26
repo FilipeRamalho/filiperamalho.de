@@ -4,6 +4,7 @@ import {type CompileDocArgs, NodeCompiler} from "@myriaddreamin/typst-ts-node-co
 import Main from "../layouts/Main.astro";
 import Navbar from "../components/Navbar.astro";
 import {load} from "cheerio";
+import Button from "../components/Button.astro";
 
 const code1 = `
 #import "@preview/cv-soft-and-hard:0.1.0": styling, section, entry, subsection, rust, cpp, python, typst-logo, java, typescript
@@ -128,29 +129,36 @@ Ich arbeite gerne in Teams, in denen direkt und klar miteinander geredet wird.
   [_2021/2025_],
 )]]))`
 
+let input: CompileDocArgs =
+    {mainFileContent: code1+code2}
+const $typst = NodeCompiler.create()
+const pdfData = $typst.pdf(input)
+const base64Data = btoa(String.fromCharCode(...new Uint8Array(pdfData)));
+const dataUrl = `data:application/pdf;base64,${base64Data}`;
+
+
 function getTypstSVG(code: string) {
     let input: CompileDocArgs =
         {mainFileContent: code}
 
     const $typst = NodeCompiler.create()
-    const docRes = $typst.compile(input);
-    if (!docRes.result) {
-        docRes.printDiagnostics();
-        return "";
-    }
-    const doc = docRes.result;
-    const svg = $typst.svg(doc)
+    const svg = $typst.svg(input)
+
     let loaded_svg = load(svg, {
         xml: true,
     });
     loaded_svg("svg").attr("width", "100%");
-    loaded_svg("svg").attr("height", "auto");
+    loaded_svg("svg").attr("height", "100%");
     return loaded_svg.html();
 
 }
 ---
 <Main>
-    <Navbar></Navbar>
+    <Navbar>
+        <Button link={dataUrl} download="CV-FilipeRamalho.pdf" target="_blank">
+            Download
+        </Button>
+    </Navbar>
     <div class="absolute left-0 w-screen m-auto md:hidden">
         <div class="w-full h-full" set:html={getTypstSVG(code1 + ",width: 10cm" + code2)}/>
     </div>
