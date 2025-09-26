@@ -16,27 +16,29 @@ const code2 = `)
   = Filipe Ramalho - Curriculum Vitae\\
   Berlinerstr. 29, 55131 Mainz\\
   #link("https://filiperamalho.de", "filiperamalho.de") |
-  #link("https://www.github.com/FilipeRamalho", "github.com/FilipeRamalho") |
   #link("mailto:privat@filiperamalho.de", "privat@filiperamalho.de") |
-  #link("tel:+4917622095047", "+49 176 22095047")
-]
+  #link("tel:+4917622095047", "+49 176 22095047") \\
+  #link("https://www.github.com/FilipeRamalho", "github.com/FilipeRamalho") |
+  #link("https://www.linkedin.com/in/fmdsr/", "linkedin.com/in/fmdsr/") 
+] 
 
 #section("Profil")
-Physiker mit Fokus auf Maschinelles Lernen. \\
-Ich finde gerne Lösungen durch datenbasierte Arbeit und die Entwicklung von selbst geschriebener Software. 
-Dabei vertiefe ich mich in die aktuelle Forschung, um stets mit den neuesten und schnellsten Tools und Methoden zu arbeiten. 
-Ich arbeite gerne in Teams, in denen direkt und klar miteinander geredet wird.
+
+*Physiker und ML-Entwickler* _mit Schwerpunkt auf numerischen Methoden und neuronalen Netzen für wissenschaftliche Anwendungen._
+- *Forschung*: Implementierung eines neuronalen Netzes zur Lösung der Schrödinger-Gleichung mithilfe der Variationsmethode (Bachelor-Thesis).
+- *Praxis*: Von der Datenpipeline bis zur Modelloptimierung, immer mit Fokus auf skalierbare, effiziente Lösungen.
+- *Tech-Stack*: PyTorch, Docker, PowerShell, Mathematica, Kotlin, Web Dev.
+- *Arbeitsweise*: Datengetrieben, kollaborativ (Erfahrung in interdisziplinären Teams), mit Leidenschaft für klare Dokumentation (Typst/LaTeX) und reproduzierbare Forschung.
 
 //Experience
 #section("Erfahrung")
 #entry(
   [
     *Werkstudent* (_Berufsgenossenschaft Holz und Metall_)
-    - Migration von MS SCOM zu PRTG
-    - Betrieb der Überwachung von Server-Hardware und Applikationen
-    - Entwicklung von selbstgeschriebenen Sensoren für PRTG mit PowerShell
-    - Betreuung von Auszubildenden
-    - Fehlerdiagnose und -behebung mittels WMI
+    - Migration von 2.000+ Servern von MS SCOM zu PRTG.
+    - Betrieb der Überwachung über WMI, SNMP von Server-Hardware und Applikationen.
+    - Entwicklung von selbstgeschriebenen Sensoren für PRTG mit PowerShell.
+    - Betreuung von Auszubildenden.
   ],
   [_seit 11/2023_]
 )
@@ -45,7 +47,7 @@ Ich arbeite gerne in Teams, in denen direkt und klar miteinander geredet wird.
   [
     *Hilfswissenschaftler* (_ZDV Mainz_)
     - Alltägliche Hardwarewartungsarbeiten. 
-    - Webseiten auf moderne Javascript Frameworks portiert 
+    - Webseiten auf moderne Javascript Frameworks portiert.
     - Python-Skripte für den HPC-Betrieb entwickelt. 
     - Entwicklung und Koordination eines Asset Management Systems. 
   ],
@@ -55,8 +57,8 @@ Ich arbeite gerne in Teams, in denen direkt und klar miteinander geredet wird.
 #entry(
   [
     *Praktikum* (_Institut für Kernphysik Mainz_)
-    - Durfte zum ersten Mal Löten und Schaltungen entwickeln. 
-    - Interesse an Elektronik geweckt
+    - Entwurf und Lötung von Schaltungen für Experimente. 
+    - Weckte Interesse an Datenanalyse (Messdatenauswertung mit Python).
   ],
   [_06/2018_],
 )
@@ -70,15 +72,24 @@ Ich arbeite gerne in Teams, in denen direkt und klar miteinander geredet wird.
     #text([Nebenfach: Informatik], size: 9pt) \\
     #text([Thesis: "_Neural network implementation of a variational method to determine solutions of the Schrödinger equation_" (Univ.-Prof. Dr. Marc Vanderhaeghen)], size: 9pt)
   ],
-  [\\
-    _04/2020-04/2026_
+  [
+    _04/2020-03/2026_
   ],
 )
 #entry(
-  [*IGS Gerhard Ertl, Sprendlingen*],
+  [*IGS Gerhard Ertl, Sprendlingen* \\
+   Abitur \\ 
+   #text([Schwerpunkt: MINT], size: 9pt)],
+  
   [_09/2011-03/2020_]
 )
 ]
+#block(breakable: false)[
+#section("Sprachen")
+
+#text("Deutsch", weight: 600) (fließend), #text("Englisch", weight: 600) (fließend), #text("Portugiesich", weight: 600) (Muttersprache). 
+]
+
 #block(breakable: false)[
 #section("Skills", note: "In absteigender Reihenfolge nach Kenntnisstand")
 #table(
@@ -88,16 +99,14 @@ Ich arbeite gerne in Teams, in denen direkt und klar miteinander geredet wird.
   row-gutter: 0pt,
   column-gutter: 5pt,
   inset: (left: 0pt, top: 2pt),
-  text("Programming Languages", weight: 600),
-  [Kotlin, PowerShell, Typescript, Python, Mathematica, SQL],
-  text("Development Tools", weight: 600),
-  [Docker, Linux, GitHub Actions],
-  text("Documentation & Publishing", weight: 600),
-  [Typst, LaTeX, HTML, CSS],
-  text("Machine Learning", weight: 600),
-  [PyTorch, Torchquad],
-  text("Others", weight: 600),
-  [Computer Hardware & Support, Löten, Elektronik, CI/CD],
+  text("ML/Data Science", weight: 600),
+  [Python, Mathematica, Matplotlib, PyTorch, SQL, Torchquad, Numpy],
+  text("Backend/DevOps", weight: 600),
+  [Kotlin, PowerShell, Docker],
+  text("Webentwicklung", weight: 600),
+  [Typescript, Astro],
+  text("Technische Skills", weight: 600),
+  [Hardware-Diagnose (WMI), Löten, Schaltungsdesign],
 )
 ]
 
@@ -156,14 +165,14 @@ function getTypstSVG(code: string) {
 <Main>
     <Navbar>
         <Button link={dataUrl} download="CV-FilipeRamalho.pdf" target="_blank" rel="noopener noreferrer">
-            Download
+            Download (A4 PDF)
         </Button>
     </Navbar>
     <div class="absolute left-0 w-screen m-auto md:hidden">
-        <div class="w-full h-full" set:html={getTypstSVG(code1 + ",width: 10cm" + code2)}/>
+        <div class="w-full h-full" set:html={getTypstSVG(code1 + ",width: 10cm,height:48cm" + code2)}/>
     </div>
     <div class="w-full hidden md:inline lg:hidden">
-        <div set:html={getTypstSVG(code1 + ",width: 15cm" + code2)}/>
+        <div set:html={getTypstSVG(code1 + ",width: 15cm,height:35cm" + code2)}/>
     </div>
     <div class="w-full hidden lg:inline">
         <div class="w-full h-full" set:html={getTypstSVG(code1 + code2)}/>
