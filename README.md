@@ -8,7 +8,7 @@ This is the repo of [filiperamalho.de](https://filiperamalho.de).
 
 If you want to build the project or develop on it, then run
 
-`corepack yarn`
+`bun -c install`
 
 to install dependencies.
 
@@ -16,11 +16,11 @@ to install dependencies.
 
 Build a prod-build with:
 
-`corepack yarn build`
+`bun -c run build`
 
 Enter development mode with:
 
-`corepack yarn dev`
+`bun -c run dev`
 
 **Docker**
 

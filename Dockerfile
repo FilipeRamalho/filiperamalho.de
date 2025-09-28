@@ -1,36 +1,30 @@
-FROM --platform=$BUILDPLATFORM node:lts-alpine AS build
-
-RUN corepack enable
+FROM --platform=$BUILDPLATFORM oven/bun:1-alpine AS build
 
 WORKDIR /app
 
 COPY package.json ./
-COPY yarn.lock ./
-COPY .yarnrc.yml ./
+COPY bun.lockb ./
 
-RUN corepack yarn install --immutable
+RUN bun -c install --frozen-lockfile --production
 
 # Copy the rest of the application files to the container
+ENV NODE_ENV=production
+
 COPY public/ ./public
 COPY src/ ./src
 COPY tsconfig.json ./tsconfig.json
 COPY astro.config.ts ./astro.config.ts
 COPY package.json ./
-COPY yarn.lock ./
 
-RUN corepack yarn build
+RUN bun -c run build
 
 
-FROM --platform=$BUILDPLATFORM node:lts-alpine AS run
+FROM --platform=$BUILDPLATFORM oven/bun:1-alpine AS run
 
 WORKDIR /app
 
 COPY --from=build /app/dist ./dist
 COPY --from=build /app/node_modules ./node_modules
+COPY bunfig.toml ./
 
-ENV NODE_ENV="production"
-
-ENV HOST=0.0.0.0
-ENV PORT=4321
-
-CMD ["node", "./dist/server/entry.mjs"]
+CMD ["bun","-c","run", "./dist/server/entry.mjs"]

@@ -1,17 +1,15 @@
 {
   "name": "filiperamalho.de",
-  "version": "3.0.0",
+  "version": "4.0.0",
   "license": "UNLICENSED",
   "scripts": {
     "dev": "astro dev --host",
     "build": "astro build",
-    "preview": "astro build && node ./dist/server/entry.mjs",
-    "astro": "astro"
+    "preview": "bun run -c build && bun run -c ./dist/server/entry.mjs"
   },
   "dependencies": {
     "@astrojs/mdx": "^4.3.5",
-    "@astrojs/node": "^9.4.4",
-    "@deno/astro-adapter": "^0.3.2",
+    "@hedystia/astro-bun": "^0.3.2",
     "@lucide/astro": "^0.544.0",
     "@myriaddreamin/typst-ts-node-compiler": "0.6.1-rc3",
     "@tailwindcss/vite": "^4.1.13",
@@ -22,5 +20,7 @@
     "typescript": "^5.9.2",
     "vite": "^6.3.6"
   },
-  "packageManager": "yarn@4.9.4+sha512.7b1cb0b62abba6a537b3a2ce00811a843bea02bcf53138581a6ae5b1bf563f734872bd47de49ce32a9ca9dcaff995aa789577ffb16811da7c603dcf69e73750b"
+  "devDependencies": {
+    "@types/bun": "^1.2.22"
+  }
 }
