@@ -36,7 +36,7 @@ const code2 = `)
   [
     *Werkstudent* (_Berufsgenossenschaft Holz und Metall_)
     - Migration von 2.000+ Servern von MS SCOM zu PRTG.
-    - Betrieb der Überwachung über WMI, SNMP von Server-Hardware und Applikationen.
+    - Anbindung von Grafana über die SQL-Schnittstelle an PRTG.
     - Entwicklung von selbstgeschriebenen Sensoren für PRTG mit PowerShell.
     - Betreuung von Auszubildenden.
   ],
@@ -87,7 +87,7 @@ const code2 = `)
 #block(breakable: false)[
 #section("Sprachen")
 
-#text("Deutsch", weight: 600) (fließend), #text("Englisch", weight: 600) (fließend), #text("Portugiesich", weight: 600) (Muttersprache). 
+#text("Deutsch", weight: 600) (fließend), #text("Englisch", weight: 600) (fließend), #text("Portugiesisch", weight: 600) (Muttersprache). 
 ]
 
 #block(breakable: false)[
@@ -166,6 +166,9 @@ function getTypstSVG(code: string) {
     <Navbar>
         <Button link={dataUrl} download="CV-FilipeRamalho.pdf" target="_blank" rel="noopener noreferrer">
             Download (A4 PDF)
+        </Button>
+        <Button link="/cv-en">
+            CV (English)
         </Button>
     </Navbar>
     <div class="absolute left-0 w-screen m-auto md:hidden">

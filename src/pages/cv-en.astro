@@ -1,0 +1,169 @@
+---
+import {type CompileDocArgs, NodeCompiler} from "@myriaddreamin/typst-ts-node-compiler";
+
+import Main from "../layouts/Main.astro";
+import Navbar from "../components/Navbar.astro";
+import {load} from "cheerio";
+import Button from "../components/Button.astro";
+
+const code1 = `
+#import "@preview/cv-soft-and-hard:0.1.0": styling, section, entry, subsection, rust, cpp, python, typst-logo, java, typescript
+#show: styling
+#set page(fill: white, margin:1cm`
+const code2 = `)
+ #align(center)[
+  = Filipe Ramalho - Curriculum Vitae\\
+  Berlinerstr. 29, 55131 Mainz, Germany\\
+  #link("https://filiperamalho.de", "filiperamalho.de") |
+  #link("mailto:privat@filiperamalho.de", "privat@filiperamalho.de") |
+  #link("tel:+4917622095047", "+49 176 22095047") \\
+  #link("https://www.github.com/FilipeRamalho", "github.com/FilipeRamalho") |
+  #link("https://www.linkedin.com/in/fmdsr/", "linkedin.com/in/fmdsr/")
+]
+#section("Profile")
+*Physicist and ML Developer* _specializing in numerical methods and neural networks for scientific applications._
+- *Research*: Implemented a neural network to solve the Schrödinger equation using variational methods (Bachelor’s thesis).
+- *Practice*: From data pipelines to model optimization, always focusing on scalable, efficient solutions.
+- *Tech Stack*: PyTorch, Docker, PowerShell, Mathematica, Kotlin, Web Development.
+- *Work Style*: Data-driven, collaborative (experience in interdisciplinary teams), with a passion for clear documentation (Typst/LaTeX) and reproducible research.
+
+#section("Experience")
+#entry(
+  [
+    *Working Student* (_Berufsgenossenschaft Holz und Metall_)
+    - Migrated 2,000+ servers from MS SCOM to PRTG.
+    - Connection of Grafana to PRTG via the SQL interface.
+    - Developed custom PRTG sensors using PowerShell.
+    - Supervised trainees.
+  ],
+  [_since 11/2023_]
+)
+#entry(
+  [
+    *Research Assistant* (_ZDV Mainz_)
+    - Performed routine hardware maintenance.
+    - Ported websites to modern JavaScript frameworks.
+    - Developed Python scripts for HPC operations.
+    - Designed and coordinated an asset management system.
+  ],
+  [_09/2021 - 10/2023_]
+)
+#entry(
+  [
+    *Internship* (_Institute for Nuclear Physics, Mainz_)
+    - Designed and soldered circuits for experiments.
+    - Sparked interest in data analysis (evaluating measurement data with Python).
+  ],
+  [_06/2018_],
+)
+#block(breakable: false)[
+#section("Education")
+#entry(
+  [
+    *Johannes Gutenberg University Mainz*\\
+    B.Sc. Physics\\
+    #text([Minor: Computer Science], size: 9pt) \\
+    #text([Thesis: "_Neural network implementation of a variational method to determine solutions of the Schrödinger equation_" (Supervisor: Univ.-Prof. Dr. Marc Vanderhaeghen)], size: 9pt)
+  ],
+  [_04/2020 - 03/2026_]
+)
+#entry(
+  [*IGS Gerhard Ertl, Sprendlingen* \\
+   High School Diploma (Abitur) \\
+   #text([Focus: STEM], size: 9pt)],
+  [_09/2011 - 03/2020_]
+)
+]
+#block(breakable: false)[
+#section("Languages")
+#text("German", weight: 600) (fluent), #text("English", weight: 600) (fluent), #text("Portuguese", weight: 600) (native).
+]
+#block(breakable: false)[
+#section("Skills", note: "Listed in descending order of proficiency")
+#table(
+  align: left,
+  columns: (auto, 1fr),
+  stroke: none,
+  row-gutter: 0pt,
+  column-gutter: 5pt,
+  inset: (left: 0pt, top: 2pt),
+  text("ML/Data Science", weight: 600),
+  [Python, Mathematica, Matplotlib, PyTorch, SQL, Torchquad, NumPy],
+  text("Backend/DevOps", weight: 600),
+  [Kotlin, PowerShell, Docker, Grafana],
+  text("Web Development", weight: 600),
+  [TypeScript, Astro],
+  text("Technical Skills", weight: 600),
+  [Hardware Diagnostics (WMI), Soldering, Circuit Design],
+)
+]
+#box(place(hide[
+#block(breakable: false)[
+#section("Selected Projects", note: "Listed in descending order of project size")
+#entry(
+  [
+    *#link("https://example.com", \`example_project\`)* -
+    _Example Project_ #java #python #typescript\\
+    - Point 1
+    - Point 2
+  ],
+  [_08/2022_]
+)
+]
+#block(breakable: false)[
+#section("Additional Commitments")
+#entry(
+  [
+    *Physics/Meteorology Student Council*\\
+    - Represented students in committees at all levels, from departmental to national conferences.
+    - Helped organize student events, such as a Mario Kart tournament with 100+ participants.
+    - Maintained the council’s website.
+    - Set up servers and a wiki for the student council.
+    - Developed an application for digital tournament management.
+  ],
+  [_2021–2025_],
+)]]))`
+
+let input: CompileDocArgs =
+    {mainFileContent: code1+code2}
+const $typst = NodeCompiler.create()
+const pdfData = $typst.pdf(input)
+const base64Data = btoa(String.fromCharCode(...new Uint8Array(pdfData)));
+const dataUrl = `data:application/octet-stream;base64,${base64Data}`;
+
+
+function getTypstSVG(code: string) {
+    let input: CompileDocArgs =
+        {mainFileContent: code}
+
+    const $typst = NodeCompiler.create()
+    const svg = $typst.svg(input)
+
+    let loaded_svg = load(svg, {
+        xml: true,
+    });
+    loaded_svg("svg").attr("width", "100%");
+    loaded_svg("svg").attr("height", "100%");
+    return loaded_svg.html();
+
+}
+---
+<Main>
+    <Navbar>
+        <Button link={dataUrl} download="CV-FilipeRamalho.pdf" target="_blank" rel="noopener noreferrer">
+            Download (A4 PDF)
+        </Button>
+        <Button link="/cv">
+            CV (Deutsch)
+        </Button>
+    </Navbar>
+    <div class="absolute left-0 w-screen m-auto md:hidden">
+        <div class="w-full h-full" set:html={getTypstSVG(code1 + ",width: 10cm,height:48cm" + code2)}/>
+    </div>
+    <div class="w-full hidden md:inline lg:hidden">
+        <div set:html={getTypstSVG(code1 + ",width: 15cm,height:35cm" + code2)}/>
+    </div>
+    <div class="w-full hidden lg:inline">
+        <div class="w-full h-full" set:html={getTypstSVG(code1 + code2)}/>
+    </div>
+</Main>
