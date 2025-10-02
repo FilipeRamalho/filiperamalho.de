@@ -25,6 +25,7 @@ WORKDIR /app
 
 COPY --from=build /app/dist ./dist
 COPY --from=build /app/node_modules ./node_modules
+COPY public/ ./public
 COPY bunfig.toml ./
 
 CMD ["bun","-c","run", "./dist/server/entry.mjs"]
