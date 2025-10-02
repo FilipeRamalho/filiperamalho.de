@@ -1,5 +1,5 @@
 ---
-import Error from "../layouts/Error.astro";
+import ErrorLayout from "../layouts/Error.astro";
 
 interface Props {
     error: unknown
@@ -7,11 +7,11 @@ interface Props {
 
 const {error} = Astro.props
 ---
-<Error>
+<ErrorLayout>
     <header>
         <h2 class="text-xl m-1">A wild 500 appeared. </h2>
         <p class="text-xl">There seems to be an error server-side?</p>
-        <p class="text-xl">{(error instanceof Error) ? error.message : 'Unknown Error'}</p>
+        <p class="text-xl">{error instanceof Error ? error.message : "Unknown error"}</p>
     </header>
 
-</Error>
+</ErrorLayout>
