@@ -9,7 +9,7 @@ import Button from "../components/Button.astro";
 
 const code1 = `
 #import "@preview/cv-soft-and-hard:0.1.0": styling, section, entry, subsection, rust, cpp, python, typst-logo, java, typescript
-#import "@preview/wrap-it:0.1.1": wrap-content, wrap-top-bottom
+#import "@preview/meander:0.2.2"
 
 #show: styling
 #set page(fill: white, margin:1.6cm`
@@ -18,27 +18,32 @@ const code2 = `)
 #set text(lang: "de")
 #set par(justify: true)
 
+#meander.reflow(placement: box,{
+  import meander: *
 
-#wrap-content(
-  align: top + right,
-  figure(
-  image("/public/profile.png", height: 4.5cm)
-  ),
-  [
-  = Filipe Ramalho - Physikstudent mit ML-Fokus\\ 
-  Berliner Str. 29, 55131 Mainz, Deutschland\\
-  #link("https://filiperamalho.de", "filiperamalho.de") |
-  #link("mailto:privat@filiperamalho.de", "privat@filiperamalho.de") |
-  #link("tel:+4917622095047", "+49 176 22095047") \\
-  #link("https://www.github.com/FilipeRamalho", "github.com/FilipeRamalho") |
-  #link("https://www.linkedin.com/in/fmdsr/", "linkedin.com/in/fmdsr/") 
-#v(1em)
-#section("Profil")
+  // As many obstacles as you want
+  placed(top + right,
+  boundary: contour.margin(.5cm),
+  image("/public/profile.png", height: 4.3cm))
 
-Ich verfolge einen *datengetriebenen Ansatz* (Python, Mathematica) und arbeite gerne in interdisziplinären Teams. Dabei lege ich großen Wert auf eine *klare Dokumentation* und die *Reproduzierbarkeit* meiner Ergebnisse (Docker, CI/CD).
-In meiner Forschung habe ich mich mit der Implementierung *neuronaler Netze* (PyTorch) zur Lösung physikalischer Probleme befasst.
-Privat experimentiere ich mit *moderner Software-Entwicklung* (TypeScript, Kotlin), um meine Fähigkeiten in sauberem Code-Design und nutzerfreundlichen Schnittstellen zu erweitern. 
-])
+  // The container wraps around all
+  container()
+  content[
+    #set par(justify: true)
+    
+    = Filipe Ramalho - Physikstudent mit ML-Fokus\\ 
+    Berliner Str. 29, 55131 Mainz, Deutschland\\
+    #link("https://filiperamalho.de", "filiperamalho.de") |
+    #link("mailto:privat@filiperamalho.de", "privat@filiperamalho.de") |
+    #link("tel:+4917622095047", "+49 176 22095047") \\
+    #link("https://www.github.com/FilipeRamalho", "github.com/FilipeRamalho") |
+    #link("https://www.linkedin.com/in/fmdsr/", "linkedin.com/in/fmdsr/") 
+    
+    #section("Profil")
+    
+    Schwerpunkt meiner Forschungsarbeit ist die Implementierung *neuronaler Netze* (PyTorch) zur Lösung physikalischer Probleme. Grundsätzlich verfolge ich in meiner Arbeit einen *datengetriebenen Ansatz* (Python, Mathematica) und arbeite gerne in interdisziplinären Teams. Dabei lege ich großen Wert auf eine *klare Dokumentation* und die *Reproduzierbarkeit* meiner Ergebnisse (Docker, CI/CD). Privat experimentiere ich mit *moderner Software-Entwicklung* (TypeScript, Kotlin), um meine Fähigkeiten im Bereich sauberes Code-Design und nutzerfreundliche Schnittstellen zu erweitern. 
+  ]
+})
 
 //Experience
 #section("Erfahrung")
@@ -182,10 +187,10 @@ function getTypstSVG(code: string) {
         </Button>
     </Navbar>
     <div class="absolute left-0 w-screen m-auto md:hidden">
-        <div class="w-full h-full" set:html={getTypstSVG(code1 + ",width: 15cm,height:35cm" + code2)}/>
+        <div class="w-full h-full" set:html={getTypstSVG(code1 + ",width: 15cm,height:40cm" + code2)}/>
     </div>
     <div class="w-full hidden md:inline lg:hidden">
-        <div set:html={getTypstSVG(code1 + ",width: 15cm,height:35cm" + code2)}/>
+        <div set:html={getTypstSVG(code1 + ",width: 15cm,height:40cm" + code2)}/>
     </div>
     <div class="w-full hidden lg:inline">
         <div class="w-full h-full" set:html={getTypstSVG(code1 + code2)}/>
