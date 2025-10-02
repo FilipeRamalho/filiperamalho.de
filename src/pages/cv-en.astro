@@ -8,32 +8,43 @@ import Button from "../components/Button.astro";
 
 const code1 = `
 #import "@preview/cv-soft-and-hard:0.1.0": styling, section, entry, subsection, rust, cpp, python, typst-logo, java, typescript
+#import "@preview/wrap-it:0.1.1": wrap-content, wrap-top-bottom
+
 #show: styling
-#set page(fill: white, margin:1cm`
+#set page(fill: white, margin:1.6cm`
+
 const code2 = `)
- #align(center)[
-  = Filipe Ramalho - Curriculum Vitae\\
-  Berlinerstraße 29, 55131 Mainz, Germany\\
+#set text(lang: "de")
+#set par(justify: true)
+
+
+#wrap-content(
+  align: top + right,
+  figure(
+  image("/public/profile.png", height: 4.5cm)
+  ),
+  [
+  = Filipe Ramalho - Physikstudent mit ML-Fokus\\ 
+  Berliner Str. 29, 55131 Mainz, Germany\\
   #link("https://filiperamalho.de", "filiperamalho.de") |
   #link("mailto:privat@filiperamalho.de", "privat@filiperamalho.de") |
   #link("tel:+4917622095047", "+49 176 22095047") \\
   #link("https://www.github.com/FilipeRamalho", "github.com/FilipeRamalho") |
-  #link("https://www.linkedin.com/in/fmdsr/", "linkedin.com/in/fmdsr/")
-]
-#section("Profile")
+  #link("https://www.linkedin.com/in/fmdsr/", "linkedin.com/in/fmdsr/") 
+#v(1em)
+#section("Profil")
 
-*Physicist and ML Developer* _specializing in numerical methods and neural networks for scientific applications._
-- *Research*: Implemented a neural network to solve the Schrödinger equation using variational methods (Bachelor’s thesis).
-- *Practice*: From data pipelines to model optimization, always focusing on scalable, efficient solutions.
-- *Tech Stack*: PyTorch, Docker, PowerShell, Mathematica, Kotlin, Web Development.
-- *Work Style*: Data-driven, collaborative (experience in interdisciplinary teams), with a passion for clear documentation (Typst/LaTeX) and reproducible research.
+I pursue a *data-driven approach* (Python, Mathematica) and enjoy working in interdisciplinary teams. To this end, I place great importance on *clear documentation* and the *reproducibility* of my results (Docker, CI/CD).
+In my research, I have worked on the implementation of *neural networks* (PyTorch) to solve physical problems.
+In my spare time, I experiment with *modern software development* (TypeScript, Kotlin) to expand my skills in clean code design and user-friendly interfaces. 
+])
 
 #section("Experience")
 #entry(
   [
     *Working Student* (_Berufsgenossenschaft Holz und Metall_)
     - Migrated 2,000+ servers from MS SCOM to PRTG.
-    - Connection of Grafana to PRTG via the SQL interface.
+    - Connection of Grafana to PRTG via an SQL interface.
     - Developed custom PRTG sensors using PowerShell.
     - Supervised trainees.
   ],
@@ -45,7 +56,6 @@ const code2 = `)
     - Performed routine hardware maintenance.
     - Ported websites to modern JavaScript frameworks.
     - Developed Python scripts for HPC operations.
-    - Designed and coordinated an asset management system.
   ],
   [_09/2021 - 10/2023_]
 )
@@ -130,7 +140,8 @@ let input: CompileDocArgs =
     {mainFileContent: code1+code2}
 const $typst = NodeCompiler.create()
 const pdfData = $typst.pdf(input)
-const base64Data = btoa(String.fromCharCode(...new Uint8Array(pdfData)));
+
+const base64Data = Buffer.from(pdfData).toString('base64');
 const dataUrl = `data:application/octet-stream;base64,${base64Data}`;
 
 
