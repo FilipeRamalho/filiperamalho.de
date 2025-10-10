@@ -22,5 +22,8 @@
   },
   "devDependencies": {
     "@types/bun": "^1.2.22"
+  },
+  "overrides": {
+    "vite": "npm:rolldown-vite@latest"
   }
 }

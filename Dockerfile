@@ -19,13 +19,15 @@ COPY package.json ./
 RUN bun -c run build
 
 
-FROM --platform=$BUILDPLATFORM oven/bun:1-alpine AS run
+FROM --platform=$BUILDPLATFORM alpine:latest AS run
+
+RUN apk add --no-cache lighttpd
+
+COPY lighttpd.conf /etc/lighttpd/lighttpd.conf
 
 WORKDIR /app
 
-COPY --from=build /app/dist ./dist
-COPY --from=build /app/node_modules ./node_modules
-COPY public/ ./public
-COPY bunfig.toml ./
+COPY --from=build /app/dist /var/www/localhost
 
-CMD ["bun","-c","run", "./dist/server/entry.mjs"]
+EXPOSE 80
+CMD ["lighttpd", "-D", "-f", "/etc/lighttpd/lighttpd.conf"]
