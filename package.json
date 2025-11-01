@@ -4,10 +4,10 @@
   "license": "UNLICENSED",
   "workspaces": ["frontend", "backend"],
   "scripts": {
-    "dev:payload": "cd backend && bun run dev",
-    "dev:website": "cd frontend && bun run dev",
-    "build:payload": "cd backend && bun run build",
-    "build:website": "cd frontend && bun run build",
+    "dev:payload": "bun run --filter 'filiperamalho.de_backend' dev",
+    "dev:website": "bun run --filter 'filiperamalho.de_frontend' dev",
+    "build:payload": "bun run --filter 'filiperamalho.de_backend' build",
+    "build:website": "bun run --filter 'filiperamalho.de_frontend' build",
     "test": "echo \"Error: no test specified\" && exit 1"
   }
 }
