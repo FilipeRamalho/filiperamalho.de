@@ -23,3 +23,10 @@ pnpm-debug.log*
 
 # jetbrains setting folder
 .idea/
+
+/backend/.next/*
+/backend/media
+/backend/*.sqlite
+
+/backend/**
+!/backend/package.json

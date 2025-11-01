@@ -1,0 +1,25 @@
+---
+import '@/styles/global.css'
+import Navbar from "@/components/Navbar.astro";
+---
+
+<!doctype html>
+<html lang="de">
+<head>
+    <meta charset="UTF-8"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+    <link rel="icon" type="image/svg" href="/favicon.svg"/>
+    <meta name="generator" content={Astro.generator}/>
+    <meta name="description" content="Hallo, mein Name ist Filipe Ramalho! Ich beschäftige mich aktiv mit Machine Learning und Data Science. Guck mal rein um zu sehen was ich alles so mache.">
+    <title>Filipe Ramalho</title>
+</head>
+    <body class="bg-white text-black h-full scroll-smooth
+                        text-sm
+                        sm:text-base
+                        min-h-screen">
+    <Navbar></Navbar>
+    <div id="content" class="w-8/10 xl:w-5/10 max-w-[1200px] m-auto">
+            <slot/>
+        </div>
+    </body>
+</html>

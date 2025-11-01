@@ -1,0 +1,28 @@
+{
+  "name": "filiperamalho.de_frontend",
+  "version": "5.0.0",
+  "license": "UNLICENSED",
+  "scripts": {
+    "dev": "astro dev --host",
+    "build": "astro build",
+    "preview": "bun run -c build && bun run -c ./dist/server/entry.mjs"
+  },
+  "dependencies": {
+    "@astrojs/mdx": "4.3.9",
+    "@tailwindcss/vite": "^4.1.13",
+    "astro": "5.15.3",
+    "cheerio": "^1.1.2",
+    "sharp": "^0.34.4",
+    "tailwindcss": "^4.1.13",
+    "typescript": "^5.9.2"
+  },
+  "devDependencies": {
+    "@types/bun": "^1.3.0"
+  },
+  "peerDependencies": {
+    "payload": "3.60.0"
+  },
+  "overrides": {
+    "vite": "npm:rolldown-vite@latest"
+  }
+}

@@ -1,28 +1,13 @@
 {
   "name": "filiperamalho.de",
-  "version": "4.0.0",
+  "version": "5.0.0",
   "license": "UNLICENSED",
+  "workspaces": ["frontend", "backend"],
   "scripts": {
-    "dev": "astro dev --host",
-    "build": "astro build",
-    "preview": "bun run -c build && bun run -c ./dist/server/entry.mjs"
-  },
-  "dependencies": {
-    "@astrojs/mdx": "^4.3.5",
-    "@hedystia/astro-bun": "^0.3.2",
-    "@lucide/astro": "^0.544.0",
-    "@myriaddreamin/typst-ts-node-compiler": "0.6.1-rc3",
-    "@tailwindcss/vite": "^4.1.13",
-    "astro": "^5.14.0",
-    "cheerio": "^1.1.2",
-    "lucide": "^0.544.0",
-    "tailwindcss": "^4.1.13",
-    "typescript": "^5.9.2"
-  },
-  "devDependencies": {
-    "@types/bun": "^1.2.22"
-  },
-  "overrides": {
-    "vite": "npm:rolldown-vite@latest"
+    "dev:payload": "cd backend && bun run dev",
+    "dev:website": "cd frontend && bun run dev",
+    "build:payload": "cd backend && bun run build",
+    "build:website": "cd frontend && bun run build",
+    "test": "echo \"Error: no test specified\" && exit 1"
   }
 }

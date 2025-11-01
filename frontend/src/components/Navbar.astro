@@ -1,0 +1,32 @@
+---
+import { Image } from "astro:assets"
+import landscape from "@/assets/img/landscape.webp"
+
+
+---
+<div id="navbar" class=`grid grid-rows-1 grid-flow-col justify-evenly 
+                        mx-auto w-fit p-2 
+                        z-50
+                        bg-black/50 backdrop-blur
+                        backdrop-invert-75
+                        rounded-4xl mt-10 shadow-[0_5px_25px_#0000000d,0_20px_50px_#00000024]
+                        fixed
+                        inset-[auto_0%_15px] sm:inset-[auto_0%_auto]
+                        `>
+    <a class={`button font-bold text-white select-none cursor-pointer w-20 sm:w-30 text-center ali hover:bg-white hover:text-black rounded-4xl py-2`}
+       href="/">
+        Home
+    </a>
+    <a class={`button font-bold text-white select-none cursor-pointer w-20 sm:w-30 text-center ali hover:bg-white hover:text-black rounded-4xl py-2`}
+       href="/#work">
+        Work
+    </a>
+    <a class={`button font-bold text-white select-none cursor-pointer w-20 sm:w-30 text-center ali hover:bg-white hover:text-black rounded-4xl py-2`}
+       href="/contact">
+        Contact
+    </a>
+</div>
+
+<div class="rounded-xl hidden sm:inline-flex pt-[10px] px-[50px] w-full">
+    <Image src={landscape} alt="Landscape" class="w-full rounded-xl object-cover max-w-[2000px] m-auto aspect-10/5 lg:aspect-10/2" />
+</div>

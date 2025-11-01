@@ -1,0 +1,298 @@
+---
+import {Image} from "astro:assets";
+
+import Main from '@/layouts/Main.astro'
+
+import me from "@/assets/img/me.webp";
+import bg from "@/assets/logos/bg.svg";
+import prtg from "@/assets/logos/prtg.svg";
+import grafana from "@/assets/logos/grafana.svg";
+import jgu from "@/assets/logos/jgu.svg";
+import microsoft from "@/assets/logos/microsoft.svg";
+import python from "@/assets/logos/python.svg";
+import pwsh from "@/assets/logos/pwsh.svg";
+import tux from "@/assets/logos/tux.svg";
+import typescript from "@/assets/logos/typescript.svg";
+import pqsql from "@/assets/logos/pqsl.svg";
+import windowsserver from "@/assets/logos/windowsserver.svg";
+import typst from "@/assets/logos/typst.svg";
+import torchquad from "@/assets/logos/torchquad.svg";
+import pytorch from "@/assets/logos/pytorch.svg";
+import mathematica from "@/assets/logos/mathematica.svg";
+
+import Picture22 from "@/assets/img/22.jpeg";
+import Picture23 from "@/assets/img/23.jpeg";
+import Picture24 from "@/assets/img/24.jpeg";
+import ImageDetails from "@/components/ImageDetails.astro";
+---
+<Main>
+    <div class="flex flex-wrap content-center h-fit">
+        <div id="hero" class="h-fit flex flex-wrap place-items-end justify-center gap-y-10 mt-10">
+            <div id="intro" class="flex-1">
+                <div id="socialmediabar" class="flex flex-wrap sm:flex-nowrap w-full mb-5 gap-5">
+                    <a class="button font-bold text-background bg-primary hover:bg-primary-dark select-none cursor-pointer py-2 px-3 rounded"
+                       href="https://github.com/FilipeRamalho">
+                        Github
+                    </a>
+                    <a class="button font-bold text-background bg-primary hover:bg-primary-dark select-none cursor-pointer py-2 px-3 rounded"
+                       href="https://www.linkedin.com/in/fmdsr/">
+                        LinkedIn
+                    </a>
+                    <a class="button font-bold text-background bg-primary hover:bg-primary-dark select-none cursor-pointer py-2 px-3 rounded"
+                       href="https://www.instagram.com/filipe.mdsr/">
+                        Instagram
+                    </a>
+                </div>
+                <p class="font-bold text-xl mb-2">
+                    Hallo, mein Name ist
+                </p>
+                <p class="text-6xl font-bold mb-8">
+                    Filipe <br/> Ramalho
+                </p>
+                <p class="inline-block">
+                    Meine Mission: <b>Mit Machine Learning die Welt verbessern.</b>
+                    <br/>
+                    Machine Learning ist für mich mehr als nur LLMs oder andere Buzzwords. Schon während meines
+                    Physikstudiums
+                    habe ich mich in meiner Forschungsarbeit auf den Einsatz Deep Neural Networks zur Lösung
+                    physikalischer
+                    Probleme konzentriert.
+
+                    <br/><br/>
+                    Ich studiere Physik und arbeite zugleich als Werkstudent bei der BGHM
+                    <a href="https://www.bghm.de/bghm"
+                       class="transition-all duration-100 ease-in-out hover:scale-125 hover:rotate-10 inline-block border-1 border-gray-700 p-[.1rem] rounded align-top">
+                        <Image alt="BG Logo" src={bg} class="h-4 w-4"/>
+                    </a>. Mein Aufgabenbereich umfasst PRTG
+                    <a href="https://www.paessler.com/de/prtg"
+                       class="transition-all duration-100 ease-in-out hover:scale-125 hover:rotate-10 inline-block border-1 border-gray-700 p-[.1rem] rounded align-top">
+                        <Image alt="PRTG Logo" src={prtg} class="h-4 w-4"/>
+                    </a>
+                    und Grafana
+                    <a href="https://grafana.com/oss/grafana"
+                       class="transition-all duration-100 ease-in-out hover:scale-125 hover:rotate-10 inline-block border-1 border-gray-700 p-[.1rem] rounded align-top">
+                        <Image alt="Grafana Logo" src={grafana} class="h-4 w-4"/>
+                    </a>.
+                    Darüber hinaus arbeite ich an einigen Hobbyprojekten, darunter ein Turniersystem und mein Blog.
+                </p>
+            </div>
+            <div class="xl:fixed xl:bottom-[0px] xl:max-w-[2000px] xl:m-auto xl:w-full xl:px-[50px] pointer-events-none">
+                <Image src={me} alt="Landscape" class="w-auto h-full max-h-[350px]"/>
+            </div>
+        </div>
+    </div>
+    <div id="work" class="my-20">
+        <h1 class="text-2xl sm:text-3xl font-bold mb-3 basis-full">
+            Erfahrung
+        </h1>
+        <i>seit 11/2023</i>
+        <div>
+            <p class="mb-2">
+                <b>Monitoring Werkstudent</b>
+                <a href="https://www.bghm.de/bghm"
+                   class="ml-2 transition-all duration-100 ease-in-out hover:scale-125 hover:rotate-10 inline-block border-1 border-gray-700 p-[.1rem] rounded align-top">
+                    <Image alt="BG Logo" src={bg} class="h-4 w-4"/>
+                </a>
+                <i> Berufsgenossenschaft Holz und Metall</i>
+            </p>
+            <ul>
+                <li>
+                    Migration von 2.000+ Servern von MS SCOM zu PRTG.
+                </li>
+                <li>
+                    Anbindung von Grafana über PostgreSQL an PRTG.
+                </li>
+                <li>
+                    Entwicklung von selbst geschriebenen Sensoren für PRTG mit PowerShell.
+                </li>
+                <li>
+                    Betreuung von Auszubildenden durch Kurse und Hands-on-Arbeit.
+                </li>
+            </ul>
+            <div class="mt-3 mb-8 leading-8">
+                <b>Relevante Skills:</b>
+                <p class="inline-block align-top">
+                    <a href="https://www.paessler.com/de/prtg"
+                       class="align-sub transition-all duration-100 ease-in-out hover:scale-125 hover:rotate-10 inline-block border-1 border-gray-700 p-[.1rem] rounded">
+                        <Image alt="PRTG Logo" src={prtg} class="h-4 w-4"/>
+                    </a>
+                    PRTG
+                </p>
+                <p class="inline-block align-top">
+                    <a href="https://grafana.com/oss/grafana"
+                       class="align-sub ml-1 transition-all duration-100 ease-in-out hover:scale-125 hover:rotate-10 inline-block border-1 border-gray-700 p-[.1rem] rounded">
+                        <Image alt="Grafana Logo" src={grafana} class="h-4 w-4"/>
+                    </a>
+                    Grafana
+                </p>
+                <p class="inline-block align-top">
+                    <a href="https://www.postgresql.org"
+                       class="align-sub ml-1 transition-all duration-100 ease-in-out hover:scale-125 hover:rotate-10 inline-block border-1 border-gray-700 p-[.1rem] rounded">
+                        <Image alt="PostgreSQL Logo" src={pqsql} class="h-4 w-4"/>
+                    </a>
+                    PostgreSQL
+                </p>
+                <p class="inline-block align-top">
+                    <a href="https://github.com/PowerShell/PowerShell"
+                       class="align-sub ml-1 transition-all duration-100 ease-in-out hover:scale-125 hover:rotate-10 inline-block border-1 border-gray-700 p-[.1rem] rounded">
+                        <Image alt="Powershell Logo" src={pwsh} class="h-4 w-4"/>
+                    </a>
+                    PowerShell
+                </p>
+                <p class="inline-block align-top">
+                    <a href="https://www.microsoft.com/de-de/windows-server"
+                       class="align-sub ml-1 transition-all duration-100 ease-in-out hover:scale-125 hover:rotate-10 inline-block border-1 border-gray-700 p-[.1rem] rounded">
+                        <Image alt="Windows Server" src={windowsserver} class="h-4 w-4"/>
+                    </a>
+                    Windows Server
+                </p>
+            </div>
+        </div>
+        <i>09/2021 - 10/2023</i>
+        <div>
+            <p class="mb-2">
+                <b>HPC Hilfswissenschaftler</b>
+                <a href="https://www.zdv.uni-mainz.de"
+                   class="ml-2 transition-all duration-100 ease-in-out hover:scale-125 hover:rotate-10 inline-block border-1 border-gray-700 p-[.1rem] rounded align-top">
+                    <Image alt="JGU Logo" src={jgu} class="h-4 w-4"/>
+                </a>
+                <i>ZDV Mainz</i>
+            </p>
+            <ul>
+                <li>
+                    Alltägliche Hardwarewartungsarbeiten.
+                </li>
+                <li>
+                    Webseiten auf moderne Typescript-Frameworks portiert.
+                </li>
+                <li>
+                    Python-Skripte für den HPC-Betrieb entwickelt.
+                </li>
+                <li>
+                    Entwicklung und Koordination eines Asset-Management-Systems.
+                </li>
+            </ul>
+            <div class="mt-3 mb-8 leading-8">
+                <b>Relevante Skills:</b>
+                <p class="inline-block align-top">
+                    <a href="https://python.org"
+                       class="transition-all duration-100 ease-in-out hover:scale-125 hover:rotate-10 inline-block border-1 border-gray-700 p-[.1rem] rounded align-sub">
+                        <Image alt="Python Logo" src={python} class="h-4 w-4"/>
+                    </a>
+                    Python
+                </p>
+                <p class="inline-block align-top">
+                    <a href="https://www.typescriptlang.org"
+                       class="ml-1 transition-all duration-100 ease-in-out hover:scale-125 hover:rotate-10 inline-block border-1 border-gray-700 p-[.1rem] rounded align-sub">
+                        <Image alt="Typescript Logo" src={typescript} class="h-4 w-4"/>
+                    </a>
+                    Typescript/Javascript
+                </p>
+                <p class="inline-block align-top">
+                    <a href="https://www.kernel.org"
+                       class="ml-1 transition-all duration-100 ease-in-out hover:scale-125 hover:rotate-10 inline-block border-1 border-gray-700 p-[.1rem] rounded align-sub">
+                        <Image alt="Tux" src={tux} class="h-4 w-4"/>
+                    </a>
+                    Linux
+                </p>
+            </div>
+        </div>
+    </div>
+    <div id="education" class="my-20">
+        <h1 class="text-2xl sm:text-3xl font-bold mb-3 basis-full">
+            Bildung
+        </h1>
+        <i>Abschluss März 2026</i>
+            <p class="mb-2">
+                <b>Bsc. Physics</b>
+                <a href="https://uni-mainz.de"
+                   class="ml-2 transition-all duration-100 ease-in-out hover:scale-125 hover:rotate-10 inline-block border-1 border-gray-700 p-[.1rem] rounded align-top">
+                    <Image alt="JGU Logo" src={jgu} class="h-4 w-4"/>
+                </a>
+                <i> Johannes-Gutenberg-Universität Mainz</i>
+            </p>
+            <ul>
+                <li>
+                    Nebenfach: Informatik
+                </li>
+                <li>
+                    Bachelorarbeit:
+                    "Neural network implementation of a variational method to determine solutions of the Schrödinger
+                    equation"
+                    (Univ.-Prof. Dr. Marc Vanderhaeghen)
+
+                </li>
+            </ul>
+            <div class="mt-3 mb-8 leading-8">
+                <b>Relevante Skills:</b>
+                <p class="inline-block align-top">
+                    <a href="https://python.org"
+                       class="transition-all duration-100 ease-in-out hover:scale-125 hover:rotate-10 inline-block border-1 border-gray-700 p-[.1rem] rounded align-sub">
+                        <Image alt="Python Logo" src={python} class="h-4 w-4"/>
+                    </a>
+                    Python
+                </p>
+                <p class="inline-block align-top">
+                    <a href="https://typst.app"
+                       class="ml-1 transition-all duration-100 ease-in-out hover:scale-125 hover:rotate-10 inline-block border-1 border-gray-700 p-[.1rem] rounded align-sub">
+                        <Image alt="Typst Logo" src={typst} class="h-4 w-4"/>
+                    </a>
+                    Typst
+                </p>
+                <p class="inline-block align-top">
+                    <a href="https://www.wolfram.com/mathematica/"
+                       class="ml-1 transition-all duration-100 ease-in-out hover:scale-125 hover:rotate-10 inline-block border-1 border-gray-700 p-[.1rem] rounded align-sub">
+                        <Image alt="Mathematica Logo" src={mathematica} class="h-4 w-4"/>
+                    </a>
+                    Mathematica
+                </p>
+                <p class="inline-block align-top">
+                    <a href="https://pytorch.org"
+                       class="ml-1 transition-all duration-100 ease-in-out hover:scale-125 hover:rotate-10 inline-block border-1 border-gray-700 p-[.1rem] rounded align-sub">
+                        <Image alt="PyTorch Logo" src={pytorch} class="h-4 w-4"/>
+                    </a>
+                    PyTorch
+                </p>
+                <p class="inline-block align-top">
+                    <a href="https://torchquad.readthedocs.io/en/main/"
+                       class="ml-1 transition-all duration-100 ease-in-out hover:scale-125 hover:rotate-10 inline-block border-1 border-gray-700 p-[.1rem] rounded align-sub">
+                        <Image alt="Torchquad Logo" src={torchquad} class="h-4 w-4"/>
+                    </a>
+                    Torchquad
+                </p>
+        </div>
+    </div>
+    <div id="personal" class="my-20">
+        <h1 class="text-2xl sm:text-3xl font-bold mb-3 basis-full">
+            Die persönliche Note
+        </h1>
+        In meiner Freizeit programmiere ich gerne an Hobbyprojekten, fahre mit dem Fahrrad, schaue mir Star Trek an, oder spiele Civilization. Wenn ich auf den Nerd-Turbo schalte, dann lese ich auch mal einige Policy Papers durch.
+        <div class="flex p-10 flex-wrap content-center items-center justify-center">
+            <div class="rotate-8">
+                <ImageDetails place="Winningen, 2025" phone="iPhone 13 Pro">
+                    <Image src={Picture24} alt="Bild" class="w-60 h-auto rounded-xl"/>
+                </ImageDetails>
+            </div>
+            <div class="-rotate-12">
+                <ImageDetails place="Aveiro, 2025" phone="iPhone 13 Pro">
+                    <Image src={Picture23} alt="Bild" class="w-60 h-auto rounded-xl"></Image>
+                </ImageDetails>
+            </div>
+            <div class="rotate-5">
+                <ImageDetails place="Parede, 2025" phone="iPhone 13 Pro">
+                    <Image src={Picture22} alt="Bild" class="w-60 h-auto rounded-xl"></Image>
+                </ImageDetails>
+            </div>
+        </div>
+        <a class="button font-bold text-background border-background border-1 select-none cursor-pointer py-2 px-3 rounded"
+           href="/pictures">
+            Mehr Bilder
+        </a>
+
+    </div>
+    <div id="quote" class="mt-10 mb-50 sm:mb-20 h-fit px-10 py-15 bg-primary text-background rounded-3xl">
+        <h1 class="font-bold text-2xl mb-2">It’s possible to commit no mistakes and still
+            lose. That’s not a weakness, that is life.</h1>
+        <h2 class="text-xl italic">- Jean-Luc Picard</h2>
+    </div>
+</Main>

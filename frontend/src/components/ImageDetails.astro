@@ -1,0 +1,23 @@
+---
+import AppleLogo from "@/assets/logos/apple.svg";
+import {Image} from "astro:assets";
+
+const {place, phone} = Astro.props
+---
+
+
+<div class="group bg-inset relative overflow-hidden rounded-lg">
+    <div class="relative">
+        <slot/>
+    </div>
+    <div class="absolute inset-0 bg-gradient-to-t from-black/70 via-transparent to-transparent opacity-0 transition-opacity duration-300 group-hover:opacity-100"></div>
+    <div class="absolute right-4 bottom-4 left-4 opacity-0 transition-opacity duration-300 group-hover:opacity-100">
+        <div class="flex items-end-safe justify-between gap-3">
+            <p class="text-xs font-bold text-white">{place}</p>
+            <p class="text-xs font-bold text-white min-w-25">
+                <Image src={AppleLogo} alt="Apple Logo" height="12" width="12" class="inline-block align-top"/>
+                {phone}
+            </p>
+        </div>
+    </div>
+</div>

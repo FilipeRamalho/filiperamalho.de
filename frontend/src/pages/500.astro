@@ -1,0 +1,16 @@
+---
+import Main from "@/layouts/Main.astro";
+
+interface Props {
+    error: unknown
+}
+
+const {error} = Astro.props
+---
+<Main>
+    <div class="text-center min-h-screen sm:min-h-auto sm:my-20 flex justify-center content-center flex-wrap">
+        <h2 class="text-4xl font-bold m-2 basis-full">A wild 500 appeared.</h2>
+        <p class="text-xl mt-5 mb-2 basis-full">There seems to be an error server-side?</p>
+        <p class="text-xl basis-full">{error instanceof Error ? error.message : "Unknown error"}</p>
+    </div>
+</Main>

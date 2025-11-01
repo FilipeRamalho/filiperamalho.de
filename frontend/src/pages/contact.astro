@@ -1,0 +1,75 @@
+---
+import Main from '@/layouts/Main.astro'
+import landscape from "@/assets/img/landscape.webp";
+import {Image} from "astro:assets";
+---
+
+<Main>
+    <div class="my-10">
+        <h1 class="text-2xl sm:text-3xl font-bold mb-3">
+            Kontakt
+        </h1>
+
+        <div class="space-y-2 ">
+            <p>
+                <span class="font-medium">Telefon/Signal/WhatsApp:</span>
+                <a href="tel:+4917622095047" class="hover:underline">+49 176 22095047</a>
+            </p>
+            <p>
+                <span class="font-medium">E-Mail:</span>
+                <a href="mailto:privat@filiperamalho.de" class="hover:underline">privat@filiperamalho.de</a>
+            </p>
+        </div>
+
+        <h1 class="text-2xl sm:text-3xl font-bold mb-3 mt-9">
+            Impressum
+        </h1>
+
+        <div class="space-y-6">
+            <!-- Angaben zum Betreiber -->
+            <section>
+                <h2 class="text-lg  font-bold mb-1">
+                    Angaben gemäß § 5 TMG
+                </h2>
+                <div>
+                    <p>Filipe Manuel De Sousa Ramalho</p>
+                    <p>Berlinerstr. 29, 55131 Mainz</p>
+                    <p>Deutschland</p>
+                </div>
+            </section>
+
+            <!-- Kontakt -->
+            <section>
+                <h2 class="text-lg  font-bold mb-1">
+                    Kontakt
+                </h2>
+                <div>
+                    <p>
+                        <span class="font-medium">Telefon/Signal/WhatsApp:</span>
+                        <span>+49 176 22095047</span>
+                    </p>
+                    <p>
+                        <span class="font-medium">E-Mail:</span>
+                        <span>privat@filiperamalho.de</span>
+                    </p>
+                </div>
+            </section>
+
+            <!-- Rechtliche Hinweise -->
+            <section>
+                <h2 class="text-lg  font-bold mb-1">
+                    Rechtliche Hinweise
+                </h2>
+                <p>
+                    Verantwortlich für den Inhalt:
+                    Filipe Manuel De Sousa Ramalho (Anschrift wie oben)
+                </p>
+                <p class="text-sm italic mt-2 ">
+                    <strong>Haftungshinweis:</strong> Trotz sorgfältiger inhaltlicher Kontrolle übernehmen wir keine
+                    Haftung für die Inhalte externer Links. Für den Inhalt der verlinkten Seiten sind ausschließlich
+                    deren Betreiber verantwortlich.
+                </p>
+            </section>
+        </div>
+    </div>
+</Main>
