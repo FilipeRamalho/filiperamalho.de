@@ -1,6 +1,12 @@
 ---
 import '@/styles/global.css'
 import Navbar from "@/components/Navbar.astro";
+
+interface Props {
+    topImage: boolean
+}
+
+const {topImage = false} = Astro.props
 ---
 
 <!doctype html>
@@ -17,7 +23,7 @@ import Navbar from "@/components/Navbar.astro";
                         text-sm
                         sm:text-base
                         min-h-screen">
-    <Navbar></Navbar>
+    <Navbar topImage={topImage}></Navbar>
     <div id="content" class="px-[50px] pt-10 max-w-[2000px] mx-auto">
             <slot/>
         </div>

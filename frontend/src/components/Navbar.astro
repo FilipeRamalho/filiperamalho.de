@@ -1,8 +1,12 @@
 ---
-import { Image } from "astro:assets"
+import {Image} from "astro:assets"
 import landscape from "@/assets/img/landscape.webp"
 
+interface Props {
+    topImage: boolean
+}
 
+const {topImage = true} = Astro.props
 ---
 <div id="navbar" class=`grid grid-rows-1 grid-flow-col justify-evenly 
                         mx-auto w-fit p-2 
@@ -26,7 +30,10 @@ import landscape from "@/assets/img/landscape.webp"
         Contact
     </a>
 </div>
-
-<div class="rounded-xl hidden sm:inline-flex pt-[10px] px-[50px] w-full">
-    <Image src={landscape} alt="Landscape" class="w-full rounded-xl object-cover max-w-[2000px] m-auto aspect-10/5 lg:aspect-10/2" />
-</div>
+{
+    topImage &&
+    <div class="rounded-xl hidden sm:inline-flex pt-[10px] px-[50px] w-full">
+        <Image src={landscape} alt="Landscape"
+               class="w-full rounded-xl object-cover max-w-[2000px] m-auto aspect-10/5 lg:aspect-10/2"/>
+    </div>
+    }

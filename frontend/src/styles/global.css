@@ -13,13 +13,14 @@ html {
 @theme {
     /* https://fabricweb.z5.web.core.windows.net/pr-deploy-site/refs/heads/master/theming-designer/ */
     --color-primary: #ffdd00;
-    --color-text: #ffffff;
-    --color-background: #002c45;
-
-    --color-primary-dark: #e6c700;
-    --color-default: #8a8886;
-    --color-foreground: #f8f8f8;
+    --color-secondary: #002c45;
 }
+
+@view-transition {
+    navigation: auto;
+}
+
+@custom-variant hover (&:hover);
 
 /**
 const myTheme = createTheme({
