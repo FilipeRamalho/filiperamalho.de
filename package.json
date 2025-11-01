@@ -1,6 +1,6 @@
 {
   "name": "filiperamalho.de",
-  "version": "5.0.0",
+  "version": "6.0.0",
   "license": "UNLICENSED",
   "workspaces": ["frontend", "backend"],
   "scripts": {

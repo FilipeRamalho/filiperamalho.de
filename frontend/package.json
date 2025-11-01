@@ -1,6 +1,6 @@
 {
   "name": "filiperamalho.de_frontend",
-  "version": "5.0.0",
+  "version": "6.0.0",
   "license": "UNLICENSED",
   "scripts": {
     "dev": "astro dev --host",
