@@ -26,65 +26,63 @@ import Picture24 from "@/assets/img/24.jpeg";
 import ImageDetails from "@/components/ImageDetails.astro";
 ---
 <Main>
-    <div class="flex flex-wrap content-center h-fit">
-        <div id="hero" class="h-fit flex flex-wrap place-items-end justify-center gap-y-10 mt-10">
-            <div id="intro" class="flex-1">
-                <div id="socialmediabar" class="flex flex-wrap sm:flex-nowrap w-full mb-5 gap-5">
-                    <a class="button font-bold text-secondary bg-primary hover:bg-primary/70 select-none cursor-pointer py-2 px-3 rounded"
-                       href="https://github.com/FilipeRamalho">
-                        Github
-                    </a>
-                    <a class="button font-bold text-secondary bg-primary hover:bg-primary/70 select-none cursor-pointer py-2 px-3 rounded"
-                       href="https://www.linkedin.com/in/fmdsr/">
-                        LinkedIn
-                    </a>
-                    <a class="button font-bold text-secondary bg-primary hover:bg-primary/70 select-none cursor-pointer py-2 px-3 rounded"
-                       href="https://www.instagram.com/filipe.mdsr/">
-                        Instagram
-                    </a>
-                </div>
-                <p class="font-bold text-xl mb-2">
-                    Hallo, mein Name ist
-                </p>
-                <p class="text-6xl font-bold mb-8">
-                    Filipe <br/> Ramalho
-                </p>
-                <p class="inline-block">
-                    Meine Mission: <b>Mit Machine Learning die Welt verbessern.</b>
-                    <br/>
-                    Machine Learning ist für mich mehr als nur LLMs oder andere Buzzwords. Schon während meines
-                    Physikstudiums
-                    habe ich mich in meiner Forschungsarbeit auf den Einsatz Deep Neural Networks zur Lösung
-                    physikalischer
-                    Probleme konzentriert.
+    <main id="hero" class="h-fit flex flex-wrap justify-center gap-y-10 mt-10">
+        <div id="intro" class="flex-1">
+            <nav id="socialmediabar" class="flex flex-wrap sm:flex-nowrap w-full mb-5 gap-5">
+                <a class="button font-bold text-secondary bg-primary hover:bg-primary/70 select-none cursor-pointer py-2 px-3 rounded"
+                   href="https://github.com/FilipeRamalho">
+                    Github
+                </a>
+                <a class="button font-bold text-secondary bg-primary hover:bg-primary/70 select-none cursor-pointer py-2 px-3 rounded"
+                   href="https://www.linkedin.com/in/fmdsr/">
+                    LinkedIn
+                </a>
+                <a class="button font-bold text-secondary bg-primary hover:bg-primary/70 select-none cursor-pointer py-2 px-3 rounded"
+                   href="https://www.instagram.com/filipe.mdsr/">
+                    Instagram
+                </a>
+            </nav>
+            <p class="font-bold text-xl mb-2">
+                Hallo, mein Name ist
+            </p>
+            <h1 class="text-6xl font-bold mb-8">
+                Filipe <br/> Ramalho
+            </h1>
+            <p class="inline-block">
+                Meine Mission: <b>Mit Machine Learning die Welt verbessern.</b>
+                <br/>
+                Machine Learning ist für mich mehr als nur LLMs oder andere Buzzwords. Schon während meines
+                Physikstudiums
+                habe ich mich in meiner Forschungsarbeit auf den Einsatz Deep Neural Networks zur Lösung
+                physikalischer
+                Probleme konzentriert.
 
-                    <br/><br/>
-                    Ich studiere Physik und arbeite zugleich als Werkstudent bei der BGHM
-                    <a href="https://www.bghm.de/bghm"
-                       class="transition-all duration-100 ease-in-out hover:scale-125 hover:rotate-10 inline-block border-1 border-gray-700 p-[.1rem] rounded align-top">
-                        <Image alt="BG Logo" src={bg} class="h-4 w-4"/>
-                    </a>. Mein Aufgabenbereich umfasst PRTG
-                    <a href="https://www.paessler.com/de/prtg"
-                       class="transition-all duration-100 ease-in-out hover:scale-125 hover:rotate-10 inline-block border-1 border-gray-700 p-[.1rem] rounded align-top">
-                        <Image alt="PRTG Logo" src={prtg} class="h-4 w-4"/>
-                    </a>
-                    und Grafana
-                    <a href="https://grafana.com/oss/grafana"
-                       class="transition-all duration-100 ease-in-out hover:scale-125 hover:rotate-10 inline-block border-1 border-gray-700 p-[.1rem] rounded align-top">
-                        <Image alt="Grafana Logo" src={grafana} class="h-4 w-4"/>
-                    </a>.
-                    Darüber hinaus arbeite ich an einigen Hobbyprojekten, darunter ein Turniersystem und mein Blog.
-                </p>
-            </div>
-            <div class="xl:fixed xl:bottom-[0px] xl:max-w-[2000px] xl:m-auto xl:w-full xl:px-[50px] pointer-events-none">
-                <Image src={me} alt="Landscape" class="w-auto h-full max-h-[350px]"/>
-            </div>
+                <br/><br/>
+                Ich studiere Physik und arbeite zugleich als Werkstudent bei der BGHM
+                <a href="https://www.bghm.de/bghm"
+                   class="transition-all duration-100 ease-in-out hover:scale-125 hover:rotate-10 inline-block border-1 border-gray-700 p-[.1rem] rounded align-top">
+                    <Image alt="BG Logo" src={bg} class="h-4 w-4"/>
+                </a>. Mein Aufgabenbereich umfasst PRTG
+                <a href="https://www.paessler.com/de/prtg"
+                   class="transition-all duration-100 ease-in-out hover:scale-125 hover:rotate-10 inline-block border-1 border-gray-700 p-[.1rem] rounded align-top">
+                    <Image alt="PRTG Logo" src={prtg} class="h-4 w-4"/>
+                </a>
+                und Grafana
+                <a href="https://grafana.com/oss/grafana"
+                   class="transition-all duration-100 ease-in-out hover:scale-125 hover:rotate-10 inline-block border-1 border-gray-700 p-[.1rem] rounded align-top">
+                    <Image alt="Grafana Logo" src={grafana} class="h-4 w-4"/>
+                </a>.
+                Darüber hinaus arbeite ich an einigen Hobbyprojekten, darunter ein Turniersystem und mein Blog.
+            </p>
         </div>
-    </div>
-    <div id="work" class="pt-20">
-        <h1 class="text-2xl sm:text-3xl font-bold mb-3 basis-full">
+        <div class="xl:fixed xl:bottom-[0px] xl:max-w-[2000px] xl:m-auto xl:w-full xl:px-[50px] pointer-events-none">
+            <Image src={me} alt="Landscape" class="w-auto h-full max-h-[350px]"/>
+        </div>
+    </main>
+    <section id="work" aria-label="work" class="pt-20">
+        <h2 class="text-2xl sm:text-3xl font-bold mb-3 basis-full">
             Erfahrung
-        </h1>
+        </h2>
         <i>seit 11/2023</i>
         <div>
             <p class="mb-2">
@@ -197,102 +195,105 @@ import ImageDetails from "@/components/ImageDetails.astro";
                 </p>
             </div>
         </div>
-    </div>
-    <div id="education" class="pt-10">
-        <h1 class="text-2xl sm:text-3xl font-bold mb-3 basis-full">
+    </section>
+    <section id="education" aria-label="education" class="pt-10">
+        <h2 class="text-2xl sm:text-3xl font-bold mb-3 basis-full">
             Bildung
-        </h1>
+        </h2>
         <i>Abschluss März 2026</i>
-            <p class="mb-2">
-                <b>Bsc. Physics</b>
-                <a href="https://uni-mainz.de"
-                   class="ml-2 transition-all duration-100 ease-in-out hover:scale-125 hover:rotate-10 inline-block border-1 border-gray-700 p-[.1rem] rounded align-top">
-                    <Image alt="JGU Logo" src={jgu} class="h-4 w-4"/>
-                </a>
-                <i> Johannes-Gutenberg-Universität Mainz</i>
-            </p>
-            <ul>
-                <li>
-                    Nebenfach: Informatik
-                </li>
-                <li>
-                    Bachelorarbeit:
-                    "Neural network implementation of a variational method to determine solutions of the Schrödinger
-                    equation"
-                    (Univ.-Prof. Dr. Marc Vanderhaeghen)
+        <p class="mb-2">
+            <b>Bsc. Physics</b>
+            <a href="https://uni-mainz.de"
+               class="ml-2 transition-all duration-100 ease-in-out hover:scale-125 hover:rotate-10 inline-block border-1 border-gray-700 p-[.1rem] rounded align-top">
+                <Image alt="JGU Logo" src={jgu} class="h-4 w-4"/>
+            </a>
+            <i> Johannes-Gutenberg-Universität Mainz</i>
+        </p>
+        <ul>
+            <li>
+                Nebenfach: Informatik
+            </li>
+            <li>
+                Bachelorarbeit:
+                "Neural network implementation of a variational method to determine solutions of the Schrödinger
+                equation"
+                (Univ.-Prof. Dr. Marc Vanderhaeghen)
 
-                </li>
-            </ul>
-            <div class="mt-1 mb-10 leading-8">
-                <b>Relevante Skills:</b>
-                <p class="inline-block align-top">
-                    <a href="https://python.org"
-                       class="transition-all duration-100 ease-in-out hover:scale-125 hover:rotate-10 inline-block border-1 border-gray-700 p-[.1rem] rounded align-sub">
-                        <Image alt="Python Logo" src={python} class="h-4 w-4"/>
-                    </a>
-                    Python
-                </p>
-                <p class="inline-block align-top">
-                    <a href="https://typst.app"
-                       class="ml-1 transition-all duration-100 ease-in-out hover:scale-125 hover:rotate-10 inline-block border-1 border-gray-700 p-[.1rem] rounded align-sub">
-                        <Image alt="Typst Logo" src={typst} class="h-4 w-4"/>
-                    </a>
-                    Typst
-                </p>
-                <p class="inline-block align-top">
-                    <a href="https://www.wolfram.com/mathematica/"
-                       class="ml-1 transition-all duration-100 ease-in-out hover:scale-125 hover:rotate-10 inline-block border-1 border-gray-700 p-[.1rem] rounded align-sub">
-                        <Image alt="Mathematica Logo" src={mathematica} class="h-4 w-4"/>
-                    </a>
-                    Mathematica
-                </p>
-                <p class="inline-block align-top">
-                    <a href="https://pytorch.org"
-                       class="ml-1 transition-all duration-100 ease-in-out hover:scale-125 hover:rotate-10 inline-block border-1 border-gray-700 p-[.1rem] rounded align-sub">
-                        <Image alt="PyTorch Logo" src={pytorch} class="h-4 w-4"/>
-                    </a>
-                    PyTorch
-                </p>
-                <p class="inline-block align-top">
-                    <a href="https://torchquad.readthedocs.io/en/main/"
-                       class="ml-1 transition-all duration-100 ease-in-out hover:scale-125 hover:rotate-10 inline-block border-1 border-gray-700 p-[.1rem] rounded align-sub">
-                        <Image alt="Torchquad Logo" src={torchquad} class="h-4 w-4"/>
-                    </a>
-                    Torchquad
-                </p>
+            </li>
+        </ul>
+        <div class="mt-1 mb-10 leading-8">
+            <b>Relevante Skills:</b>
+            <p class="inline-block align-top">
+                <a href="https://python.org"
+                   class="transition-all duration-100 ease-in-out hover:scale-125 hover:rotate-10 inline-block border-1 border-gray-700 p-[.1rem] rounded align-sub">
+                    <Image alt="Python Logo" src={python} class="h-4 w-4"/>
+                </a>
+                Python
+            </p>
+            <p class="inline-block align-top">
+                <a href="https://typst.app"
+                   class="ml-1 transition-all duration-100 ease-in-out hover:scale-125 hover:rotate-10 inline-block border-1 border-gray-700 p-[.1rem] rounded align-sub">
+                    <Image alt="Typst Logo" src={typst} class="h-4 w-4"/>
+                </a>
+                Typst
+            </p>
+            <p class="inline-block align-top">
+                <a href="https://www.wolfram.com/mathematica/"
+                   class="ml-1 transition-all duration-100 ease-in-out hover:scale-125 hover:rotate-10 inline-block border-1 border-gray-700 p-[.1rem] rounded align-sub">
+                    <Image alt="Mathematica Logo" src={mathematica} class="h-4 w-4"/>
+                </a>
+                Mathematica
+            </p>
+            <p class="inline-block align-top">
+                <a href="https://pytorch.org"
+                   class="ml-1 transition-all duration-100 ease-in-out hover:scale-125 hover:rotate-10 inline-block border-1 border-gray-700 p-[.1rem] rounded align-sub">
+                    <Image alt="PyTorch Logo" src={pytorch} class="h-4 w-4"/>
+                </a>
+                PyTorch
+            </p>
+            <p class="inline-block align-top">
+                <a href="https://torchquad.readthedocs.io/en/main/"
+                   class="ml-1 transition-all duration-100 ease-in-out hover:scale-125 hover:rotate-10 inline-block border-1 border-gray-700 p-[.1rem] rounded align-sub">
+                    <Image alt="Torchquad Logo" src={torchquad} class="h-4 w-4"/>
+                </a>
+                Torchquad
+            </p>
         </div>
-    </div>
-    <div id="personal" class="py-10">
-        <h1 class="text-2xl sm:text-3xl font-bold mb-3 basis-full">
+    </section>
+    <section id="personal" aria-label="personal" class="py-10">
+        <h2 class="text-2xl sm:text-3xl font-bold mb-3 basis-full">
             Die persönliche Note
-        </h1>
-        In meiner Freizeit programmiere ich gerne an Hobbyprojekten, fahre mit dem Fahrrad, schaue mir Star Trek an, oder spiele Civilization. Wenn ich auf den Nerd-Turbo schalte, dann lese ich auch mal einige Policy Papers durch.
-        <div class="flex p-10 flex-wrap content-center items-center justify-center">
-            <div class="rotate-8 hover:rotate-10 hover:scale-110">
-                <ImageDetails place="Winningen, 2025" phone="iPhone 13 Pro">
-                    <Image src={Picture24} alt="Bild" class="w-60 h-auto rounded-xl"/>
-                </ImageDetails>
-            </div>
-            <div class="-rotate-12 hover:-rotate-14 hover:scale-110">
+        </h2>
+        In meiner Freizeit programmiere ich gerne an Hobbyprojekten, fahre mit dem Fahrrad, schaue mir Star Trek an,
+        oder spiele Civilization. Wenn ich auf den Nerd-Turbo schalte, dann lese ich auch mal einige Policy Papers
+        durch.
+        <div class="flex py-10 flex-wrap content-center items-center justify-center">
+            <div class="rotate-8 hover:rotate-10 hover:scale-110 hover:z-10">
                 <ImageDetails place="Aveiro, 2025" phone="iPhone 13 Pro">
                     <Image src={Picture23} alt="Bild" class="w-60 h-auto rounded-xl"></Image>
                 </ImageDetails>
             </div>
-            <div class="rotate-5 hover:rotate-7 hover:scale-110">
+            <div class="-rotate-12 hover:-rotate-14 hover:scale-110 hover:z-10">
+                <ImageDetails place="Winningen, 2025" phone="iPhone 13 Pro">
+                    <Image src={Picture24} alt="Bild" class="w-60 h-auto rounded-xl"/>
+                </ImageDetails>
+            </div>
+            <div class="rotate-5 hover:rotate-7 hover:scale-110 hover:z-10">
                 <ImageDetails place="Parede, 2025" phone="iPhone 13 Pro">
                     <Image src={Picture22} alt="Bild" class="w-60 h-auto rounded-xl"></Image>
                 </ImageDetails>
             </div>
         </div>
         <a class="button font-bold text-secondary border-secondary border-1 hover:scale-200 select-none cursor-pointer py-2 px-3 rounded"
-           href="/pictures">
+           href="/gallery">
             Mehr Bilder
         </a>
 
-    </div>
-    <div id="quote" class="mt-10 mb-50 sm:mb-20 h-fit px-10 py-15 bg-primary text-secondary rounded-3xl">
-        <h1 class="font-bold text-2xl mb-2">It’s possible to commit no mistakes and still
-            lose. That’s not a weakness, that is life.</h1>
-        <h2 class="text-xl italic">- Jean-Luc Picard</h2>
-    </div>
+    </section>
+    <section id="quote" aria-label="quote"
+             class="mt-10 sm:mb-20 h-fit px-10 py-15 bg-primary text-secondary rounded-3xl">
+        <h2 class="font-bold text-2xl mb-2">It’s possible to commit no mistakes and still
+            lose. That’s not a weakness, that is life.</h2>
+        <p class="text-xl italic">- Jean-Luc Picard</p>
+    </section>
 </Main>

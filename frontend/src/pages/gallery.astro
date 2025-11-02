@@ -31,10 +31,11 @@ import ImageDetails from "@/components/ImageDetails.astro";
 ---
 
 <Basic topImage={true}>
-    <div class="grid gap-10 [grid-template-columns:_repeat(auto-fit,_minmax(250px,_1fr))]
+    <main class="grid gap-10 [grid-template-columns:_repeat(auto-fit,_minmax(200px,_1fr))]
     *:snap-center *:sm:snap-align-none
-    *:hover:scale-120
+    [&_button]:hover:scale-110
     mb-20">
+        <h1 class="col-span-full text-4xl sm:text-4xl font-bold"> Gallery </h1>
         <ImageDetails place="Winningen, 2025" phone="iPhone 13 Pro">
             <Image src={Picture24} alt="Bild" class="rounded-xl"/>
         </ImageDetails>
@@ -107,5 +108,5 @@ import ImageDetails from "@/components/ImageDetails.astro";
         <ImageDetails place="Barreiro, 2024" phone="iPhone 13 Pro">
             <Image src={Picture1} alt="Bild" class="rounded-xl"/>
         </ImageDetails>
-    </div>
+    </main>
 </Basic>
