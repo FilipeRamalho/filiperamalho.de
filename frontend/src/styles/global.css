@@ -20,6 +20,13 @@ html {
     navigation: auto;
 }
 
+* {
+    touch-action: manipulation;
+    scrollbar-width: none;
+    scroll-snap-type: y mandatory;
+    scroll-snap-stop: always;
+}
+
 @custom-variant hover (&:hover);
 
 /**
