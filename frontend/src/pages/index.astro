@@ -30,15 +30,15 @@ import ImageDetails from "@/components/ImageDetails.astro";
         <div id="hero" class="h-fit flex flex-wrap place-items-end justify-center gap-y-10 mt-10">
             <div id="intro" class="flex-1">
                 <div id="socialmediabar" class="flex flex-wrap sm:flex-nowrap w-full mb-5 gap-5">
-                    <a class="button font-bold text-secondary bg-primary hover:bg-primary-dark select-none cursor-pointer py-2 px-3 rounded"
+                    <a class="button font-bold text-secondary bg-primary hover:bg-primary/70 select-none cursor-pointer py-2 px-3 rounded"
                        href="https://github.com/FilipeRamalho">
                         Github
                     </a>
-                    <a class="button font-bold text-secondary bg-primary hover:bg-primary-dark select-none cursor-pointer py-2 px-3 rounded"
+                    <a class="button font-bold text-secondary bg-primary hover:bg-primary/70 select-none cursor-pointer py-2 px-3 rounded"
                        href="https://www.linkedin.com/in/fmdsr/">
                         LinkedIn
                     </a>
-                    <a class="button font-bold text-secondary bg-primary hover:bg-primary-dark select-none cursor-pointer py-2 px-3 rounded"
+                    <a class="button font-bold text-secondary bg-primary hover:bg-primary/70 select-none cursor-pointer py-2 px-3 rounded"
                        href="https://www.instagram.com/filipe.mdsr/">
                         Instagram
                     </a>
@@ -268,23 +268,23 @@ import ImageDetails from "@/components/ImageDetails.astro";
         </h1>
         In meiner Freizeit programmiere ich gerne an Hobbyprojekten, fahre mit dem Fahrrad, schaue mir Star Trek an, oder spiele Civilization. Wenn ich auf den Nerd-Turbo schalte, dann lese ich auch mal einige Policy Papers durch.
         <div class="flex p-10 flex-wrap content-center items-center justify-center">
-            <div class="rotate-8">
+            <div class="rotate-8 hover:rotate-10 hover:scale-110">
                 <ImageDetails place="Winningen, 2025" phone="iPhone 13 Pro">
                     <Image src={Picture24} alt="Bild" class="w-60 h-auto rounded-xl"/>
                 </ImageDetails>
             </div>
-            <div class="-rotate-12">
+            <div class="-rotate-12 hover:-rotate-14 hover:scale-110">
                 <ImageDetails place="Aveiro, 2025" phone="iPhone 13 Pro">
                     <Image src={Picture23} alt="Bild" class="w-60 h-auto rounded-xl"></Image>
                 </ImageDetails>
             </div>
-            <div class="rotate-5">
+            <div class="rotate-5 hover:rotate-7 hover:scale-110">
                 <ImageDetails place="Parede, 2025" phone="iPhone 13 Pro">
                     <Image src={Picture22} alt="Bild" class="w-60 h-auto rounded-xl"></Image>
                 </ImageDetails>
             </div>
         </div>
-        <a class="button font-bold text-secondary border-secondary border-1 select-none cursor-pointer py-2 px-3 rounded"
+        <a class="button font-bold text-secondary border-secondary border-1 hover:scale-200 select-none cursor-pointer py-2 px-3 rounded"
            href="/pictures">
             Mehr Bilder
         </a>
