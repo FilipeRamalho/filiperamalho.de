@@ -8,7 +8,6 @@ import bg from "@/assets/logos/bg.svg";
 import prtg from "@/assets/logos/prtg.svg";
 import grafana from "@/assets/logos/grafana.svg";
 import jgu from "@/assets/logos/jgu.svg";
-import microsoft from "@/assets/logos/microsoft.svg";
 import python from "@/assets/logos/python.svg";
 import pwsh from "@/assets/logos/pwsh.svg";
 import tux from "@/assets/logos/tux.svg";
@@ -24,276 +23,275 @@ import Picture22 from "@/assets/img/22.jpeg";
 import Picture23 from "@/assets/img/23.jpeg";
 import Picture24 from "@/assets/img/24.jpeg";
 import ImageDetails from "@/components/ImageDetails.astro";
+import Icon from "@/components/Icon.astro";
 ---
+
 <Main>
-    <main id="hero" class="h-fit flex flex-wrap justify-center gap-y-10 mt-10">
-        <div id="intro" class="flex-1">
-            <nav id="socialmediabar" class="flex flex-wrap sm:flex-nowrap w-full mb-5 gap-5">
+    <main id="hero" class="space-y-10 my-10">
+        <section id="intro" class="space-y-5">
+            <nav id="socialmediabar" class="flex flex-wrap sm:flex-nowrap w-full gap-5">
                 <a class="button font-bold text-secondary bg-primary hover:bg-primary/70 select-none cursor-pointer py-2 px-3 rounded"
                    href="https://github.com/FilipeRamalho">
                     Github
                 </a>
+
                 <a class="button font-bold text-secondary bg-primary hover:bg-primary/70 select-none cursor-pointer py-2 px-3 rounded"
                    href="https://www.linkedin.com/in/fmdsr/">
                     LinkedIn
                 </a>
+
                 <a class="button font-bold text-secondary bg-primary hover:bg-primary/70 select-none cursor-pointer py-2 px-3 rounded"
                    href="https://www.instagram.com/filipe.mdsr/">
                     Instagram
                 </a>
             </nav>
-            <p class="font-bold text-xl mb-2">
-                Hallo, mein Name ist
-            </p>
-            <h1 class="text-6xl font-bold mb-8">
-                Filipe <br/> Ramalho
-            </h1>
-            <p class="inline-block">
+
+            <section>
+                <p class="font-bold text-xl mb-2">
+                    Hallo, mein Name ist
+                </p>
+
+                <h1 class="text-6xl font-bold">
+                    Filipe <br/> Ramalho
+                </h1>
+            </section>
+
+            <p>
                 Meine Mission: <b>Mit Machine Learning die Welt verbessern.</b>
                 <br/>
                 Machine Learning ist für mich mehr als nur LLMs oder andere Buzzwords. Schon während meines
-                Physikstudiums
-                habe ich mich in meiner Forschungsarbeit auf den Einsatz Deep Neural Networks zur Lösung
-                physikalischer
-                Probleme konzentriert.
+                Physikstudiums habe ich mich in meiner Forschungsarbeit auf den Einsatz Deep Neural Networks zur Lösung
+                physikalischer Probleme konzentriert.
+            </p>
 
-                <br/><br/>
-                Ich studiere Physik und arbeite zugleich als Werkstudent bei der BGHM
-                <a href="https://www.bghm.de/bghm"
-                   class="transition-all duration-100 ease-in-out hover:scale-125 hover:rotate-10 inline-block border-1 border-gray-700 p-[.1rem] rounded align-top">
-                    <Image alt="BG Logo" src={bg} class="h-4 w-4"/>
-                </a>. Mein Aufgabenbereich umfasst PRTG
-                <a href="https://www.paessler.com/de/prtg"
-                   class="transition-all duration-100 ease-in-out hover:scale-125 hover:rotate-10 inline-block border-1 border-gray-700 p-[.1rem] rounded align-top">
-                    <Image alt="PRTG Logo" src={prtg} class="h-4 w-4"/>
-                </a>
-                und Grafana
-                <a href="https://grafana.com/oss/grafana"
-                   class="transition-all duration-100 ease-in-out hover:scale-125 hover:rotate-10 inline-block border-1 border-gray-700 p-[.1rem] rounded align-top">
-                    <Image alt="Grafana Logo" src={grafana} class="h-4 w-4"/>
-                </a>.
+            <p>
+                Ich studiere Physik und arbeite zugleich als Werkstudent bei der
+                <Icon href="https://www.bghm.de/bghm" alt="BG Logo" src={bg}>
+                    BGHM.
+                </Icon>
+                Mein Aufgabenbereich umfasst
+                <Icon href="https://www.paessler.com/de/prtg" alt="PRTG Logo" src={prtg}>
+                    PRTG
+                </Icon>
+                und
+                <Icon href="https://grafana.com/oss/grafana" alt="Grafana Logo" src={grafana}>
+                    Grafana.
+                </Icon>
                 Darüber hinaus arbeite ich an einigen Hobbyprojekten, darunter ein Turniersystem und mein Blog.
             </p>
-        </div>
-        <div class="xl:fixed xl:bottom-[0px] xl:max-w-[2000px] xl:m-auto xl:w-full xl:px-[50px] pointer-events-none">
-            <Image src={me} alt="Landscape" class="w-auto h-full max-h-[350px]"/>
+        </section>
+
+        <div class="xl:fixed xl:bottom-0 xl:left-0 m-auto w-fit xl:w-full pointer-events-none">
+            <div class="m-auto max-w-[2000px] xl:px-[50px] z-100">
+                <Image src={me} alt="Landscape" class="w-auto h-full max-h-[350px]"/>
+            </div>
         </div>
     </main>
-    <section id="work" aria-label="work" class="pt-20">
+
+    <!--  Used padding here because of the scroll position at #work -->
+    <section id="work" aria-label="work" class="pt-10 my-10">
         <h2 class="text-2xl sm:text-3xl font-bold mb-3 basis-full">
             Erfahrung
         </h2>
-        <i>seit 11/2023</i>
-        <div>
-            <p class="mb-2">
+
+        <article>
+            <i>seit 11/2023</i>
+
+            <h3 class="mb-2 space-x-2">
                 <b>Monitoring Werkstudent</b>
-                <a href="https://www.bghm.de/bghm"
-                   class="ml-2 transition-all duration-100 ease-in-out hover:scale-125 hover:rotate-10 inline-block border-1 border-gray-700 p-[.1rem] rounded align-top">
-                    <Image alt="BG Logo" src={bg} class="h-4 w-4"/>
-                </a>
-                <i> Berufsgenossenschaft Holz und Metall</i>
-            </p>
+
+                <Icon href="https://www.bghm.de/bghm" alt="BG Logo" src={bg}>
+                    <i> Berufsgenossenschaft Holz und Metall </i>
+                </Icon>
+            </h3>
+
             <ul>
                 <li>
                     Migration von 2.000+ Servern von MS SCOM zu PRTG.
                 </li>
+
                 <li>
                     Anbindung von Grafana über PostgreSQL an PRTG.
                 </li>
+
                 <li>
                     Entwicklung von selbst geschriebenen Sensoren für PRTG mit PowerShell.
                 </li>
+
                 <li>
                     Betreuung von Auszubildenden durch Kurse und Hands-on-Arbeit.
                 </li>
             </ul>
-            <div class="mt-1 mb-10 leading-8">
+
+            <p class="mt-1 mb-10 leading-8 inline-block align-top">
                 <b>Relevante Skills:</b>
-                <p class="inline-block align-top">
-                    <a href="https://www.paessler.com/de/prtg"
-                       class="align-sub transition-all duration-100 ease-in-out hover:scale-125 hover:rotate-10 inline-block border-1 border-gray-700 p-[.1rem] rounded">
-                        <Image alt="PRTG Logo" src={prtg} class="h-4 w-4"/>
-                    </a>
+
+                <Icon href="https://www.paessler.com/de/prtg" alt="PRTG Logo" src={prtg}>
                     PRTG
-                </p>
-                <p class="inline-block align-top">
-                    <a href="https://grafana.com/oss/grafana"
-                       class="align-sub ml-1 transition-all duration-100 ease-in-out hover:scale-125 hover:rotate-10 inline-block border-1 border-gray-700 p-[.1rem] rounded">
-                        <Image alt="Grafana Logo" src={grafana} class="h-4 w-4"/>
-                    </a>
+                </Icon>
+
+                <Icon href="https://grafana.com/oss/grafana" alt="Grafana Logo" src={grafana}>
                     Grafana
-                </p>
-                <p class="inline-block align-top">
-                    <a href="https://www.postgresql.org"
-                       class="align-sub ml-1 transition-all duration-100 ease-in-out hover:scale-125 hover:rotate-10 inline-block border-1 border-gray-700 p-[.1rem] rounded">
-                        <Image alt="PostgreSQL Logo" src={pqsql} class="h-4 w-4"/>
-                    </a>
+                </Icon>
+
+                <Icon href="https://www.postgresql.org" alt="PostgreSQL Logo" src={pqsql}>
                     PostgreSQL
-                </p>
-                <p class="inline-block align-top">
-                    <a href="https://github.com/PowerShell/PowerShell"
-                       class="align-sub ml-1 transition-all duration-100 ease-in-out hover:scale-125 hover:rotate-10 inline-block border-1 border-gray-700 p-[.1rem] rounded">
-                        <Image alt="Powershell Logo" src={pwsh} class="h-4 w-4"/>
-                    </a>
+                </Icon>
+
+                <Icon href="https://github.com/PowerShell/PowerShell" alt="Powershell Logo" src={pwsh}>
                     PowerShell
-                </p>
-                <p class="inline-block align-top">
-                    <a href="https://www.microsoft.com/de-de/windows-server"
-                       class="align-sub ml-1 transition-all duration-100 ease-in-out hover:scale-125 hover:rotate-10 inline-block border-1 border-gray-700 p-[.1rem] rounded">
-                        <Image alt="Windows Server" src={windowsserver} class="h-4 w-4"/>
-                    </a>
+                </Icon>
+
+                <Icon href="https://www.microsoft.com/de-de/windows-server" alt="Windows Server" src={windowsserver}>
                     Windows Server
-                </p>
-            </div>
-        </div>
-        <i>09/2021 - 10/2023</i>
-        <div>
-            <p class="mb-2">
-                <b>HPC Hilfswissenschaftler</b>
-                <a href="https://www.zdv.uni-mainz.de"
-                   class="ml-2 transition-all duration-100 ease-in-out hover:scale-125 hover:rotate-10 inline-block border-1 border-gray-700 p-[.1rem] rounded align-top">
-                    <Image alt="JGU Logo" src={jgu} class="h-4 w-4"/>
-                </a>
-                <i>ZDV Mainz</i>
+                </Icon>
             </p>
+        </article>
+
+        <article>
+            <i>09/2021 - 10/2023</i>
+
+            <h3 class="mb-2 space-x-2">
+                <b>HPC Hilfswissenschaftler</b>
+
+                <Icon href="https://www.zdv.uni-mainz.de" alt="JGU Logo" src={jgu}>
+                    <i>ZDV Mainz</i>
+                </Icon>
+            </h3>
+
             <ul>
                 <li>
                     Alltägliche Hardwarewartungsarbeiten.
                 </li>
+
                 <li>
                     Webseiten auf moderne Typescript-Frameworks portiert.
                 </li>
+
                 <li>
                     Python-Skripte für den HPC-Betrieb entwickelt.
                 </li>
+
                 <li>
                     Entwicklung und Koordination eines Asset-Management-Systems.
                 </li>
             </ul>
-            <div class="mt-1 mb-10 leading-8">
+
+            <p class="mt-1 mb-10 leading-8 inline-block align-top">
                 <b>Relevante Skills:</b>
-                <p class="inline-block align-top">
-                    <a href="https://python.org"
-                       class="transition-all duration-100 ease-in-out hover:scale-125 hover:rotate-10 inline-block border-1 border-gray-700 p-[.1rem] rounded align-sub">
-                        <Image alt="Python Logo" src={python} class="h-4 w-4"/>
-                    </a>
+
+                <Icon href="https://python.org" alt="Python Logo" src={python}>
                     Python
-                </p>
-                <p class="inline-block align-top">
-                    <a href="https://www.typescriptlang.org"
-                       class="ml-1 transition-all duration-100 ease-in-out hover:scale-125 hover:rotate-10 inline-block border-1 border-gray-700 p-[.1rem] rounded align-sub">
-                        <Image alt="Typescript Logo" src={typescript} class="h-4 w-4"/>
-                    </a>
+                </Icon>
+
+                <Icon href="https://www.typescriptlang.org" alt="Typescript Logo" src={typescript}>
                     Typescript/Javascript
-                </p>
-                <p class="inline-block align-top">
-                    <a href="https://www.kernel.org"
-                       class="ml-1 transition-all duration-100 ease-in-out hover:scale-125 hover:rotate-10 inline-block border-1 border-gray-700 p-[.1rem] rounded align-sub">
-                        <Image alt="Tux" src={tux} class="h-4 w-4"/>
-                    </a>
+                </Icon>
+
+                <Icon href="https://www.kernel.org" alt="Tux" src={tux}>
                     Linux
-                </p>
-            </div>
-        </div>
+                </Icon>
+            </p>
+        </article>
     </section>
-    <section id="education" aria-label="education" class="pt-10">
+
+    <section id="education" aria-label="education" class="pt-10 my-10">
         <h2 class="text-2xl sm:text-3xl font-bold mb-3 basis-full">
             Bildung
         </h2>
-        <i>Abschluss März 2026</i>
-        <p class="mb-2">
-            <b>Bsc. Physics</b>
-            <a href="https://uni-mainz.de"
-               class="ml-2 transition-all duration-100 ease-in-out hover:scale-125 hover:rotate-10 inline-block border-1 border-gray-700 p-[.1rem] rounded align-top">
-                <Image alt="JGU Logo" src={jgu} class="h-4 w-4"/>
-            </a>
-            <i> Johannes-Gutenberg-Universität Mainz</i>
-        </p>
-        <ul>
-            <li>
-                Nebenfach: Informatik
-            </li>
-            <li>
-                Bachelorarbeit:
-                "Neural network implementation of a variational method to determine solutions of the Schrödinger
-                equation"
-                (Univ.-Prof. Dr. Marc Vanderhaeghen)
 
-            </li>
-        </ul>
-        <div class="mt-1 mb-10 leading-8">
-            <b>Relevante Skills:</b>
-            <p class="inline-block align-top">
-                <a href="https://python.org"
-                   class="transition-all duration-100 ease-in-out hover:scale-125 hover:rotate-10 inline-block border-1 border-gray-700 p-[.1rem] rounded align-sub">
-                    <Image alt="Python Logo" src={python} class="h-4 w-4"/>
-                </a>
-                Python
+        <article>
+            <i>Abschluss März 2026</i>
+
+            <h3 class="mb-2">
+                <b>Bsc. Physics</b>
+
+                <Icon href="https://www.uni-mainz.de" alt="JGU Logo" src={jgu}>
+                    <i>Johannes-Gutenberg-Universität Mainz</i>
+                </Icon>
+            </h3>
+
+            <ul>
+                <li>
+                    Nebenfach: Informatik
+                </li>
+
+                <li>
+                    Bachelorarbeit:
+                    "Neural network implementation of a variational method to determine solutions of the Schrödinger
+                    equation"
+                    (Univ.-Prof. Dr. Marc Vanderhaeghen)
+                </li>
+            </ul>
+
+            <p class="mt-1 mb-10 leading-8 inline-block align-top">
+                <b>Relevante Skills:</b>
+
+                <Icon href="https://python.org" alt="Python Logo" src={python}>
+                    Python
+                </Icon>
+
+                <Icon href="https://typst.app" alt="Typst Logo" src={typst}>
+                    Typst
+                </Icon>
+
+                <Icon href="https://www.wolfram.com/mathematica/" alt="Mathematica Logo" src={mathematica}>
+                    Mathematica
+                </Icon>
+
+                <Icon href="https://pytorch.org" alt="PyTorch Logo" src={pytorch}>
+                    PyTorch
+                </Icon>
+
+                <Icon href="https://torchquad.readthedocs.io/en/main/" alt="Torchquad Logo" src={torchquad}>
+                    Torchquad
+                </Icon>
             </p>
-            <p class="inline-block align-top">
-                <a href="https://typst.app"
-                   class="ml-1 transition-all duration-100 ease-in-out hover:scale-125 hover:rotate-10 inline-block border-1 border-gray-700 p-[.1rem] rounded align-sub">
-                    <Image alt="Typst Logo" src={typst} class="h-4 w-4"/>
-                </a>
-                Typst
-            </p>
-            <p class="inline-block align-top">
-                <a href="https://www.wolfram.com/mathematica/"
-                   class="ml-1 transition-all duration-100 ease-in-out hover:scale-125 hover:rotate-10 inline-block border-1 border-gray-700 p-[.1rem] rounded align-sub">
-                    <Image alt="Mathematica Logo" src={mathematica} class="h-4 w-4"/>
-                </a>
-                Mathematica
-            </p>
-            <p class="inline-block align-top">
-                <a href="https://pytorch.org"
-                   class="ml-1 transition-all duration-100 ease-in-out hover:scale-125 hover:rotate-10 inline-block border-1 border-gray-700 p-[.1rem] rounded align-sub">
-                    <Image alt="PyTorch Logo" src={pytorch} class="h-4 w-4"/>
-                </a>
-                PyTorch
-            </p>
-            <p class="inline-block align-top">
-                <a href="https://torchquad.readthedocs.io/en/main/"
-                   class="ml-1 transition-all duration-100 ease-in-out hover:scale-125 hover:rotate-10 inline-block border-1 border-gray-700 p-[.1rem] rounded align-sub">
-                    <Image alt="Torchquad Logo" src={torchquad} class="h-4 w-4"/>
-                </a>
-                Torchquad
-            </p>
-        </div>
+        </article>
     </section>
-    <section id="personal" aria-label="personal" class="py-10">
+
+    <section id="personal" aria-label="personal" class="pt-10 my-10">
         <h2 class="text-2xl sm:text-3xl font-bold mb-3 basis-full">
             Die persönliche Note
         </h2>
-        In meiner Freizeit programmiere ich gerne an Hobbyprojekten, fahre mit dem Fahrrad, schaue mir Star Trek an,
-        oder spiele Civilization. Wenn ich auf den Nerd-Turbo schalte, dann lese ich auch mal einige Policy Papers
-        durch.
+
+        <p>
+            In meiner Freizeit programmiere ich gerne an Hobbyprojekten, fahre mit dem Fahrrad, schaue mir Star Trek an,
+            oder spiele Civilization. Wenn ich auf den Nerd-Turbo schalte, dann lese ich auch mal einige Policy Papers
+            durch.
+        </p>
+
         <div class="flex py-10 flex-wrap content-center items-center justify-center">
             <div class="rotate-8 hover:rotate-10 hover:scale-110 hover:z-10">
                 <ImageDetails place="Aveiro, 2025" phone="iPhone 13 Pro">
                     <Image src={Picture23} alt="Bild" class="w-60 h-auto rounded-xl"></Image>
                 </ImageDetails>
             </div>
+
             <div class="-rotate-12 hover:-rotate-14 hover:scale-110 hover:z-10">
                 <ImageDetails place="Winningen, 2025" phone="iPhone 13 Pro">
                     <Image src={Picture24} alt="Bild" class="w-60 h-auto rounded-xl"/>
                 </ImageDetails>
             </div>
+
             <div class="rotate-5 hover:rotate-7 hover:scale-110 hover:z-10">
                 <ImageDetails place="Parede, 2025" phone="iPhone 13 Pro">
                     <Image src={Picture22} alt="Bild" class="w-60 h-auto rounded-xl"></Image>
                 </ImageDetails>
             </div>
         </div>
-        <a class="button font-bold text-secondary border-secondary border-1 hover:scale-200 select-none cursor-pointer py-2 px-3 rounded"
-           href="/gallery">
+
+        <a class="button font-bold text-secondary border-secondary border-1 select-none cursor-pointer py-2 px-3 rounded" href="/gallery">
             Mehr Bilder
         </a>
-
     </section>
-    <section id="quote" aria-label="quote"
-             class="mt-10 sm:mb-20 h-fit px-10 py-15 bg-primary text-secondary rounded-3xl">
-        <h2 class="font-bold text-2xl mb-2">It’s possible to commit no mistakes and still
-            lose. That’s not a weakness, that is life.</h2>
+
+    <section id="quote" aria-label="quote" class="my-20 px-10 py-15 bg-primary text-secondary rounded-3xl">
+        <p class="font-bold text-2xl mb-2">
+            It’s possible to commit no mistakes and still
+            lose. That’s not a weakness, that is life.
+        </p>
+
         <p class="text-xl italic">- Jean-Luc Picard</p>
     </section>
 </Main>

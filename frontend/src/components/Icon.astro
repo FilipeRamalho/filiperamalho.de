@@ -1,0 +1,11 @@
+---
+import {Image} from "astro:assets";
+
+const { src, href, alt } = Astro.props
+---
+
+<a href={href} class="text-nowrap">
+    <Image alt={alt} src={src}
+           class="h-4 w-4 scale-130 ml-1 mr-0.5 align-text-top transition-all duration-100 ease-in-out hover:scale-150 hover:rotate-10 inline-block border-1 border-gray-700 p-[.1rem] rounded"/>
+    <slot/>
+</a>

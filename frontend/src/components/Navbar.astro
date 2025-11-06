@@ -3,10 +3,10 @@ import {Image} from "astro:assets"
 import landscape from "@/assets/img/landscape.webp"
 
 interface Props {
-    topImage: boolean
+    topImage?: ImageMetadata | null
 }
 
-const {topImage = true} = Astro.props
+const {topImage = landscape} = Astro.props
 ---
 <nav id="navbar" class=`grid grid-rows-1 grid-flow-col justify-evenly 
                         mx-auto w-fit p-2 
@@ -26,14 +26,17 @@ const {topImage = true} = Astro.props
         Work
     </a>
     <a class={`button font-bold text-white select-none cursor-pointer w-20 sm:w-30 text-center ali hover:bg-white hover:text-black rounded-4xl py-2`}
+       href="/blog">
+        Blog
+    </a>
+    <a class={`button font-bold text-white select-none cursor-pointer w-20 sm:w-30 text-center ali hover:bg-white hover:text-black rounded-4xl py-2`}
        href="/contact">
         Contact
     </a>
 </nav>
 {
-    topImage &&
-    <div role="complementary" class="rounded-xl hidden sm:inline-flex pt-[10px] px-[50px] w-full">
-        <Image src={landscape} alt="Landscape"
+    topImage ? <div role="complementary" class="rounded-xl hidden sm:inline-flex pt-[10px] px-[50px] w-full">
+        <Image src={topImage} alt="Landscape"
                class="w-full rounded-xl object-cover max-w-[2000px] m-auto aspect-10/4 lg:aspect-10/2"/>
-    </div>
+    </div> : null
     }

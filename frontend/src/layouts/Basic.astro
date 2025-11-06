@@ -3,29 +3,29 @@ import '@/styles/global.css'
 import Navbar from "@/components/Navbar.astro";
 
 interface Props {
-    topImage?: boolean
+    topImage?: ImageMetadata | null
 }
 
-const {topImage = false} = Astro.props
+const {topImage} = Astro.props
 ---
 
 <!doctype html>
 <html lang="de">
-<head>
-    <meta charset="UTF-8"/>
-    <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
-    <link rel="icon" type="image/svg" href="/favicon.svg"/>
-    <meta name="generator" content={Astro.generator}/>
-    <meta name="description" content="Hallo, mein Name ist Filipe Ramalho! Ich beschäftige mich aktiv mit Machine Learning und Data Science. Guck mal rein um zu sehen was ich alles so mache.">
-    <title>Filipe Ramalho</title>
-</head>
-    <body class="bg-white text-black h-full scroll-smooth
-                        text-sm
-                        sm:text-base
-                        min-h-screen">
-    <Navbar topImage={topImage}></Navbar>
-    <div id="content" class="px-[50px] pt-10 max-w-[2000px] mx-auto mb-50">
+    <head>
+        <meta charset="UTF-8"/>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+        <link rel="icon" type="image/svg" href="/favicon.svg"/>
+        <meta name="generator" content={Astro.generator}/>
+        <meta name="description"
+              content="Hallo, mein Name ist Filipe Ramalho! Ich beschäftige mich aktiv mit Machine Learning und Data Science. Guck mal rein um zu sehen was ich alles so mache.">
+        <title>Filipe Ramalho</title>
+    </head>
+
+    <body class="bg-white text-black text-sm sm:text-base h-full  min-h-screen">
+        <Navbar topImage={topImage}></Navbar>
+
+        <div id="content" class="px-[50px] max-w-[2000px] mx-auto mb-30 sm:mb-0">
             <slot/>
-    </div>
+        </div>
     </body>
 </html>
