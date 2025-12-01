@@ -8,7 +8,7 @@
     "preview": "bun run -c build && bun run -c ./dist/server/entry.mjs"
   },
   "dependencies": {
-    "@astrojs/mdx": "4.3.9",
+    "@astrojs/mdx": "4.3.12",
     "@tailwindcss/vite": "^4.1.13",
     "astro": "5.15.3",
     "cheerio": "^1.1.2",
