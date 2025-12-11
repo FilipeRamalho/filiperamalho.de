@@ -28,7 +28,7 @@
     "better-sqlite3": "^12.4.1",
     "cross-env": "^7.0.3",
     "graphql": "^16.8.1",
-    "next": "15.4.4",
+    "next": "15.4.9",
     "payload": "3.60.0",
     "react": "19.1.0",
     "react-dom": "19.1.0",
