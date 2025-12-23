@@ -18,7 +18,7 @@ COPY frontend/src/ ./frontend/src
 COPY frontend/tsconfig.json ./frontend/tsconfig.json
 COPY frontend/astro.config.ts ./frontend/astro.config.ts
 
-RUN bun -c run build:website
+RUN bun -c run frontend build
 
 
 FROM --platform=$BUILDPLATFORM alpine:latest AS run
