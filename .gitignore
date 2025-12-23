@@ -26,7 +26,5 @@ pnpm-debug.log*
 
 /backend/.next/*
 /backend/media
+/backend/icons
 /backend/*.sqlite
-
-/backend/**
-!/backend/package.json
