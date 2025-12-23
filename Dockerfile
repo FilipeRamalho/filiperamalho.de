@@ -6,6 +6,7 @@ COPY package.json ./
 COPY bun.lock ./
 COPY frontend/package.json ./frontend/
 COPY backend/package.json ./backend/
+COPY oauth-lib/package.json ./oauth-lib/
 
 RUN bun -c install --frozen-lockfile --production --filter 'filiperamalho.de_frontend'
 
