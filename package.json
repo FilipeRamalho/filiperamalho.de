@@ -2,9 +2,10 @@
   "name": "filiperamalho.de",
   "version": "6.0.0",
   "license": "UNLICENSED",
-  "workspaces": ["frontend", "backend"],
+  "workspaces": ["frontend", "backend", "oauth-lib"],
   "scripts": {
     "backend": "bun run --filter 'filiperamalho.de_backend'",
-    "frontend": "bun run --filter 'filiperamalho.de_frontend'"
+    "frontend": "bun run --filter 'filiperamalho.de_frontend'",
+    "oauth-lib": "bun run --filter 'oauth-lib'"
   }
 }

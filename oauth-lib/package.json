@@ -1,0 +1,17 @@
+{
+  "name": "oauth-lib",
+  "version": "1.0.0",
+  "license": "UNLICENSED",
+  "main": "./src/index.ts",
+  "scripts": {
+    "npm:publish": "bun publish -p",
+    "npm:dry": "bun publish -p --dry-run"
+  },
+  "dependencies": {
+    "jose": "^6.1.0",
+    "cookie": "^1.0.2"
+  },
+  "devDependencies": {
+    "@types/bun": "1.3.2"
+  }
+}
