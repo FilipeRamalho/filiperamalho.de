@@ -24,7 +24,7 @@
     "@payloadcms/db-mongodb": "3.64.0",
     "@payloadcms/next": "3.64.0",
     "@payloadcms/richtext-lexical": "3.64.0",
-    "@payloadcms/translations": "3.64.0",
+    "@payloadcms/translations": "3.69.0",
     "@payloadcms/ui": "3.64.0",
     "graphql": "^16.12.0",
     "oauth-lib": "workspace:*",
