@@ -6,6 +6,9 @@ import Main from '@/layouts/Main.astro'
 import me from "@/assets/img/me.webp";
 import bg from "@/assets/logos/bg.svg";
 import prtg from "@/assets/logos/prtg.svg";
+import github from "@/assets/logos/github.svg";
+import instagram from "@/assets/logos/instagram.svg";
+import linkedin from "@/assets/logos/linkedin.svg";
 import ey from "@/assets/logos/ey.svg";
 import grafana from "@/assets/logos/grafana.svg";
 import jgu from "@/assets/logos/jgu.svg";
@@ -49,7 +52,7 @@ import Icon from "@/components/Icon.astro";
             </section>
 
 
-            <p class="text-justify hyphens-auto">
+            <p class="text-justify hyphens-auto w-full">
                 Meine Mission: <b>Mit Machine Learning die Welt verbessern.</b>
                 <br/>
                 Machine Learning ist für mich mehr als nur Chatbots/LLMs oder andere Buzzwords. Schon während meines
@@ -57,28 +60,21 @@ import Icon from "@/components/Icon.astro";
                 physikalischer Probleme konzentriert.
             </p>
 
-            <p>
+            <p class="text-justify hyphens-auto w-full">
                 Im Moment arbeite ich als AI Berater bei
                 <Icon href="https://www.ey.com/de_de/services/ai" alt="EY Logo" src={ey}>Ernst & Young</Icon>.
                 Darüber hinaus arbeite ich an einigen Hobbyprojekten, darunter ein Turniersystem, mein Blog und ein Programm zur Verwaltung von Forschungsprojekten.
             </p>
-            <nav id="socialmediabar" class="flex flex-wrap sm:flex-nowrap w-full gap-5">
-                <a class="button font-bold text-secondary bg-primary hover:bg-primary/70 select-none cursor-pointer py-2 px-3 rounded"
-                   href="https://github.com/FilipeRamalho">
-                    Github
-                </a>
 
-                <a class="button font-bold text-secondary bg-primary hover:bg-primary/70 select-none cursor-pointer py-2 px-3 rounded"
-                   href="https://www.linkedin.com/in/fmdsr/">
-                    LinkedIn
-                </a>
-
-                <a class="button font-bold text-secondary bg-primary hover:bg-primary/70 select-none cursor-pointer py-2 px-3 rounded"
-                   href="https://www.instagram.com/filipe.mdsr/">
-                    Instagram
-                </a>
-            </nav>
-
+            <p class="text-justify hyphens-auto w-full leading-6">
+                Du kannst mich auf
+                <Icon href="https://www.linkedin.com/in/fmdsr/" alt="LinkedIn Logo" src={linkedin}>LinkedIn</Icon>
+                und
+                <Icon href="https://www.instagram.com/filipe.mdsr/" alt="Instagram Logo" src={instagram}>Instagram</Icon>
+                erreichen oder dir meinen Code auf
+                <Icon href="https://github.com/FilipeRamalho" alt="Github Logo" src={github}>Github</Icon>
+                anschauen.
+            </p>
 
             <div class="md:hidden mt-10 m-auto  w-6/10">
                 <Image src={me} alt="Landscape" class="w-full"/>
