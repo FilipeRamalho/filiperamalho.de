@@ -1,12 +1,6 @@
 ---
 import '@/styles/global.css'
 import Navbar from "@/components/Navbar.astro";
-
-interface Props {
-    topImage?: ImageMetadata | null
-}
-
-const {topImage} = Astro.props
 ---
 
 <!doctype html>
@@ -22,9 +16,9 @@ const {topImage} = Astro.props
     </head>
 
     <body class="bg-white text-black text-sm sm:text-base h-full  min-h-screen">
-        <Navbar topImage={topImage}></Navbar>
+        <Navbar></Navbar>
 
-        <div id="content" class="px-[50px] max-w-[2000px] mx-auto mb-30 sm:mb-0">
+        <div id="content" class="w-8/10 xl:w-5/10 max-w-300 mx-auto mb-30 sm:mb-0">
             <slot/>
         </div>
     </body>

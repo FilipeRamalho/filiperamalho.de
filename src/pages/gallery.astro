@@ -1,5 +1,5 @@
 ---
-import Basic from "@/layouts/Basic.astro";
+import Main from "@/layouts/Main.astro";
 
 import Picture1 from "@/assets/img/1.jpeg";
 import Picture2 from "@/assets/img/2.jpeg";
@@ -30,7 +30,7 @@ import {Image} from "astro:assets";
 import ImageDetails from "@/components/ImageDetails.astro";
 ---
 
-<Basic>
+<Main>
     <main class="grid gap-10 [grid-template-columns:_repeat(auto-fit,_minmax(200px,_1fr))]
     *:snap-center *:sm:snap-align-none
     [&_button]:hover:scale-110
@@ -134,4 +134,4 @@ import ImageDetails from "@/components/ImageDetails.astro";
             <Image src={Picture1} alt="Bild" class="rounded-xl"/>
         </ImageDetails>
     </main>
-</Basic>
+</Main>

@@ -1,0 +1,134 @@
+---
+import {Image} from "astro:assets";
+
+import Main from '@/layouts/Main.astro'
+
+import me from "@/assets/img/me.webp";
+import bg from "@/assets/logos/bg.svg";
+import prtg from "@/assets/logos/prtg.svg";
+import ey from "@/assets/logos/ey.svg";
+import grafana from "@/assets/logos/grafana.svg";
+import jgu from "@/assets/logos/jgu.svg";
+import python from "@/assets/logos/python.svg";
+import pwsh from "@/assets/logos/pwsh.svg";
+import tux from "@/assets/logos/tux.svg";
+import typescript from "@/assets/logos/typescript.svg";
+import pqsql from "@/assets/logos/pqsl.svg";
+import windowsserver from "@/assets/logos/windowsserver.svg";
+import typst from "@/assets/logos/typst.svg";
+import torchquad from "@/assets/logos/torchquad.svg";
+import pytorch from "@/assets/logos/pytorch.svg";
+import mathematica from "@/assets/logos/mathematica.svg";
+
+import Picture22 from "@/assets/img/22.jpeg";
+import Picture23 from "@/assets/img/23.jpeg";
+import Picture24 from "@/assets/img/24.jpeg";
+import ImageDetails from "@/components/ImageDetails.astro";
+import Icon from "@/components/Icon.astro";
+---
+
+<Main>
+    <main id="hero" class="space-y-10 my-10">
+        <section id="intro" class="space-y-5 flex flex-wrap md:flex-row-reverse">
+
+
+            <div class="xl:fixed xl:bottom-0 xl:left-0 xl:w-full xl:m-0 pointer-events-none">
+                <div class="m-auto md:max-w-600 xl:px-10 z-100">
+                    <Image src={me} alt="Landscape" class="md:w-auto h-full md:h-80 hidden md:block"/>
+                </div>
+            </div>
+
+            <section class="flex-1">
+                <p class="font-bold text-xl mb-2">
+                    Hallo, mein Name ist
+                </p>
+
+                <h1 class="text-6xl font-bold">
+                    Filipe <br/> Ramalho
+                </h1>
+            </section>
+
+
+            <p class="text-justify hyphens-auto">
+                Meine Mission: <b>Mit Machine Learning die Welt verbessern.</b>
+                <br/>
+                Machine Learning ist für mich mehr als nur Chatbots/LLMs oder andere Buzzwords. Schon während meines
+                Physikstudiums habe ich mich in meiner Forschungsarbeit auf den Einsatz Deep Neural Networks zur Lösung
+                physikalischer Probleme konzentriert.
+            </p>
+
+            <p>
+                Im Moment arbeite ich als AI Berater bei
+                <Icon href="https://www.ey.com/de_de/services/ai" alt="EY Logo" src={ey}>Ernst & Young</Icon>.
+                Darüber hinaus arbeite ich an einigen Hobbyprojekten, darunter ein Turniersystem, mein Blog und ein Programm zur Verwaltung von Forschungsprojekten.
+            </p>
+            <nav id="socialmediabar" class="flex flex-wrap sm:flex-nowrap w-full gap-5">
+                <a class="button font-bold text-secondary bg-primary hover:bg-primary/70 select-none cursor-pointer py-2 px-3 rounded"
+                   href="https://github.com/FilipeRamalho">
+                    Github
+                </a>
+
+                <a class="button font-bold text-secondary bg-primary hover:bg-primary/70 select-none cursor-pointer py-2 px-3 rounded"
+                   href="https://www.linkedin.com/in/fmdsr/">
+                    LinkedIn
+                </a>
+
+                <a class="button font-bold text-secondary bg-primary hover:bg-primary/70 select-none cursor-pointer py-2 px-3 rounded"
+                   href="https://www.instagram.com/filipe.mdsr/">
+                    Instagram
+                </a>
+            </nav>
+
+
+            <div class="md:hidden mt-10 m-auto  w-6/10">
+                <Image src={me} alt="Landscape" class="w-full"/>
+                <p class="text-xl font-serif text-center pt-3 italic"> Ich. </p>
+            </div>
+        </section>
+    </main>
+
+    <section id="personal" aria-label="personal" class="my-10">
+        <h2 class="text-2xl sm:text-3xl font-bold mb-3 basis-full">
+            Die persönliche Note
+        </h2>
+
+        <p class="text-justify hyphens-auto">
+            In meiner Freizeit programmiere ich gerne an Hobbyprojekten, fahre mit dem Fahrrad, schaue mir Star Trek an,
+            oder spiele Civilization. Wenn ich auf den Nerd-Turbo schalte, dann lese ich auch mal einige Policy Papers
+            durch. Zum Entspannen koche ich gerne.
+        </p>
+
+        <div class="flex py-10 flex-wrap content-center items-center justify-center">
+            <div class="rotate-8 hover:rotate-10 hover:scale-110 hover:z-10">
+                <ImageDetails place="Aveiro, 2025" phone="iPhone 13 Pro">
+                    <Image src={Picture23} alt="Bild" class="w-60 h-auto rounded-xl"></Image>
+                </ImageDetails>
+            </div>
+
+            <div class="-rotate-12 hover:-rotate-14 hover:scale-110 hover:z-10">
+                <ImageDetails place="Winningen, 2025" phone="iPhone 13 Pro">
+                    <Image src={Picture24} alt="Bild" class="w-60 h-auto rounded-xl"/>
+                </ImageDetails>
+            </div>
+
+            <div class="rotate-5 hover:rotate-7 hover:scale-110 hover:z-10">
+                <ImageDetails place="Parede, 2025" phone="iPhone 13 Pro">
+                    <Image src={Picture22} alt="Bild" class="w-60 h-auto rounded-xl"></Image>
+                </ImageDetails>
+            </div>
+        </div>
+
+        <a class="button font-bold text-secondary border-secondary border select-none cursor-pointer py-2 px-3 rounded" href="/gallery">
+            Mehr Bilder
+        </a>
+    </section>
+
+    <section id="quote" aria-label="quote" class="my-20 px-10 py-15 bg-primary text-secondary rounded-3xl">
+        <p class="font-bold text-2xl mb-2">
+            It’s possible to commit no mistakes and still
+            lose. That’s not a weakness, that is life.
+        </p>
+
+        <p class="text-xl italic">- Jean-Luc Picard</p>
+    </section>
+</Main>
