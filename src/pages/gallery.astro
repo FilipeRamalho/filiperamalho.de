@@ -22,21 +22,106 @@ import Picture18 from "@/assets/img/18.jpeg";
 import Picture19 from "@/assets/img/19.jpeg";
 import Picture20 from "@/assets/img/20.jpeg";
 import Picture21 from "@/assets/img/21.jpeg";
-import Picture24 from "@/assets/img/24.jpeg";
-import Picture23 from "@/assets/img/23.jpeg";
 import Picture22 from "@/assets/img/22.jpeg";
+import Picture23 from "@/assets/img/23.jpeg";
+import Picture24 from "@/assets/img/24.jpeg";
+import Picture25 from "@/assets/img/25.jpeg";
+import Picture26 from "@/assets/img/26.jpeg";
+import Picture27 from "@/assets/img/27.jpeg";
+import Picture28 from "@/assets/img/28.jpeg";
+import Picture29 from "@/assets/img/29.jpeg";
+import Picture30 from "@/assets/img/30.jpeg";
+import Picture31 from "@/assets/img/31.jpeg";
+import Picture32 from "@/assets/img/32.jpeg";
+import Picture33 from "@/assets/img/33.jpeg";
+import Picture34 from "@/assets/img/34.jpeg";
+import Picture35 from "@/assets/img/35.jpeg";
+import Picture36 from "@/assets/img/36.jpeg";
+import Picture37 from "@/assets/img/37.jpeg";
+import Picture38 from "@/assets/img/38.jpeg";
+import Picture39 from "@/assets/img/39.jpeg";
+import Picture40 from "@/assets/img/40.jpeg";
+import Picture41 from "@/assets/img/41.jpeg";
 import {Image} from "astro:assets";
 
 import ImageDetails from "@/components/ImageDetails.astro";
 ---
 
 <Main>
-    <main class="grid gap-10 [grid-template-columns:_repeat(auto-fit,_minmax(200px,_1fr))]
+    <main class="grid gap-10 grid-cols-[repeat(auto-fit,minmax(200px,1fr))]
     *:snap-center *:sm:snap-align-none
     [&_button]:hover:scale-110
     mt-10 mb-20">
 
         <h1 class="col-span-full text-4xl sm:text-4xl font-bold"> Gallery </h1>
+
+        <ImageDetails place="Mainz, 2026" phone="iPhone 17 Pro">
+            <Image src={Picture40} alt="Bild" class="rounded-xl"/>
+        </ImageDetails>
+
+        <ImageDetails place="Mainz, 2026" phone="iPhone 17 Pro">
+            <Image src={Picture39} alt="Bild" class="rounded-xl"/>
+        </ImageDetails>
+
+        <ImageDetails place="Bad Kreuznach, 2026" phone="iPhone 17 Pro">
+            <Image src={Picture32} alt="Bild" class="rounded-xl"/>
+        </ImageDetails>
+
+        <ImageDetails place="Bad Kreuznach, 2026" phone="iPhone 17 Pro">
+            <Image src={Picture31} alt="Bild" class="rounded-xl"/>
+        </ImageDetails>
+
+        <ImageDetails place="Mainz, 2026" phone="iPhone 17 Pro">
+            <Image src={Picture38} alt="Bild" class="rounded-xl"/>
+        </ImageDetails>
+
+        <ImageDetails place="Mainz, 2026" phone="iPhone 17 Pro">
+            <Image src={Picture37} alt="Bild" class="rounded-xl"/>
+        </ImageDetails>
+
+        <ImageDetails place="München, 2026" phone="iPhone 13 Pro">
+            <Image src={Picture36} alt="Bild" class="rounded-xl"/>
+        </ImageDetails>
+
+        <ImageDetails place="München, 2026" phone="iPhone 13 Pro">
+            <Image src={Picture34} alt="Bild" class="rounded-xl"/>
+        </ImageDetails>
+
+        <ImageDetails place="München, 2026" phone="iPhone 13 Pro">
+            <Image src={Picture33} alt="Bild" class="rounded-xl"/>
+        </ImageDetails>
+
+        <ImageDetails place="Mainz, 2026" phone="iPhone 13 Pro">
+            <Image src={Picture30} alt="Bild" class="rounded-xl"/>
+        </ImageDetails>
+
+        <ImageDetails place="Mainz, 2026" phone="iPhone 13 Pro">
+            <Image src={Picture35} alt="Bild" class="rounded-xl"/>
+        </ImageDetails>
+
+        <ImageDetails place="Lisboa, 2025" phone="iPhone 13 Pro">
+            <Image src={Picture29} alt="Bild" class="rounded-xl"/>
+        </ImageDetails>
+
+        <ImageDetails place="Lisboa, 2025" phone="iPhone 13 Pro">
+            <Image src={Picture28} alt="Bild" class="rounded-xl"/>
+        </ImageDetails>
+
+        <ImageDetails place="Arruda dos Vinhos, 2025" phone="iPhone 13 Pro">
+            <Image src={Picture41} alt="Bild" class="rounded-xl"/>
+        </ImageDetails>
+
+        <ImageDetails place="Arruda dos Vinhos, 2025" phone="iPhone 13 Pro">
+            <Image src={Picture27} alt="Bild" class="rounded-xl"/>
+        </ImageDetails>
+
+        <ImageDetails place="Caparica, 2025" phone="iPhone 13 Pro">
+            <Image src={Picture26} alt="Bild" class="rounded-xl"/>
+        </ImageDetails>
+
+        <ImageDetails place="Mainz, 2025" phone="iPhone 13 Pro">
+            <Image src={Picture25} alt="Bild" class="rounded-xl"/>
+        </ImageDetails>
 
         <ImageDetails place="Winningen, 2025" phone="iPhone 13 Pro">
             <Image src={Picture24} alt="Bild" class="rounded-xl"/>
